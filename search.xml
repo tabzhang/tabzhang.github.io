@@ -5,9 +5,13 @@
     <url>/2021/05/13/AutoUpdater/</url>
     <content><![CDATA[<p><img src="/2021/05/13/AutoUpdater/01.png" alt="img1"></p>
 <h2 id="【功能说明】"><a href="#【功能说明】" class="headerlink" title="【功能说明】"></a>【功能说明】</h2><p>1.自动对比程序文件，按需增量升级<br>2.可跨版本升级，不关心版本号，支持零代码集成<br>3.支持Auto/Normal/Silence三种运行模式<br>4.支持Update/Delete/SkipExist更新方式<br>5.提供独立升级包制作工具，支持自身升级<br>6.支持自动解除锁定文件<br>7.支持版本跳过，支持缺失文件检查等</p>
+<span id="more"></span>
+
 <h2 id="升级包制件工具-AutoUpdaterBuilder"><a href="#升级包制件工具-AutoUpdaterBuilder" class="headerlink" title="升级包制件工具-AutoUpdaterBuilder"></a>升级包制件工具-AutoUpdaterBuilder</h2><p><img src="/2021/05/13/AutoUpdater/04.png" alt="img4"></p>
 <h2 id="其它相关界面参考…"><a href="#其它相关界面参考…" class="headerlink" title="其它相关界面参考…"></a>其它相关界面参考…</h2><p><img src="/2021/05/13/AutoUpdater/02.png" alt="img2"></p>
 <p><img src="/2021/05/13/AutoUpdater/03.png" alt="img3"></p>
+<p>欢迎提出您的建议与意见！</p>
+<p><a href="/download/AutoUpdaterV1.2.7z">点击下载</a></p>
 ]]></content>
       <categories>
         <category>原创</category>
@@ -32,13 +36,27 @@
       </tags>
   </entry>
   <entry>
+    <title>批量Xml文件格式化</title>
+    <url>/2021/05/18/BatchXmlFormater/</url>
+    <content><![CDATA[<h3 id="批量Xml文件格式化"><a href="#批量Xml文件格式化" class="headerlink" title="批量Xml文件格式化"></a>批量Xml文件格式化</h3><p><img src="/2021/05/18/BatchXmlFormater/01.png" alt="image"></p>
+<p><a href="/download/BatchXmlFormater.7z">点击下载</a></p>
+]]></content>
+      <categories>
+        <category>原创</category>
+      </categories>
+      <tags>
+        <tag>XML</tag>
+        <tag>文件格式化</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>LogParser使用说明</title>
     <url>/2021/05/18/LogParser/</url>
     <content><![CDATA[<h3 id="LogParser-使用说明"><a href="#LogParser-使用说明" class="headerlink" title="LogParser 使用说明"></a>LogParser <strong>使用说明</strong></h3><p>为了大家定位产线测试问题，我们需要所有原始 log 不良明细，特意开发了以下工具： </p>
 <ol>
 <li><p>下载并打开 LogParser.exe 。</p>
 <p><img src="/2021/05/18/LogParser/1.jpg"></p>
-</li>
+<span id="more"></span></li>
 <li><p>删除D:\LogFiles不是本次试产的其它log。（如果改变了设置，删除相应的log）</p>
 </li>
 <li><p>点击 Add Folder 按钮，定位到 D:\LogFiles 后点击确定。</p>
@@ -51,6 +69,7 @@
 <li><p>桌面上会生成一个 Excel 文件如。 </p>
 </li>
 <li><p>把这个文件按电脑名称命名，比如 SMT4. xlsx，这个命名十分重要，方便定位到问题后反馈。 </p>
+<p><a href="/download/LogParser.7z">点击下载</a></p>
 </li>
 </ol>
 ]]></content>
