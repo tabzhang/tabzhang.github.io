@@ -10,10 +10,11 @@
 <p><img src="/2021/05/13/AutoUpdater/03.png" alt="img3"></p>
 ]]></content>
       <categories>
-        <category>Android</category>
+        <category>原创</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
+        <tag>AutoUpdater</tag>
+        <tag>增量</tag>
       </tags>
   </entry>
   <entry>
@@ -28,6 +29,37 @@
       </categories>
       <tags>
         <tag>笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>LogParser使用说明</title>
+    <url>/2021/05/18/LogParser/</url>
+    <content><![CDATA[<h3 id="LogParser-使用说明"><a href="#LogParser-使用说明" class="headerlink" title="LogParser 使用说明"></a>LogParser <strong>使用说明</strong></h3><p>为了大家定位产线测试问题，我们需要所有原始 log 不良明细，特意开发了以下工具： </p>
+<ol>
+<li><p>下载并打开 LogParser.exe 。</p>
+<p><img src="/2021/05/18/LogParser/1.jpg"></p>
+</li>
+<li><p>删除D:\LogFiles不是本次试产的其它log。（如果改变了设置，删除相应的log）</p>
+</li>
+<li><p>点击 Add Folder 按钮，定位到 D:\LogFiles 后点击确定。</p>
+</li>
+</ol>
+<p><img src="/2021/05/18/LogParser/2.jpg"></p>
+<ol start="4">
+<li><p>点击 Start Parser 等待解析完成。 </p>
+</li>
+<li><p>桌面上会生成一个 Excel 文件如。 </p>
+</li>
+<li><p>把这个文件按电脑名称命名，比如 SMT4. xlsx，这个命名十分重要，方便定位到问题后反馈。 </p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>原创</category>
+      </categories>
+      <tags>
+        <tag>LogParser</tag>
+        <tag>Log解析</tag>
       </tags>
   </entry>
 </search>
