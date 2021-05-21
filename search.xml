@@ -22,20 +22,6 @@
       </tags>
   </entry>
   <entry>
-    <title>DotNet反射动态加载</title>
-    <url>/2021/05/13/DotNetRef/</url>
-    <content><![CDATA[<p>反射动态加载示例</p>
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">try</span></span><br><span class="line">&#123;</span><br><span class="line">    Assembly tempAssembly = Assembly.LoadFrom(<span class="string">&quot;EquipConfig.dll&quot;</span>);</span><br><span class="line">    Type t = tempAssembly.GetType(<span class="string">&quot;EquipConfig.mForm&quot;</span>);</span><br><span class="line">    Object[] objPar = <span class="keyword">new</span> Object[] &#123; <span class="string">@&quot;..\data\System.ini&quot;</span> &#125;;</span><br><span class="line">    <span class="built_in">object</span> o = Activator.CreateInstance(t, objPar);</span><br><span class="line">    Form form = (Form)o;</span><br><span class="line"></span><br><span class="line">    form.TopLevel = <span class="literal">false</span>;</span><br><span class="line">    form.ForeColor = Color.Black;</span><br><span class="line">    form.Dock = DockStyle.Fill;</span><br><span class="line">    form.FormBorderStyle = FormBorderStyle.None;</span><br><span class="line">    tabPageConfig.Controls.Add(form);</span><br><span class="line">    form.Show();</span><br><span class="line"></span><br><span class="line">    tempAssembly = <span class="literal">null</span>;</span><br><span class="line">    t = <span class="literal">null</span>;</span><br><span class="line">    objPar = <span class="literal">null</span>;</span><br><span class="line">    o = <span class="literal">null</span>;</span><br><span class="line">    form = <span class="literal">null</span>;</span><br><span class="line">&#125;</span><br><span class="line">catch (Exception ex)</span><br><span class="line">&#123;</span><br><span class="line">    MessageBox.Show(<span class="keyword">this</span>, ex.Message, <span class="string">&quot;mTest&quot;</span>, MessageBoxButtons.OK, MessageBoxIcon.Error);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>DotNet</category>
-      </categories>
-      <tags>
-        <tag>笔记</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>批量Xml文件格式化</title>
     <url>/2021/05/18/BatchXmlFormater/</url>
     <content><![CDATA[<h3 id="批量Xml文件格式化"><a href="#批量Xml文件格式化" class="headerlink" title="批量Xml文件格式化"></a>批量Xml文件格式化</h3><p><img src="/2021/05/18/BatchXmlFormater/01.png" alt="image"></p>
@@ -47,6 +33,20 @@
       <tags>
         <tag>XML</tag>
         <tag>文件格式化</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>DotNet反射动态加载</title>
+    <url>/2021/05/13/DotNetRef/</url>
+    <content><![CDATA[<p>反射动态加载示例</p>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">try</span></span><br><span class="line">&#123;</span><br><span class="line">    Assembly tempAssembly = Assembly.LoadFrom(<span class="string">&quot;EquipConfig.dll&quot;</span>);</span><br><span class="line">    Type t = tempAssembly.GetType(<span class="string">&quot;EquipConfig.mForm&quot;</span>);</span><br><span class="line">    Object[] objPar = <span class="keyword">new</span> Object[] &#123; <span class="string">@&quot;..\data\System.ini&quot;</span> &#125;;</span><br><span class="line">    <span class="built_in">object</span> o = Activator.CreateInstance(t, objPar);</span><br><span class="line">    Form form = (Form)o;</span><br><span class="line"></span><br><span class="line">    form.TopLevel = <span class="literal">false</span>;</span><br><span class="line">    form.ForeColor = Color.Black;</span><br><span class="line">    form.Dock = DockStyle.Fill;</span><br><span class="line">    form.FormBorderStyle = FormBorderStyle.None;</span><br><span class="line">    tabPageConfig.Controls.Add(form);</span><br><span class="line">    form.Show();</span><br><span class="line"></span><br><span class="line">    tempAssembly = <span class="literal">null</span>;</span><br><span class="line">    t = <span class="literal">null</span>;</span><br><span class="line">    objPar = <span class="literal">null</span>;</span><br><span class="line">    o = <span class="literal">null</span>;</span><br><span class="line">    form = <span class="literal">null</span>;</span><br><span class="line">&#125;</span><br><span class="line">catch (Exception ex)</span><br><span class="line">&#123;</span><br><span class="line">    MessageBox.Show(<span class="keyword">this</span>, ex.Message, <span class="string">&quot;mTest&quot;</span>, MessageBoxButtons.OK, MessageBoxIcon.Error);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>DotNet</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
       </tags>
   </entry>
   <entry>
