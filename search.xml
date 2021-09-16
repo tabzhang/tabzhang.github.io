@@ -22,20 +22,6 @@
       </tags>
   </entry>
   <entry>
-    <title>批量Xml文件格式化</title>
-    <url>/2021/05/18/BatchXmlFormater/</url>
-    <content><![CDATA[<h3 id="批量Xml文件格式化"><a href="#批量Xml文件格式化" class="headerlink" title="批量Xml文件格式化"></a>批量Xml文件格式化</h3><p><img src="/2021/05/18/BatchXmlFormater/01.png" alt="image"></p>
-<p><a href="/download/BatchXmlFormater.7z">点击下载</a></p>
-]]></content>
-      <categories>
-        <category>原创</category>
-      </categories>
-      <tags>
-        <tag>XML</tag>
-        <tag>文件格式化</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>DotNet反射动态加载</title>
     <url>/2021/05/13/DotNetRef/</url>
     <content><![CDATA[<p>反射动态加载示例</p>
@@ -96,6 +82,20 @@
       <tags>
         <tag>QCN</tag>
         <tag>金板</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>批量Xml文件格式化</title>
+    <url>/2021/05/18/BatchXmlFormater/</url>
+    <content><![CDATA[<h3 id="批量Xml文件格式化"><a href="#批量Xml文件格式化" class="headerlink" title="批量Xml文件格式化"></a>批量Xml文件格式化</h3><p><img src="/2021/05/18/BatchXmlFormater/01.png" alt="image"></p>
+<p><a href="/download/BatchXmlFormater.7z">点击下载</a></p>
+]]></content>
+      <categories>
+        <category>原创</category>
+      </categories>
+      <tags>
+        <tag>XML</tag>
+        <tag>文件格式化</tag>
       </tags>
   </entry>
 </search>
