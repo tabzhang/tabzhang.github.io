@@ -291,7 +291,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/18/LogParser/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/16/CMW100_FW/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.svg">
@@ -308,7 +308,7 @@
               <span class="post-sticky-flag" title="置顶">
                 <i class="fa fa-thumbtack"></i>
               </span>
-            <a href="/2021/05/18/LogParser/" class="post-title-link" itemprop="url">LogParser使用说明</a>
+            <a href="/2021/09/16/CMW100_FW/" class="post-title-link" itemprop="url">CMW100固件更新（含下载地址）</a>
         </h2>
 
         <div class="post-meta">
@@ -318,7 +318,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2021-05-18 10:57:09" itemprop="dateCreated datePublished" datetime="2021-05-18T10:57:09+08:00">2021-05-18</time>
+              <time title="创建时间：2021-09-16 16:02:09" itemprop="dateCreated datePublished" datetime="2021-09-16T16:02:09+08:00">2021-09-16</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -339,8 +339,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2021/05/18/LogParser/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2021/05/18/LogParser/" itemprop="commentCount"></span>
+    <a title="valine" href="/2021/09/16/CMW100_FW/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/09/16/CMW100_FW/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -350,7 +350,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>235</span>
+              <span>596</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -369,18 +369,152 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h3 id="LogParser-使用说明"><a href="#LogParser-使用说明" class="headerlink" title="LogParser 使用说明"></a>LogParser <strong>使用说明</strong></h3><p>为了大家定位产线测试问题，我们需要所有原始 log 不良明细，特意开发了以下工具： </p>
-<ol>
-<li><p>下载并打开 LogParser.exe 。</p>
-<p><img src="/2021/05/18/LogParser/1.jpg"></p></li></ol>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/05/18/LogParser/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+          <p>1.<strong>先卸载旧固件</strong>。如果找不到桌面维护图标，按<kbd>Win</kbd>+<kbd>R</kbd>打开Windows的<strong>运行对话框</strong>，输入以下指令后<kbd>ENTER</kbd>，在弹出的对应框中选择旧版本卸载全部。</p>
+<blockquote>
+<p>“C:\Program Files (x86)\Rohde-Schwarz\RsDistributor\RsDistributor.exe” -maintenance</p>
+</blockquote>
+<p>2.<strong>下载新固件与波形文件</strong>，阿里云盘不限速下载，地址如下：</p>
+<table>
+<thead>
+<tr>
+<th align="center">路径</th>
+<th align="center">版本</th>
+<th align="center">备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a target="_blank" rel="noopener" href="https://www.aliyundrive.com/s/k9rs2BZKqr2">https://www.aliyundrive.com/s/k9rs2BZKqr2</a></td>
+<td align="center">3.7.160</td>
+<td align="center">组合版</td>
+</tr>
+<tr>
+<td align="center"><a target="_blank" rel="noopener" href="https://www.aliyundrive.com/s/tQDZo8ZMC8E">https://www.aliyundrive.com/s/tQDZo8ZMC8E</a></td>
+<td align="center">3.8.14</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><a target="_blank" rel="noopener" href="https://www.aliyundrive.com/s/4ru1sY92YFQ">https://www.aliyundrive.com/s/4ru1sY92YFQ</a></td>
+<td align="center"></td>
+<td align="center">波形文件</td>
+</tr>
+<tr>
+<td align="center"><strong>固件版本选择，按项目找负责人确认，波形通用。</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<p>3.<strong>安装新固件</strong>，解压后双击其中一个安装包，在<strong>向导对话框</strong>中<strong>勾选</strong>如<strong>下图选项</strong>，并<strong>下一步</strong>等待安装完成即可，<strong>波形文件安装与固件类似</strong>。</p>
+<p><img src="/2021/09/16/CMW100_FW/img1.png" alt="img1"></p>
+<p>4.<strong>切换成单窗口</strong> (推荐)：固件默认是多窗口模式，不方便操作，按下面<strong>红色标记</strong>找到<strong>Muliple Windows</strong>，<strong>取消勾选</strong>即可。</p>
+<p><img src="/2021/09/16/CMW100_FW/img2.png" alt="img2"></p>
+<p>5.<strong>切换双通道</strong> (根据项目需要)：按第4步设置后，点击右侧DEVICE按钮，如下图进行设置，切换后要等待仪表自动重启后，方可使用。</p>
+<p><img src="/2021/09/16/CMW100_FW/img3.png" alt="img3"></p>
+<p>6.<strong>更多设置</strong>，请参考以下文档：</p>
+<p><a href="/download/CMW100_Manual_V1.0.pdf">CMW100应用操作指引_V1.0 点击查看</a></p>
+<p><a href="/download/CMW100_Manual_V2.0.pdf">CMW100固件安装指引_V2.0 点击查看</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/16/RestoreQCN/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.svg">
+      <meta itemprop="name" content="TabZ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="TabZ随意录">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+              <span class="post-sticky-flag" title="置顶">
+                <i class="fa fa-thumbtack"></i>
+              </span>
+            <a href="/2021/09/16/RestoreQCN/" class="post-title-link" itemprop="url">恢复QCN的方法(校准数据)</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-09-16 16:02:09" itemprop="dateCreated datePublished" datetime="2021-09-16T16:02:09+08:00">2021-09-16</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%8E%9F%E5%88%9B/" itemprop="url" rel="index"><span itemprop="name">原创</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/09/16/RestoreQCN/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/09/16/RestoreQCN/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>197</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>1.对比xqcn文件与主板编号与PSN是否一致，如下图，找到5号主板，并核对PSN是否正确。</p>
+<p><img src="/2021/09/16/RestoreQCN/img1.png" alt="img1"></p>
+<p>2.关闭一切测试工具，把主板上电正常开机后，打开QPST中的<strong>Software Download</strong>,并切换到<strong>Restore页面</strong>如下图：</p>
+<p><img src="/2021/09/16/RestoreQCN/img2.png" alt="img2"></p>
+<p>3.点击红色标记<strong>1 选择手机端口</strong>，点击<strong>2 选择对应的.xqcn文件</strong>，然后点击<strong>3 Start</strong>，等待大概3分钟左右，直到<strong>4这里显示Memory Restore Completed</strong> 就完成了。</p>
+
       
     </div>
 
@@ -498,7 +632,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/16/CMW100_FW/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/05/18/LogParser/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.svg">
@@ -515,7 +649,7 @@
               <span class="post-sticky-flag" title="置顶">
                 <i class="fa fa-thumbtack"></i>
               </span>
-            <a href="/2021/09/16/CMW100_FW/" class="post-title-link" itemprop="url">CMW100固件更新（含下载地址）</a>
+            <a href="/2021/05/18/LogParser/" class="post-title-link" itemprop="url">LogParser使用说明</a>
         </h2>
 
         <div class="post-meta">
@@ -525,7 +659,7 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2021-09-16 16:02:09" itemprop="dateCreated datePublished" datetime="2021-09-16T16:02:09+08:00">2021-09-16</time>
+              <time title="创建时间：2021-05-18 10:57:09" itemprop="dateCreated datePublished" datetime="2021-05-18T10:57:09+08:00">2021-05-18</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -546,8 +680,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2021/09/16/CMW100_FW/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2021/09/16/CMW100_FW/" itemprop="commentCount"></span>
+    <a title="valine" href="/2021/05/18/LogParser/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/05/18/LogParser/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -557,7 +691,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>600</span>
+              <span>235</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -576,152 +710,18 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>1.<strong>先卸载旧固件</strong>。如果找不到桌面维护图标，按<kbd>Win</kbd>+<kbd>R</kbd>打开Windows的<strong>运行对话框</strong>，输入以下指令后<kbd>ENTER</kbd>，在弹出的对应框中选择旧版本卸载全部。</p>
-<blockquote>
-<p>“C:\Program Files (x86)\Rohde-Schwarz\RsDistributor\RsDistributor.exe” -maintenance</p>
-</blockquote>
-<p>2.<strong>下载新固件与波形文件</strong>，阿里云盘不限速下载，地址如下：</p>
-<table>
-<thead>
-<tr>
-<th align="center">路径</th>
-<th align="center">版本</th>
-<th align="center">备注</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a target="_blank" rel="noopener" href="https://www.aliyundrive.com/s/k9rs2BZKqr2">https://www.aliyundrive.com/s/k9rs2BZKqr2</a></td>
-<td align="center">3.7.160</td>
-<td align="center">组合版</td>
-</tr>
-<tr>
-<td align="center"><a target="_blank" rel="noopener" href="https://www.aliyundrive.com/s/tQDZo8ZMC8E">https://www.aliyundrive.com/s/tQDZo8ZMC8E</a></td>
-<td align="center">3.8.14</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center"><a target="_blank" rel="noopener" href="https://www.aliyundrive.com/s/4ru1sY92YFQ">https://www.aliyundrive.com/s/4ru1sY92YFQ</a></td>
-<td align="center"></td>
-<td align="center">波形文件</td>
-</tr>
-<tr>
-<td align="center"><strong>固件版本选择，按项目找负责人确认，波形通用。</strong></td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-</tbody></table>
-<p>3.<strong>安装新固件</strong>，解压后双击其中一个安装包，在<strong>向导对话框</strong>中<strong>勾选</strong>如<strong>下图选项</strong>，并<strong>下一步</strong>等待安装完成即可，<strong>波形文件安装与固件类似</strong>。</p>
-<p><img src="/2021/09/16/CMW100_FW/img1.png" alt="img1"></p>
-<p>4.<strong>切换成单窗口</strong> (推荐)：固件默认是多窗口模式，不方便操作，按下面<strong>红色标记</strong>找到<strong>Muliple Windows</strong>，<strong>取消勾选</strong>即可。</p>
-<p><img src="/2021/09/16/CMW100_FW/img2.png" alt="img2"></p>
-<p>5.<strong>切换双通道</strong> (根据项目需要)：按第4步设置后，点击右侧DEVICE按钮，如下图进行设置，切换后要等待仪表自动重启后，方可使用。</p>
-<p><img src="/2021/09/16/CMW100_FW/img3.png" alt="img3"></p>
-<p>6**.更多设置**，请参考以下文档：</p>
-<p><a href="/download/CMW100_Manual_V1.0.pdf">CMW100应用操作指引_V1.0 点击查看</a></p>
-<p><a href="/download/CMW100_Manual_V2.0.pdf">CMW100固件安装指引_V2.0 点击查看</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/16/RestoreQCN/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.svg">
-      <meta itemprop="name" content="TabZ">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="TabZ随意录">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-              <span class="post-sticky-flag" title="置顶">
-                <i class="fa fa-thumbtack"></i>
-              </span>
-            <a href="/2021/09/16/RestoreQCN/" class="post-title-link" itemprop="url">恢复QCN的方法(校准数据)</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-09-16 16:02:09" itemprop="dateCreated datePublished" datetime="2021-09-16T16:02:09+08:00">2021-09-16</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%8E%9F%E5%88%9B/" itemprop="url" rel="index"><span itemprop="name">原创</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2021/09/16/RestoreQCN/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2021/09/16/RestoreQCN/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>197</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>1.对比xqcn文件与主板编号与PSN是否一致，如下图，找到5号主板，并核对PSN是否正确。</p>
-<p><img src="/2021/09/16/RestoreQCN/img1.png" alt="img1"></p>
-<p>2.关闭一切测试工具，把主板上电正常开机后，打开QPST中的<strong>Software Download</strong>,并切换到<strong>Restore页面</strong>如下图：</p>
-<p><img src="/2021/09/16/RestoreQCN/img2.png" alt="img2"></p>
-<p>3.点击红色标记<strong>1 选择手机端口</strong>，点击<strong>2 选择对应的.xqcn文件</strong>，然后点击<strong>3 Start</strong>，等待大概3分钟左右，直到<strong>4这里显示Memory Restore Completed</strong> 就完成了。</p>
-
+          <h3 id="LogParser-使用说明"><a href="#LogParser-使用说明" class="headerlink" title="LogParser 使用说明"></a>LogParser <strong>使用说明</strong></h3><p>为了大家定位产线测试问题，我们需要所有原始 log 不良明细，特意开发了以下工具： </p>
+<ol>
+<li><p>下载并打开 LogParser.exe 。</p>
+<p><img src="/2021/05/18/LogParser/1.jpg"></p></li></ol>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/05/18/LogParser/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
