@@ -36,17 +36,57 @@
       </tags>
   </entry>
   <entry>
-    <title>DotNet反射动态加载</title>
-    <url>/2021/05/13/DotNetRef/</url>
-    <content><![CDATA[<p>反射动态加载示例</p>
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">try</span></span><br><span class="line">&#123;</span><br><span class="line">    Assembly tempAssembly = Assembly.LoadFrom(<span class="string">&quot;EquipConfig.dll&quot;</span>);</span><br><span class="line">    Type t = tempAssembly.GetType(<span class="string">&quot;EquipConfig.mForm&quot;</span>);</span><br><span class="line">    Object[] objPar = <span class="keyword">new</span> Object[] &#123; <span class="string">@&quot;..\data\System.ini&quot;</span> &#125;;</span><br><span class="line">    <span class="built_in">object</span> o = Activator.CreateInstance(t, objPar);</span><br><span class="line">    Form form = (Form)o;</span><br><span class="line"></span><br><span class="line">    form.TopLevel = <span class="literal">false</span>;</span><br><span class="line">    form.ForeColor = Color.Black;</span><br><span class="line">    form.Dock = DockStyle.Fill;</span><br><span class="line">    form.FormBorderStyle = FormBorderStyle.None;</span><br><span class="line">    tabPageConfig.Controls.Add(form);</span><br><span class="line">    form.Show();</span><br><span class="line"></span><br><span class="line">    tempAssembly = <span class="literal">null</span>;</span><br><span class="line">    t = <span class="literal">null</span>;</span><br><span class="line">    objPar = <span class="literal">null</span>;</span><br><span class="line">    o = <span class="literal">null</span>;</span><br><span class="line">    form = <span class="literal">null</span>;</span><br><span class="line">&#125;</span><br><span class="line">catch (Exception ex)</span><br><span class="line">&#123;</span><br><span class="line">    MessageBox.Show(<span class="keyword">this</span>, ex.Message, <span class="string">&quot;mTest&quot;</span>, MessageBoxButtons.OK, MessageBoxIcon.Error);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+    <title>CMW100固件更新（含下载地址）</title>
+    <url>/2021/09/16/CMW100_FW/</url>
+    <content><![CDATA[<p>1.<strong>先卸载旧固件</strong>。如果找不到桌面维护图标，按<kbd>Win</kbd>+<kbd>R</kbd>打开Windows的<strong>运行对话框</strong>，输入以下指令后<kbd>ENTER</kbd>，在弹出的对应框中选择旧版本卸载全部。</p>
+<blockquote>
+<p>“C:\Program Files (x86)\Rohde-Schwarz\RsDistributor\RsDistributor.exe” -maintenance</p>
+</blockquote>
+<p>2.<strong>下载新固件与波形文件</strong>，阿里云盘不限速下载，地址如下：</p>
+<table>
+<thead>
+<tr>
+<th align="center">路径</th>
+<th align="center">版本</th>
+<th align="center">备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a href="https://www.aliyundrive.com/s/k9rs2BZKqr2">https://www.aliyundrive.com/s/k9rs2BZKqr2</a></td>
+<td align="center">3.7.160</td>
+<td align="center">组合版</td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.aliyundrive.com/s/tQDZo8ZMC8E">https://www.aliyundrive.com/s/tQDZo8ZMC8E</a></td>
+<td align="center">3.8.14</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><a href="https://www.aliyundrive.com/s/4ru1sY92YFQ">https://www.aliyundrive.com/s/4ru1sY92YFQ</a></td>
+<td align="center"></td>
+<td align="center">波形文件</td>
+</tr>
+<tr>
+<td align="center"><strong>固件版本选择，按项目找负责人确认，波形通用。</strong></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<p>3.<strong>安装新固件</strong>，解压后双击其中一个安装包，在<strong>向导对话框</strong>中<strong>勾选</strong>如<strong>下图选项</strong>，并<strong>下一步</strong>等待安装完成即可，<strong>波形文件安装与固件类似</strong>。</p>
+<p><img src="/2021/09/16/CMW100_FW/img1.png" alt="img1"></p>
+<p>4.<strong>切换成单窗口</strong> (推荐)：固件默认是多窗口模式，不方便操作，按下面<strong>红色标记</strong>找到<strong>Muliple Windows</strong>，<strong>取消勾选</strong>即可。</p>
+<p><img src="/2021/09/16/CMW100_FW/img2.png" alt="img2"></p>
+<p>5.<strong>切换双通道</strong> (根据项目需要)：按第4步设置后，点击右侧DEVICE按钮，如下图进行设置，切换后要等待仪表自动重启后，方可使用。</p>
+<p><img src="/2021/09/16/CMW100_FW/img3.png" alt="img3"></p>
+<p><a href="/download/CMW100%E5%BA%94%E7%94%A8%E6%93%8D%E4%BD%9C%E6%8C%87%E5%BC%95_V1.0.pdf">CMW100应用操作指引_V1.0 点击下载</a></p>
+<p><a href="/download/CMW100%E5%9B%BA%E4%BB%B6%E5%AE%89%E8%A3%85%E6%8C%87%E5%BC%95_V2.0.pdf">CMW100固件安装指引_V2.0 点击下载</a></p>
 ]]></content>
       <categories>
-        <category>DotNet</category>
+        <category>原创</category>
       </categories>
       <tags>
-        <tag>笔记</tag>
+        <tag>CMW100</tag>
+        <tag>仪表</tag>
       </tags>
   </entry>
   <entry>
@@ -82,11 +122,11 @@
       </tags>
   </entry>
   <entry>
-    <title>恢复金板校准原始数据的方法</title>
+    <title>恢复QCN的方法(校准数据)</title>
     <url>/2021/09/16/RestoreQCN/</url>
-    <content><![CDATA[<h3 id="恢复金板校准原始数据的方法"><a href="#恢复金板校准原始数据的方法" class="headerlink" title="恢复金板校准原始数据的方法"></a>恢复金板校准原始数据的方法</h3><p>1.对比xqcn文件与金板编号与PSN是否一致，如下图，找到5号金板，并核对PSN是否正确。</p>
+    <content><![CDATA[<p>1.对比xqcn文件与主板编号与PSN是否一致，如下图，找到5号主板，并核对PSN是否正确。</p>
 <p><img src="/2021/09/16/RestoreQCN/img1.png" alt="img1"></p>
-<p>2.关闭一切测试工具，把金板上电正常开机后，打开QPST中的<strong>Software Download</strong>,并切换到<strong>Restore页面</strong>如下图：</p>
+<p>2.关闭一切测试工具，把主板上电正常开机后，打开QPST中的<strong>Software Download</strong>,并切换到<strong>Restore页面</strong>如下图：</p>
 <p><img src="/2021/09/16/RestoreQCN/img2.png" alt="img2"></p>
 <p>3.点击红色标记<strong>1 选择手机端口</strong>，点击<strong>2 选择对应的.xqcn文件</strong>，然后点击<strong>3 Start</strong>，等待大概3分钟左右，直到<strong>4这里显示Memory Restore Completed</strong> 就完成了。</p>
 ]]></content>
