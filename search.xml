@@ -36,7 +36,7 @@
       </tags>
   </entry>
   <entry>
-    <title>CMW固件更新（含下载地址）</title>
+    <title>CMW固件更新及设置</title>
     <url>/2021/10/12/CMW_FW/</url>
     <content><![CDATA[<p>1.<strong>先卸载旧固件</strong>。如果找不到桌面维护图标，按<kbd>Win</kbd>+<kbd>R</kbd>打开Windows的<strong>运行对话框</strong>，输入以下指令后<kbd>ENTER</kbd>，在弹出的对应框中选择旧版本卸载全部。</p>
 <blockquote>
@@ -79,7 +79,7 @@
 <p><a href="/download/CMW100_Manual_V2.0.pdf">CMW100固件安装指引_V2.0 点击查看</a></p>
 ]]></content>
       <categories>
-        <category>原创</category>
+        <category>下载</category>
       </categories>
       <tags>
         <tag>CMW100</tag>
@@ -129,7 +129,7 @@
 <p>3.点击红色标记<strong>1 选择手机端口</strong>，点击<strong>2 选择对应的.xqcn文件</strong>，然后点击<strong>3 Start</strong>，等待大概3分钟左右，直到<strong>4这里显示Memory Restore Completed</strong> 就完成了。</p>
 ]]></content>
       <categories>
-        <category>原创</category>
+        <category>手册</category>
       </categories>
       <tags>
         <tag>QCN</tag>
@@ -137,7 +137,7 @@
       </tags>
   </entry>
   <entry>
-    <title>常用运行库及驱动安装（含下载地址）</title>
+    <title>常用运行库及驱动安装</title>
     <url>/2021/09/16/RuntimeAndDrivers/</url>
     <content><![CDATA[<p>1.<strong>微软常用运行库</strong>。安装运行库合集，可以解决类似下图2中的错误提示。</p>
 <p><img src="/2021/09/16/RuntimeAndDrivers/img2.png" alt="img2"></p>
@@ -150,7 +150,7 @@
 <p>下载地址：<a href="https://www.aliyundrive.com/s/nZCRhRmvRky">https://www.aliyundrive.com/s/nZCRhRmvRky</a></p>
 ]]></content>
       <categories>
-        <category>原创</category>
+        <category>下载</category>
       </categories>
       <tags>
         <tag>常用运行库</tag>
