@@ -24,7 +24,7 @@
   <entry>
     <title>批量Xml文件格式化</title>
     <url>/2021/05/18/BatchXmlFormater/</url>
-    <content><![CDATA[<h3 id="批量Xml文件格式化"><a href="#批量Xml文件格式化" class="headerlink" title="批量Xml文件格式化"></a>批量Xml文件格式化</h3><p><img src="/2021/05/18/BatchXmlFormater/01.png" alt="image"></p>
+    <content><![CDATA[<p><img src="/2021/05/18/BatchXmlFormater/01.png" alt="image"></p>
 <p><a href="/download/BatchXmlFormater.7z">点击下载</a></p>
 ]]></content>
       <categories>
@@ -89,7 +89,7 @@
   <entry>
     <title>LogParser使用说明</title>
     <url>/2021/05/18/LogParser/</url>
-    <content><![CDATA[<h3 id="LogParser-使用说明"><a href="#LogParser-使用说明" class="headerlink" title="LogParser 使用说明"></a>LogParser <strong>使用说明</strong></h3><p>为了大家定位产线测试问题，我们需要所有原始 log 不良明细，特意开发了以下工具： </p>
+    <content><![CDATA[<p>为了大家定位产线测试问题，我们需要所有原始 log 不良明细，特意开发了以下工具： </p>
 <ol>
 <li><p>下载并打开 LogParser.exe 。</p>
 <p><img src="/2021/05/18/LogParser/1.jpg"></p>
