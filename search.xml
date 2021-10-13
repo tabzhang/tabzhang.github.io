@@ -19,7 +19,7 @@
 <p><strong>9.在OnCreate中设置实现窗口无标题</strong></p>
 <figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">requestWindowFeature(Window.FEATURE_NO_TITLE);<span class="regexp">//</span>设置窗口没有标题</span><br></pre></td></tr></table></figure>
 
-<p><strong>10.在子Activity左上角显示导航返回按钮的方法，在****AndroidManifest.xml对应的Activity下设置如下内容</strong></p>
+<p>10.<strong>在子Activity左上角显示导航返回按钮的方法</strong>，在AndroidManifest.xml对应的Activity下设置如下内容</p>
 <figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">//设置第二个Activity的父Activity<span class="tag">&lt;<span class="name">activity</span> <span class="attr">android:name</span>=<span class="string">&quot;.InfoActivity&quot;</span>   <span class="attr">android:parentActivityName</span>=<span class="string">&quot;.MainActivity&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">activity</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>资料</category>
@@ -65,63 +65,9 @@
       </tags>
   </entry>
   <entry>
-    <title>GIT学习笔记</title>
-    <url>/2021/09/16/GitStudy/</url>
-    <content><![CDATA[<h3 id="GIT配置"><a href="#GIT配置" class="headerlink" title="GIT配置"></a>GIT配置</h3><blockquote>
-<p>$ git config –global user.name “Your Name”<br>$ git config –global user.email “<a href="mailto:&#101;&#x6d;&#x61;&#x69;&#108;&#x40;&#101;&#120;&#97;&#x6d;&#x70;&#x6c;&#x65;&#46;&#x63;&#111;&#109;">&#101;&#x6d;&#x61;&#x69;&#108;&#x40;&#101;&#120;&#97;&#x6d;&#x70;&#x6c;&#x65;&#46;&#x63;&#111;&#109;</a>“</p>
-</blockquote>
-<h3 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h3><blockquote>
-<p>初始化一个Git仓库，使用<strong>git init</strong>命令。</p>
-<p>添加文件到Git仓库，分两步：</p>
-<p>使用命令**git add <file>**，注意，可反复多次使用，添加多个文件；</file></p>
-<p>使用命令**git commit -m <message>**，完成。</message></p>
-</blockquote>
-<span id="more"></span>
-<h3 id="状态管理"><a href="#状态管理" class="headerlink" title="状态管理"></a>状态管理</h3><blockquote>
-<p>要随时掌握工作区的状态，使用<strong>git status</strong>命令。</p>
-<p>如果<code>git status</code>告诉你有文件被修改过，用<strong>git diff</strong>可以查看修改内容。</p>
-</blockquote>
-<h3 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h3><blockquote>
-<p>HEAD指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭。</p>
-<p>使用命令<strong>git reset –hard commit_id</strong>。</p>
-<p>穿梭前，用<strong>git log</strong>可以查看提交历史，以便确定要回退到哪个版本。</p>
-<p>单号显示历史：<strong>git log –pretty=oneline</strong></p>
-<p>要重返未来，用<strong>git reflog</strong>查看命令历史，以便确定要回到未来的哪个版本。</p>
-<p>提交回退到<strong>github</strong>，<strong>git push origin main –force</strong></p>
-</blockquote>
-<h3 id="撤销修改"><a href="#撤销修改" class="headerlink" title="撤销修改"></a>撤销修改</h3><blockquote>
-<p>场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令<strong>git checkout – file</strong>。</p>
-<p>场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令**git reset HEAD <file>**，就回到了场景1，第二步按场景1操作。</file></p>
-<p>场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，参考<a href="https://www.liaoxuefeng.com/wiki/896043488029600/897013573512192">版本回退</a>一节，不过前提是没有推送到远程库。</p>
-</blockquote>
-<h3 id="删除文件"><a href="#删除文件" class="headerlink" title="删除文件"></a>删除文件</h3><blockquote>
-<p>命令<strong>git rm</strong>用于删除一个文件。如果一个文件已经被提交到版本库，那么你永远不用担心误删，但是要小心，你只能恢复文件到最新版本，你会丢失<strong>最近一次提交后你修改的内容</strong>。</p>
-</blockquote>
-<h3 id="注册远程仓库"><a href="#注册远程仓库" class="headerlink" title="注册远程仓库"></a>注册远程仓库</h3><blockquote>
-<p>第1步：创建SSH Key。在用户主目录下，看看有没有.ssh目录，如果有，再看看这个目录下有没有<code>id_rsa</code>和<code>id_rsa.pub</code>这两个文件，如果已经有了，可直接跳到下一步。如果没有，打开Shell（Windows下打开Git Bash），创建SSH Key：</p>
-<p>$ ssh-keygen -t rsa -C “<a href="mailto:&#121;&#111;&#117;&#114;&#101;&#x6d;&#x61;&#x69;&#x6c;&#64;&#101;&#120;&#x61;&#x6d;&#x70;&#x6c;&#x65;&#46;&#x63;&#x6f;&#x6d;">&#121;&#111;&#117;&#114;&#101;&#x6d;&#x61;&#x69;&#x6c;&#64;&#101;&#120;&#x61;&#x6d;&#x70;&#x6c;&#x65;&#46;&#x63;&#x6f;&#x6d;</a>“</p>
-<p>第2步：登陆GitHub，打开“Account settings”，“SSH Keys”页面：</p>
-<p>然后，点“Add SSH Key”，填上任意Title，在Key文本框里粘贴<code>id_rsa.pub</code>文件的内容：</p>
-</blockquote>
-<h3 id="关联远程"><a href="#关联远程" class="headerlink" title="关联远程"></a>关联远程</h3><blockquote>
-<p>要关联一个远程库，使用命令<strong>git remote add origin git@server-name:path/repo-name.git</strong>；</p>
-<p>关联一个远程库时必须给远程库指定一个名字，<code>origin</code>是默认习惯命名；</p>
-<p>关联后，使用命令<strong>git push -u origin master</strong>第一次推送master分支的所有内容；</p>
-<p>此后，每次本地提交后，只要有必要，就可以使用命令<strong>git push origin master</strong>推送最新修改；</p>
-</blockquote>
-<h3 id="版本回退-1"><a href="#版本回退-1" class="headerlink" title="版本回退"></a>版本回退</h3>]]></content>
-      <categories>
-        <category>资料</category>
-      </categories>
-      <tags>
-        <tag>笔记</tag>
-        <tag>GIT</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>CMW固件更新及设置</title>
     <url>/2021/10/12/CMW_FW/</url>
-    <content><![CDATA[<p>1.<strong>先卸载旧固件</strong>。如果找不到桌面维护图标，按<kbd>Win</kbd>+<kbd>R</kbd>打开Windows的<strong>运行对话框</strong>，输入以下指令后<kbd>ENTER</kbd>，在弹出的对应框中选择旧版本卸载全部。</p>
+    <content><![CDATA[<p>1.<strong>先卸载旧固件</strong>，如果找不到桌面维护图标，按<kbd>Win</kbd>+<kbd>R</kbd>打开Windows的<strong>运行对话框</strong>，输入以下指令后<kbd>ENTER</kbd>，在弹出的对应框中卸载旧版本。</p>
 <blockquote>
 <p>“C:\Program Files (x86)\Rohde-Schwarz\RsDistributor\RsDistributor.exe” -maintenance</p>
 </blockquote>
@@ -167,6 +113,60 @@
       <tags>
         <tag>CMW100</tag>
         <tag>仪表</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>GIT学习笔记</title>
+    <url>/2021/09/16/GitStudy/</url>
+    <content><![CDATA[<h3 id="GIT配置"><a href="#GIT配置" class="headerlink" title="GIT配置"></a>GIT配置</h3><blockquote>
+<p>$ git config –global user.name “Your Name”<br>$ git config –global user.email “<a href="mailto:&#x65;&#x6d;&#x61;&#105;&#108;&#64;&#x65;&#120;&#97;&#x6d;&#x70;&#x6c;&#x65;&#x2e;&#99;&#x6f;&#x6d;">&#x65;&#x6d;&#x61;&#105;&#108;&#64;&#x65;&#120;&#97;&#x6d;&#x70;&#x6c;&#x65;&#x2e;&#99;&#x6f;&#x6d;</a>“</p>
+</blockquote>
+<h3 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h3><blockquote>
+<p>初始化一个Git仓库，使用<strong>git init</strong>命令。</p>
+<p>添加文件到Git仓库，分两步：</p>
+<p>使用命令<strong>git add</strong>  FileName，注意，可反复多次使用，添加多个文件；</p>
+<p>使用命令<strong>git commit -m</strong>  Message，完成。</p>
+</blockquote>
+<span id="more"></span>
+<h3 id="状态管理"><a href="#状态管理" class="headerlink" title="状态管理"></a>状态管理</h3><blockquote>
+<p>要随时掌握工作区的状态，使用<strong>git status</strong>命令。</p>
+<p>如果<code>git status</code>告诉你有文件被修改过，用<strong>git diff</strong>可以查看修改内容。</p>
+</blockquote>
+<h3 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h3><blockquote>
+<p>HEAD指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭。</p>
+<p>使用命令<strong>git reset –hard commit_id</strong>。</p>
+<p>穿梭前，用<strong>git log</strong>可以查看提交历史，以便确定要回退到哪个版本。</p>
+<p>单号显示历史：<strong>git log –pretty=oneline</strong></p>
+<p>要重返未来，用<strong>git reflog</strong>查看命令历史，以便确定要回到未来的哪个版本。</p>
+<p>提交回退到<strong>github</strong>，<strong>git push origin main –force</strong></p>
+</blockquote>
+<h3 id="撤销修改"><a href="#撤销修改" class="headerlink" title="撤销修改"></a>撤销修改</h3><blockquote>
+<p>场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令<strong>git checkout – file</strong>。</p>
+<p>场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令<strong>git reset HEAD</strong> file，就回到了场景1，第二步按场景1操作。</p>
+<p>场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，参考<a href="https://www.liaoxuefeng.com/wiki/896043488029600/897013573512192">版本回退</a>一节，不过前提是没有推送到远程库。</p>
+</blockquote>
+<h3 id="删除文件"><a href="#删除文件" class="headerlink" title="删除文件"></a>删除文件</h3><blockquote>
+<p>命令<strong>git rm</strong>用于删除一个文件。如果一个文件已经被提交到版本库，那么你永远不用担心误删，但是要小心，你只能恢复文件到最新版本，你会丢失<strong>最近一次提交后你修改的内容</strong>。</p>
+</blockquote>
+<h3 id="注册远程仓库"><a href="#注册远程仓库" class="headerlink" title="注册远程仓库"></a>注册远程仓库</h3><blockquote>
+<p>第1步：创建SSH Key。在用户主目录下，看看有没有.ssh目录，如果有，再看看这个目录下有没有<code>id_rsa</code>和<code>id_rsa.pub</code>这两个文件，如果已经有了，可直接跳到下一步。如果没有，打开Shell（Windows下打开Git Bash），创建SSH Key：</p>
+<p>$ ssh-keygen -t rsa -C “<a href="mailto:&#x79;&#x6f;&#x75;&#114;&#x65;&#109;&#97;&#x69;&#x6c;&#x40;&#101;&#x78;&#97;&#x6d;&#112;&#108;&#101;&#x2e;&#x63;&#x6f;&#x6d;">&#x79;&#x6f;&#x75;&#114;&#x65;&#109;&#97;&#x69;&#x6c;&#x40;&#101;&#x78;&#97;&#x6d;&#112;&#108;&#101;&#x2e;&#x63;&#x6f;&#x6d;</a>“</p>
+<p>第2步：登陆GitHub，打开“Account settings”，“SSH Keys”页面：</p>
+<p>然后，点“Add SSH Key”，填上任意Title，在Key文本框里粘贴<code>id_rsa.pub</code>文件的内容：</p>
+</blockquote>
+<h3 id="关联远程"><a href="#关联远程" class="headerlink" title="关联远程"></a>关联远程</h3><blockquote>
+<p>要关联一个远程库，使用命令<strong>git remote add origin git@server-name:path/repo-name.git</strong>；</p>
+<p>关联一个远程库时必须给远程库指定一个名字，<code>origin</code>是默认习惯命名；</p>
+<p>关联后，使用命令<strong>git push -u origin master</strong>第一次推送master分支的所有内容；</p>
+<p>此后，每次本地提交后，只要有必要，就可以使用命令<strong>git push origin master</strong>推送最新修改；</p>
+</blockquote>
+<h3 id="版本回退-1"><a href="#版本回退-1" class="headerlink" title="版本回退"></a>版本回退</h3>]]></content>
+      <categories>
+        <category>资料</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>GIT</tag>
       </tags>
   </entry>
   <entry>
@@ -249,8 +249,9 @@
 <p>Excel批量删除公式错误Ctrl+G<br>定位条件-&gt;公式-&gt;错误<br>改好后按Ctrl+enter</p>
 </blockquote>
 <span id="more"></span>
+
 <h3 id="Genymotion无法启动"><a href="#Genymotion无法启动" class="headerlink" title="Genymotion无法启动"></a>Genymotion无法启动</h3><blockquote>
-<p>1 结束所有VirtualBox相关进程<br>2 以管理员方式启动VirtualBox 不关闭<br>3 以管理员方式启动Genymotion<br>Genymotion 账号 - zx.<br>Android模拟器 Genymotion / Username: tabzhang / Email address: <a href="mailto:&#116;&#97;&#98;&#x2e;&#x7a;&#x68;&#97;&#x6e;&#103;&#x40;&#102;&#111;&#x78;&#109;&#x61;&#105;&#x6c;&#46;&#x63;&#x6f;&#109;">&#116;&#97;&#98;&#x2e;&#x7a;&#x68;&#97;&#x6e;&#103;&#x40;&#102;&#111;&#x78;&#109;&#x61;&#105;&#x6c;&#46;&#x63;&#x6f;&#109;</a></p>
+<p>1 结束所有VirtualBox相关进程<br>2 以管理员方式启动VirtualBox 不关闭<br>3 以管理员方式启动Genymotion<br>Genymotion 账号 - zx.<br>Android模拟器 Genymotion / Username: tabzhang / Email address: <a href="mailto:&#116;&#97;&#98;&#x2e;&#x7a;&#x68;&#x61;&#x6e;&#x67;&#x40;&#x66;&#111;&#120;&#x6d;&#x61;&#105;&#x6c;&#46;&#99;&#x6f;&#109;">&#116;&#97;&#98;&#x2e;&#x7a;&#x68;&#x61;&#x6e;&#x67;&#x40;&#x66;&#111;&#120;&#x6d;&#x61;&#105;&#x6c;&#46;&#99;&#x6f;&#109;</a></p>
 </blockquote>
 <h3 id="C-调用-C-新方式"><a href="#C-调用-C-新方式" class="headerlink" title="C# 调用 C++ 新方式"></a>C# 调用 C++ 新方式</h3><blockquote>
 <p>用C++CLI搭建C++和C#之间的桥梁</p>
@@ -265,7 +266,7 @@
 <ul>
 <li>“F12 “ 快速查找引用</li>
 <li>“Ctrl + -“ 快速返回方法调用处，两者是互逆操作</li>
-<li>VS中批量删除注释，按<kbd>Ctrl</kbd>+ H 选上正则表达式<br>Find what: //.*\n，Replace with: (空)，点replace all就行了</li>
+<li>VS中批量删除注释，按<kbd>Ctrl</kbd>+<kbd>H</kbd> 选上正则表达式<br>Find what: //.*\n，Replace with: (空)，点replace all就行了</li>
 </ul>
 </blockquote>
 <h3 id="术语"><a href="#术语" class="headerlink" title="术语"></a>术语</h3><blockquote>
@@ -277,13 +278,16 @@
 <p>1毫米=100丝=100道=1000微米 (南方称‘丝’，北方称‘道’，台湾称‘条’) 1毫米=10</p>
 <p>丝米=100忽米=1000微米，习惯上用的丝和丝米不是一个概念</p>
 </blockquote>
-<h3 id="mklink-用法示例"><a href="#mklink-用法示例" class="headerlink" title="mklink 用法示例"></a>mklink 用法示例</h3><blockquote>
+<h3 id="MkKink-用法示例"><a href="#MkKink-用法示例" class="headerlink" title="MkKink 用法示例"></a>MkKink 用法示例</h3><blockquote>
 <p>mklink /j “C:\Users\Librarys” “D:\MzDevelop\Librarys”<br>第一个参数是目标，第二个参数是原始文件夹</p>
 </blockquote>
-<h3 id="Crypto-Notepad-开源加密计事本"><a href="#Crypto-Notepad-开源加密计事本" class="headerlink" title="Crypto Notepad 开源加密计事本"></a>Crypto Notepad 开源加密计事本</h3><h3 id="高通-禁用驱动签名"><a href="#高通-禁用驱动签名" class="headerlink" title="高通-禁用驱动签名"></a>高通-禁用驱动签名</h3><blockquote>
+<h3 id="开源加密计事本"><a href="#开源加密计事本" class="headerlink" title="开源加密计事本"></a>开源加密计事本</h3><blockquote>
+<p>Crypto Notepad </p>
+</blockquote>
+<h3 id="高通-禁用驱动签名"><a href="#高通-禁用驱动签名" class="headerlink" title="高通-禁用驱动签名"></a>高通-禁用驱动签名</h3><blockquote>
 <p>打开 Driver Signature Enforcement Overrider 应用程序。</p>
 </blockquote>
-<h3 id="治具探针大小与安全距离"><a href="#治具探针大小与安全距离" class="headerlink" title="治具探针大小与安全距离"></a>治具探针大小与安全距离</h3><blockquote>
+<h3 id="治具探针安全距离"><a href="#治具探针安全距离" class="headerlink" title="治具探针安全距离"></a>治具探针安全距离</h3><blockquote>
 <p> 注: 1in=1000mil-2.54cm-25.4mm  1mm-0.3937inch-39.37mil</p>
 <p>1，100mil和100mil之间的最小安全距离（要求： 2.1mm） 2.095mm = 82.5mil</p>
 <p>2、75mil和75mil之间的最小安全距离（要求： 1.75mm） 1.74mm = 68.5mil</p>
@@ -295,14 +299,14 @@
 <h3 id="批处理去文件夹的隐藏属性"><a href="#批处理去文件夹的隐藏属性" class="headerlink" title="批处理去文件夹的隐藏属性"></a>批处理去文件夹的隐藏属性</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">attrib c:\&quot;ABC&quot; -s -h</span><br></pre></td></tr></table></figure>
 
 <h3 id="打印机地址"><a href="#打印机地址" class="headerlink" title="打印机地址"></a>打印机地址</h3><blockquote>
-<p>工艺，魅族换打印机，看网络摘要<br>彩色打印机:172.16.148.220,HP Color LaserJet MFP M277dw</p>
+<p>工艺换打印机，看网络摘要<br>彩色打印机:172.16.148.220,HP Color LaserJet MFP M277dw</p>
 </blockquote>
 <h2 id="C-展开和折叠代码的快捷键"><a href="#C-展开和折叠代码的快捷键" class="headerlink" title="C# 展开和折叠代码的快捷键"></a>C# 展开和折叠代码的快捷键</h2><blockquote>
 <p>Ctrl + M + O: 折叠所有方法</p>
 <p>Ctrl + M + M: 折叠或者展开当前方法</p>
 <p>Ctrl + M + L:  展开所有方法</p>
 </blockquote>
-<h3 id="回执可以淘宝搞定"><a href="#回执可以淘宝搞定" class="headerlink" title="回执可以淘宝搞定"></a>回执可以淘宝搞定</h3>]]></content>
+]]></content>
       <categories>
         <category>资料</category>
       </categories>
