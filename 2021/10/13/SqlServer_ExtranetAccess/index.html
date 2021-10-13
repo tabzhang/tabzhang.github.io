@@ -20,15 +20,35 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="TabZ随意录">
-<meta property="og:url" content="http://example.com/categories/%E4%B8%8B%E8%BD%BD/index.html">
+  <meta name="description" content="1.Sql Server 2008R2，确保可通过sa进行登录，先关掉防火墙，以免因为防火墙导致连接不上。 2.配置管理器中需要打开TCP&#x2F;IP，路径为Sql Server Configuration Manager–SqlServer网络配置–SqlServer的协议，并双击确定端口是1433">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SQLServer2008R2外网访问">
+<meta property="og:url" content="http://example.com/2021/10/13/SqlServer_ExtranetAccess/index.html">
 <meta property="og:site_name" content="TabZ随意录">
+<meta property="og:description" content="1.Sql Server 2008R2，确保可通过sa进行登录，先关掉防火墙，以免因为防火墙导致连接不上。 2.配置管理器中需要打开TCP&#x2F;IP，路径为Sql Server Configuration Manager–SqlServer网络配置–SqlServer的协议，并双击确定端口是1433">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2021/10/13/SqlServer_ExtranetAccess/img1.png">
+<meta property="og:image" content="http://example.com/2021/10/13/SqlServer_ExtranetAccess/img2.png">
+<meta property="og:image" content="http://example.com/2021/10/13/SqlServer_ExtranetAccess/img3.png">
+<meta property="og:image" content="http://example.com/2021/10/13/SqlServer_ExtranetAccess/img4.png">
+<meta property="og:image" content="http://example.com/2021/10/13/SqlServer_ExtranetAccess/img5.png">
+<meta property="og:image" content="http://example.com/2021/10/13/SqlServer_ExtranetAccess/img6.png">
+<meta property="og:image" content="http://example.com/2021/10/13/SqlServer_ExtranetAccess/img7.png">
+<meta property="og:image" content="http://example.com/2021/10/13/SqlServer_ExtranetAccess/img8.png">
+<meta property="og:image" content="http://example.com/2021/10/13/SqlServer_ExtranetAccess/img9.png">
+<meta property="og:image" content="http://example.com/2021/10/13/SqlServer_ExtranetAccess/img10.png">
+<meta property="og:image" content="http://example.com/2021/10/13/SqlServer_ExtranetAccess/img11.png">
+<meta property="og:image" content="http://example.com/2021/10/13/SqlServer_ExtranetAccess/img12.png">
+<meta property="og:image" content="http://example.com/2021/10/13/SqlServer_ExtranetAccess/img13.png">
+<meta property="article:published_time" content="2021-10-13T08:02:09.000Z">
+<meta property="article:modified_time" content="2021-10-13T02:53:43.281Z">
 <meta property="article:author" content="TabZ">
+<meta property="article:tag" content="SQLServer">
+<meta property="article:tag" content="外网访问">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2021/10/13/SqlServer_ExtranetAccess/img1.png">
 
-<link rel="canonical" href="http://example.com/categories/%E4%B8%8B%E8%BD%BD/">
+<link rel="canonical" href="http://example.com/2021/10/13/SqlServer_ExtranetAccess/">
 
 
 <script id="page-configurations">
@@ -36,12 +56,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>分类: 下载 | TabZ随意录</title>
+  <title>SQLServer2008R2外网访问 | TabZ随意录</title>
   
 
 
@@ -179,77 +199,188 @@
         <div class="content-wrap">
           
 
-          <div class="content category">
+          <div class="content post posts-expand">
             
 
+    
   
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/13/SqlServer_ExtranetAccess/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.svg">
+      <meta itemprop="name" content="TabZ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="TabZ随意录">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          SQLServer2008R2外网访问
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-10-13 16:02:09" itemprop="dateCreated datePublished" datetime="2021-10-13T16:02:09+08:00">2021-10-13</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%89%8B%E5%86%8C/" itemprop="url" rel="index"><span itemprop="name">手册</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
   
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h2 class="collection-header">下载
-          <small>分类</small>
-        </h2>
-      </div>
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/10/13/SqlServer_ExtranetAccess/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/10/13/SqlServer_ExtranetAccess/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2021</span>
-    </div>
+        <p>1.Sql Server 2008R2，确保可通过sa进行登录，先关掉防火墙，以免因为防火墙导致连接不上。</p>
+<p>2.配置管理器中需要打开TCP/IP，路径为Sql Server Configuration Manager–SqlServer网络配置–SqlServer的协议，并双击确定端口是1433</p>
+<p><img src="/2021/10/13/SqlServer_ExtranetAccess/img1.png" alt="img"></p>
+<span id="more"></span>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-10-12T09:10:09+08:00"
-              content="2021-10-12">
-          10-12
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/10/12/CMW_FW/" itemprop="url">
-            <span itemprop="name">CMW固件更新及设置</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-09-16T16:02:09+08:00"
-              content="2021-09-16">
-          09-16
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/09/16/RuntimeAndDrivers/" itemprop="url">
-            <span itemprop="name">常用运行库及驱动安装</span>
-          </a>
-      </div>
-
-    </header>
-  </article>
+<p>3.SqlServer Management Studio配置，右键–方面–外围应用配置-RemoteDecEnable-True。</p>
+<p><img src="/2021/10/13/SqlServer_ExtranetAccess/img2.png" alt="img"></p>
+<p>4.配置连接</p>
+<p><img src="/2021/10/13/SqlServer_ExtranetAccess/img3.png" alt="img"></p>
+<p>配置一下安全性，允许连接，启用登录。</p>
+<p><img src="/2021/10/13/SqlServer_ExtranetAccess/img4.png" alt="img"></p>
+<p>5.重启服务，再次进入配置管理器，重启服务，因为没有重启这个，一直导致外网访问失败，故一定要注意此项。<br>   <img src="/2021/10/13/SqlServer_ExtranetAccess/img5.png" alt="img"></p>
+<p>6.测试，使用外网电脑，通过程序或sql 数据库 连接进行测试。</p>
+<p>7.防火墙配置,这块做网站经常会用到，一般都比较熟练。这里我简单说一下，新建入站规则，打开1433端口。</p>
+<p>8.如果按照以上配置还有问题，请尝试进行更多配置</p>
+<blockquote>
+<p>1.程序例外</p>
+<p>Windows 防火墙中，选择”例外”选项卡，单击”添加程序”，在“添加程序”窗口中，单击“浏览”，选择 “C:\Program Files\Microsoft SQL Server\MSSQL10.MSSQLSERVER\MSSQL\Binn\sqlservr.exe” 可执行文件，然后单击“确定”按钮：</p>
+<p>2.服务确保开启</p>
+<p>配置管理器中，左侧的“SQL Server服务”，确保右侧的“SQL Server”以及“SQL Server Browser”正在运行。</p>
+</blockquote>
+<h3 id="SQLServer创建用户登录出现错误18456"><a href="#SQLServer创建用户登录出现错误18456" class="headerlink" title="SQLServer创建用户登录出现错误18456"></a>SQLServer创建用户登录出现错误18456</h3><p>使用SQLServer创建用户并登录的过程中总是出现问题，查找方法不易，于是就打算把解决方法写一下，方便后来的小伙伴查找<br>1、在本机数据库处右键，选择属性，点击打开。</p>
+<p><img src="/2021/10/13/SqlServer_ExtranetAccess/img6.png" alt="img"></p>
+<p>选择左侧的安全性，右侧服务器身份验证选择SQL Sever和Windos身份验证模式，点击确定。</p>
+<p><img src="/2021/10/13/SqlServer_ExtranetAccess/img7.png" alt="img"></p>
+<p>2、数据库–&gt;安全性–&gt;登录名，打开后下方选择你已经设置好的登录名，在登录名上右键，选择属性。</p>
+<p><img src="/2021/10/13/SqlServer_ExtranetAccess/img8.png" alt="img"></p>
+<p>将强制实施密码策略的选择取消，同时注意下方选择你想要登陆的数据库。</p>
+<p><img src="/2021/10/13/SqlServer_ExtranetAccess/img9.png" alt="img"></p>
+<p>左侧选择状态，注意将右侧的选项改成授予和启用，点击确定。</p>
+<p><img src="/2021/10/13/SqlServer_ExtranetAccess/img10.png" alt="img"></p>
+<p>此时断开重新使用创建的账号连接可能会出现18456错误。</p>
+<p>解决方法：<br>1、关闭SQLSeverl。</p>
+<p><img src="/2021/10/13/SqlServer_ExtranetAccess/img11.png" alt="img"></p>
+<p>2、打开菜单栏，找到SQL的配置管理器，打开。选择网络设置下的MSSQLSWEVER的协议，将右侧下面的两项启用。</p>
+<p><img src="/2021/10/13/SqlServer_ExtranetAccess/img12.png" alt="img"></p>
+<p>3、选择SQLSever服务，将第一项先停止再启动。关闭配置管理器，重新打开SQLSever 用创建的用户身份登录就可以了。</p>
+<p><img src="/2021/10/13/SqlServer_ExtranetAccess/img13.png" alt="img"></p>
 
     </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div></div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.png" alt="TabZ 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.png" alt="TabZ 支付宝">
+        <p>支付宝</p>
+      </div>
+
   </div>
-  
-  
-  
+</div>
 
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/SQLServer/" rel="tag"># SQLServer</a>
+              <a href="/tags/%E5%A4%96%E7%BD%91%E8%AE%BF%E9%97%AE/" rel="tag"># 外网访问</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/10/12/CMW_FW/" rel="prev" title="CMW固件更新及设置">
+      <i class="fa fa-chevron-left"></i> CMW固件更新及设置
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
 
 
           </div>
           
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -296,6 +427,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#SQLServer%E5%88%9B%E5%BB%BA%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E5%87%BA%E7%8E%B0%E9%94%99%E8%AF%AF18456"><span class="nav-number">1.</span> <span class="nav-text">SQLServer创建用户登录出现错误18456</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
