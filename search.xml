@@ -1,6 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Android学习笔记</title>
+    <url>/2016/04/16/AndroidStudy/</url>
+    <content><![CDATA[<p><strong>1.Xml 格式化Ctrl+Alt+L</strong></p>
+<p><strong>2.注释与反注释 Ctrl+/</strong></p>
+<p><strong>3.分割线</strong></p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">TextView</span>   <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span>   <span class="attr">android:layout_height</span>=<span class="string">&quot;1px&quot;</span>   <span class="attr">android:background</span>=<span class="string">&quot;#000000&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+<p><strong>4.Android中内嵌字体实现个性化</strong></p>
+<p>Android的Assets类有单个文件1MB体积的限制，将字体文件test.ttf放到工程的assets文件夹的fonts目录中。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> org.yftx.font;</span><br><span class="line"><span class="keyword">import</span> android.app.Activity;</span><br><span class="line"><span class="keyword">import</span> android.graphics.Color;</span><br><span class="line"><span class="keyword">import</span> android.graphics.Typeface;</span><br><span class="line"><span class="keyword">import</span> android.os.Bundle;</span><br><span class="line"><span class="keyword">import</span> android.widget.TextView;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainAcitity</span> <span class="keyword">extends</span> <span class="title">Activity</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.main);</span><br><span class="line">        Typeface textFont = Typeface.createFromAsset(getAssets(),<span class="string">&quot;fonts/test.ttf&quot;</span>);</span><br><span class="line">        TextView testView = (TextView) findViewById(R.id.textView2);</span><br><span class="line">        testView.setTypeface(textFont); <span class="comment">// 设置TextView的风格</span></span><br><span class="line">        testView.setTextSize(<span class="number">12</span>);</span><br><span class="line">        testView.setTextColor(Color.RED);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>5.发现语法错误，按Alt+Enter修复</strong></p>
+<p><strong>6</strong>.为android:onClick = “btnMain_click”，先选中<strong>btnMain_click</strong>，按Alt+Enter快速生成方法。</p>
+<p><strong>7.SVG代替IconFont</strong></p>
+<p><strong>8.<strong>通俗的说gradle是更好的管理三方库和打包用的，读音</strong>ge rua dou</strong></p>
+<p><strong>9.在OnCreate中设置实现窗口无标题</strong></p>
+<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">requestWindowFeature(Window.FEATURE_NO_TITLE);<span class="regexp">//</span>设置窗口没有标题</span><br></pre></td></tr></table></figure>
+
+<p><strong>10.在子Activity左上角显示导航返回按钮的方法，在****AndroidManifest.xml对应的Activity下设置如下内容</strong></p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">//设置第二个Activity的父Activity<span class="tag">&lt;<span class="name">activity</span> <span class="attr">android:name</span>=<span class="string">&quot;.InfoActivity&quot;</span>   <span class="attr">android:parentActivityName</span>=<span class="string">&quot;.MainActivity&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">activity</span>&gt;</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>资料</category>
+      </categories>
+      <tags>
+        <tag>Android</tag>
+        <tag>笔记</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>增量自动升级AutoUpdater V1.2</title>
     <url>/2021/05/13/AutoUpdater/</url>
     <content><![CDATA[<p><img src="/2021/05/13/AutoUpdater/01.png" alt="img1"></p>
@@ -33,6 +62,60 @@
       <tags>
         <tag>XML</tag>
         <tag>文件格式化</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>GIT学习笔记</title>
+    <url>/2021/09/16/GitStudy/</url>
+    <content><![CDATA[<h3 id="GIT配置"><a href="#GIT配置" class="headerlink" title="GIT配置"></a>GIT配置</h3><blockquote>
+<p>$ git config –global user.name “Your Name”<br>$ git config –global user.email “<a href="mailto:&#101;&#x6d;&#x61;&#x69;&#108;&#x40;&#101;&#120;&#97;&#x6d;&#x70;&#x6c;&#x65;&#46;&#x63;&#111;&#109;">&#101;&#x6d;&#x61;&#x69;&#108;&#x40;&#101;&#120;&#97;&#x6d;&#x70;&#x6c;&#x65;&#46;&#x63;&#111;&#109;</a>“</p>
+</blockquote>
+<h3 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h3><blockquote>
+<p>初始化一个Git仓库，使用<strong>git init</strong>命令。</p>
+<p>添加文件到Git仓库，分两步：</p>
+<p>使用命令**git add <file>**，注意，可反复多次使用，添加多个文件；</file></p>
+<p>使用命令**git commit -m <message>**，完成。</message></p>
+</blockquote>
+<span id="more"></span>
+<h3 id="状态管理"><a href="#状态管理" class="headerlink" title="状态管理"></a>状态管理</h3><blockquote>
+<p>要随时掌握工作区的状态，使用<strong>git status</strong>命令。</p>
+<p>如果<code>git status</code>告诉你有文件被修改过，用<strong>git diff</strong>可以查看修改内容。</p>
+</blockquote>
+<h3 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h3><blockquote>
+<p>HEAD指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭。</p>
+<p>使用命令<strong>git reset –hard commit_id</strong>。</p>
+<p>穿梭前，用<strong>git log</strong>可以查看提交历史，以便确定要回退到哪个版本。</p>
+<p>单号显示历史：<strong>git log –pretty=oneline</strong></p>
+<p>要重返未来，用<strong>git reflog</strong>查看命令历史，以便确定要回到未来的哪个版本。</p>
+<p>提交回退到<strong>github</strong>，<strong>git push origin main –force</strong></p>
+</blockquote>
+<h3 id="撤销修改"><a href="#撤销修改" class="headerlink" title="撤销修改"></a>撤销修改</h3><blockquote>
+<p>场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令<strong>git checkout – file</strong>。</p>
+<p>场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令**git reset HEAD <file>**，就回到了场景1，第二步按场景1操作。</file></p>
+<p>场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，参考<a href="https://www.liaoxuefeng.com/wiki/896043488029600/897013573512192">版本回退</a>一节，不过前提是没有推送到远程库。</p>
+</blockquote>
+<h3 id="删除文件"><a href="#删除文件" class="headerlink" title="删除文件"></a>删除文件</h3><blockquote>
+<p>命令<strong>git rm</strong>用于删除一个文件。如果一个文件已经被提交到版本库，那么你永远不用担心误删，但是要小心，你只能恢复文件到最新版本，你会丢失<strong>最近一次提交后你修改的内容</strong>。</p>
+</blockquote>
+<h3 id="注册远程仓库"><a href="#注册远程仓库" class="headerlink" title="注册远程仓库"></a>注册远程仓库</h3><blockquote>
+<p>第1步：创建SSH Key。在用户主目录下，看看有没有.ssh目录，如果有，再看看这个目录下有没有<code>id_rsa</code>和<code>id_rsa.pub</code>这两个文件，如果已经有了，可直接跳到下一步。如果没有，打开Shell（Windows下打开Git Bash），创建SSH Key：</p>
+<p>$ ssh-keygen -t rsa -C “<a href="mailto:&#121;&#111;&#117;&#114;&#101;&#x6d;&#x61;&#x69;&#x6c;&#64;&#101;&#120;&#x61;&#x6d;&#x70;&#x6c;&#x65;&#46;&#x63;&#x6f;&#x6d;">&#121;&#111;&#117;&#114;&#101;&#x6d;&#x61;&#x69;&#x6c;&#64;&#101;&#120;&#x61;&#x6d;&#x70;&#x6c;&#x65;&#46;&#x63;&#x6f;&#x6d;</a>“</p>
+<p>第2步：登陆GitHub，打开“Account settings”，“SSH Keys”页面：</p>
+<p>然后，点“Add SSH Key”，填上任意Title，在Key文本框里粘贴<code>id_rsa.pub</code>文件的内容：</p>
+</blockquote>
+<h3 id="关联远程"><a href="#关联远程" class="headerlink" title="关联远程"></a>关联远程</h3><blockquote>
+<p>要关联一个远程库，使用命令<strong>git remote add origin git@server-name:path/repo-name.git</strong>；</p>
+<p>关联一个远程库时必须给远程库指定一个名字，<code>origin</code>是默认习惯命名；</p>
+<p>关联后，使用命令<strong>git push -u origin master</strong>第一次推送master分支的所有内容；</p>
+<p>此后，每次本地提交后，只要有必要，就可以使用命令<strong>git push origin master</strong>推送最新修改；</p>
+</blockquote>
+<h3 id="版本回退-1"><a href="#版本回退-1" class="headerlink" title="版本回退"></a>版本回退</h3>]]></content>
+      <categories>
+        <category>资料</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>GIT</tag>
       </tags>
   </entry>
   <entry>
@@ -141,11 +224,14 @@
     <content><![CDATA[<p>1.<strong>微软常用运行库</strong>。安装运行库合集，可以解决类似下图2中的错误提示。</p>
 <p><img src="/2021/09/16/RuntimeAndDrivers/img2.png" alt="img2"></p>
 <span id="more"></span>
+
 <p><img src="/2021/09/16/RuntimeAndDrivers/img1.png" alt="img1"></p>
 <p>2.<strong>NI 488.2安装</strong>。如果下图，<strong>要勾选.Net Framework支持</strong>。</p>
 <p><img src="/2021/09/16/RuntimeAndDrivers/img3.png" alt="img3"></p>
 <p>3.<strong>IT天空万能驱动</strong>。</p>
 <p><img src="/2021/09/16/RuntimeAndDrivers/img4.png" alt="img4"></p>
+<p>4.<strong>Microsoft .NET Framework 4.5.2</strong>。</p>
+<p>官网下载  <a href="https://www.microsoft.com/zh-CN/download/details.aspx?id=42642">https://www.microsoft.com/zh-CN/download/details.aspx?id=42642</a></p>
 <p>下载地址：<a href="https://www.aliyundrive.com/s/nZCRhRmvRky">https://www.aliyundrive.com/s/nZCRhRmvRky</a></p>
 ]]></content>
       <categories>
@@ -157,10 +243,78 @@
       </tags>
   </entry>
   <entry>
+    <title>杂类拾零</title>
+    <url>/2021/10/13/Skills/</url>
+    <content><![CDATA[<h3 id="Excel小技巧"><a href="#Excel小技巧" class="headerlink" title="Excel小技巧"></a>Excel小技巧</h3><blockquote>
+<p>Excel批量删除公式错误Ctrl+G<br>定位条件-&gt;公式-&gt;错误<br>改好后按Ctrl+enter</p>
+</blockquote>
+<span id="more"></span>
+<h3 id="Genymotion无法启动"><a href="#Genymotion无法启动" class="headerlink" title="Genymotion无法启动"></a>Genymotion无法启动</h3><blockquote>
+<p>1 结束所有VirtualBox相关进程<br>2 以管理员方式启动VirtualBox 不关闭<br>3 以管理员方式启动Genymotion<br>Genymotion 账号 - zx.<br>Android模拟器 Genymotion / Username: tabzhang / Email address: <a href="mailto:&#116;&#97;&#98;&#x2e;&#x7a;&#x68;&#97;&#x6e;&#103;&#x40;&#102;&#111;&#x78;&#109;&#x61;&#105;&#x6c;&#46;&#x63;&#x6f;&#109;">&#116;&#97;&#98;&#x2e;&#x7a;&#x68;&#97;&#x6e;&#103;&#x40;&#102;&#111;&#x78;&#109;&#x61;&#105;&#x6c;&#46;&#x63;&#x6f;&#109;</a></p>
+</blockquote>
+<h3 id="C-调用-C-新方式"><a href="#C-调用-C-新方式" class="headerlink" title="C# 调用 C++ 新方式"></a>C# 调用 C++ 新方式</h3><blockquote>
+<p>用C++CLI搭建C++和C#之间的桥梁</p>
+<p><a href="https://www.cnblogs.com/ceachy/p/Cpp-Cli-Overview.html">https://www.cnblogs.com/ceachy/p/Cpp-Cli-Overview.html</a> </p>
+<p><strong>直接调用</strong></p>
+<p>SWIG 技术：<a href="http://www.swig.org/">http://www.swig.org/</a></p>
+<p>Conari： <a href="https://github.com/3F/Conari">https://github.com/3F/Conari</a> </p>
+<p>.Net DllExport : <a href="https://github.com/3F/DllExport">https://github.com/3F/DllExport</a> </p>
+<p>CppSharp : <a href="https://github.com/mono/CppSharp">https://github.com/mono/CppSharp</a> </p>
+</blockquote>
+<h3 id="VS-快捷键"><a href="#VS-快捷键" class="headerlink" title="VS 快捷键"></a>VS 快捷键</h3><blockquote>
+<ul>
+<li>“F12 “ 快速查找引用</li>
+<li>“Ctrl + -“ 快速返回方法调用处，两者是互逆操作</li>
+<li>VS中批量删除注释，按<kbd>Ctrl</kbd>+ H 选上正则表达式<br>Find what: //.*\n，Replace with: (空)，点replace all就行了</li>
+</ul>
+</blockquote>
+<h3 id="术语"><a href="#术语" class="headerlink" title="术语"></a>术语</h3><blockquote>
+<p>First Piece Qualification (FPQ) 首件资格认证</p>
+<p>Pilot Lot Qualification (PLQ) 试验批量资格认证</p>
+<p>bi-weekly 两星期一次</p>
+<p>Double Bag Kit 双袋包 Half Kit 半包 FullKit 全副装备</p>
+<p>die-casting 美 [‘dai:k’ɑ:st] 压铸; 压模法，铸造法</p>
+<p>1毫米=100丝=100道=1000微米 (南方称‘丝’，北方称‘道’，台湾称‘条’) 1毫米=10</p>
+<p>丝米=100忽米=1000微米，习惯上用的丝和丝米不是一个概念</p>
+</blockquote>
+<h3 id="mklink-用法示例"><a href="#mklink-用法示例" class="headerlink" title="mklink 用法示例"></a>mklink 用法示例</h3><blockquote>
+<p>mklink /j “C:\Users\Librarys” “D:\MzDevelop\Librarys”<br>第一个参数是目标，第二个参数是原始文件夹</p>
+</blockquote>
+<h3 id="Crypto-Notepad-开源加密计事本"><a href="#Crypto-Notepad-开源加密计事本" class="headerlink" title="Crypto Notepad 开源加密计事本"></a>Crypto Notepad 开源加密计事本</h3><h3 id="高通-禁用驱动签名"><a href="#高通-禁用驱动签名" class="headerlink" title="高通-禁用驱动签名"></a>高通-禁用驱动签名</h3><blockquote>
+<p>打开 Driver Signature Enforcement Overrider 应用程序。</p>
+</blockquote>
+<h3 id="治具探针大小与安全距离"><a href="#治具探针大小与安全距离" class="headerlink" title="治具探针大小与安全距离"></a>治具探针大小与安全距离</h3><blockquote>
+<p> 注: 1in=1000mil-2.54cm-25.4mm  1mm-0.3937inch-39.37mil</p>
+<p>1，100mil和100mil之间的最小安全距离（要求： 2.1mm） 2.095mm = 82.5mil</p>
+<p>2、75mil和75mil之间的最小安全距离（要求： 1.75mm） 1.74mm = 68.5mil</p>
+<p>3、50mil和50mil之间的最小安全距离（要求： 1.21mm） 1.2065mm = 47.5mil</p>
+<p>4、100mil和75mil之间的最小安全距离（要求： 1.92mm） 1.9177mm = 75.5mil</p>
+<p>5、100mil和50mil之间的最小安全距离（要求： 1.72mm） 1.7145mm = 67.5mil</p>
+<p>6、75mil和50mil之间的最小安全距离（要求： 1.55mm） 1.5367mm = 60.5mil</p>
+</blockquote>
+<h3 id="批处理去文件夹的隐藏属性"><a href="#批处理去文件夹的隐藏属性" class="headerlink" title="批处理去文件夹的隐藏属性"></a>批处理去文件夹的隐藏属性</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">attrib c:\&quot;ABC&quot; -s -h</span><br></pre></td></tr></table></figure>
+
+<h3 id="打印机地址"><a href="#打印机地址" class="headerlink" title="打印机地址"></a>打印机地址</h3><blockquote>
+<p>工艺，魅族换打印机，看网络摘要<br>彩色打印机:172.16.148.220,HP Color LaserJet MFP M277dw</p>
+</blockquote>
+<h2 id="C-展开和折叠代码的快捷键"><a href="#C-展开和折叠代码的快捷键" class="headerlink" title="C# 展开和折叠代码的快捷键"></a>C# 展开和折叠代码的快捷键</h2><blockquote>
+<p>Ctrl + M + O: 折叠所有方法</p>
+<p>Ctrl + M + M: 折叠或者展开当前方法</p>
+<p>Ctrl + M + L:  展开所有方法</p>
+</blockquote>
+<h3 id="回执可以淘宝搞定"><a href="#回执可以淘宝搞定" class="headerlink" title="回执可以淘宝搞定"></a>回执可以淘宝搞定</h3>]]></content>
+      <categories>
+        <category>资料</category>
+      </categories>
+      <tags>
+        <tag>杂类</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>SQLServer2008R2外网访问</title>
     <url>/2021/10/13/SqlServer_ExtranetAccess/</url>
     <content><![CDATA[<p>1.Sql Server 2008R2，确保可通过sa进行登录，先关掉防火墙，以免因为防火墙导致连接不上。</p>
-<p>2.配置管理器中需要打开TCP/IP，路径为Sql Server Configuration Manager–SqlServer网络配置–SqlServer的协议，并双击确定端口是1433</p>
+<p>2.配置管理器中需要打开TCP/IP，路径为Sql Server Configuration Manager-SqlServer网络配置-SqlServer的协议，并双击确定端口是1433</p>
 <p><img src="/2021/10/13/SqlServer_ExtranetAccess/img1.png" alt="img"></p>
 <span id="more"></span>
 
@@ -170,7 +324,8 @@
 <p><img src="/2021/10/13/SqlServer_ExtranetAccess/img3.png" alt="img"></p>
 <p>配置一下安全性，允许连接，启用登录。</p>
 <p><img src="/2021/10/13/SqlServer_ExtranetAccess/img4.png" alt="img"></p>
-<p>5.重启服务，再次进入配置管理器，重启服务，因为没有重启这个，一直导致外网访问失败，故一定要注意此项。<br>   <img src="/2021/10/13/SqlServer_ExtranetAccess/img5.png" alt="img"></p>
+<p>5.重启服务，再次进入配置管理器，重启服务，因为没有重启这个，一直导致外网访问失败，故一定要注意此项。</p>
+<p><img src="/2021/10/13/SqlServer_ExtranetAccess/img5.png" alt="img"></p>
 <p>6.测试，使用外网电脑，通过程序或sql 数据库 连接进行测试。</p>
 <p>7.防火墙配置,这块做网站经常会用到，一般都比较熟练。这里我简单说一下，新建入站规则，打开1433端口。</p>
 <p>8.如果按照以上配置还有问题，请尝试进行更多配置</p>
@@ -189,14 +344,13 @@
 <p>将强制实施密码策略的选择取消，同时注意下方选择你想要登陆的数据库。</p>
 <p><img src="/2021/10/13/SqlServer_ExtranetAccess/img9.png" alt="img"></p>
 <p>左侧选择状态，注意将右侧的选项改成授予和启用，点击确定。</p>
-<p><img src="/2021/10/13/SqlServer_ExtranetAccess/img10.png" alt="img"></p>
+<p><img src="/2021/10/13/SqlServer_ExtranetAccess/img4.png" alt="img"></p>
 <p>此时断开重新使用创建的账号连接可能会出现18456错误。</p>
-<p>解决方法：<br>1、关闭SQLSeverl。</p>
-<p><img src="/2021/10/13/SqlServer_ExtranetAccess/img11.png" alt="img"></p>
+<p>解决方法：<br>1、关闭SQLServer。</p>
 <p>2、打开菜单栏，找到SQL的配置管理器，打开。选择网络设置下的MSSQLSWEVER的协议，将右侧下面的两项启用。</p>
-<p><img src="/2021/10/13/SqlServer_ExtranetAccess/img12.png" alt="img"></p>
+<p><img src="/2021/10/13/SqlServer_ExtranetAccess/img1.png" alt="img"></p>
 <p>3、选择SQLSever服务，将第一项先停止再启动。关闭配置管理器，重新打开SQLSever 用创建的用户身份登录就可以了。</p>
-<p><img src="/2021/10/13/SqlServer_ExtranetAccess/img13.png" alt="img"></p>
+<p><img src="/2021/10/13/SqlServer_ExtranetAccess/img5.png" alt="img"></p>
 ]]></content>
       <categories>
         <category>手册</category>
