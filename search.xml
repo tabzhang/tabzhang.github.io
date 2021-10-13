@@ -122,7 +122,7 @@
     <title>恢复QCN的方法(校准数据)</title>
     <url>/2021/09/16/RestoreQCN/</url>
     <content><![CDATA[<p>1.对比xqcn文件名的PSN与主板编号与PSN是否一致。</p>
-<p>2.关闭一切测试工具，把主板上电正常开机后，打开QPST中的<strong>Software Download</strong>,并切换到<strong>Restore页面</strong>如下图：<br><img src="/2021/09/16/RestoreQCN/img2.png" alt="img2"></p>
+<p>2.关闭一切测试工具，把主板上电正常开机后，打开QPST中的<strong>Software Download</strong>,并切换到<strong>Restore页面</strong>如下图：<br><img src="/2021/09/16/RestoreQCN/img2.png" alt="img1"></p>
 <span id="more"></span>
 <p>3.点击红色标记<strong>1 选择手机端口</strong>，点击<strong>2 选择对应的.xqcn文件</strong>，然后点击<strong>3 Start</strong></p>
 <p>4.等待大概3分钟左右，直到<strong>4这里显示Memory Restore Completed</strong> 就完成了。</p>
