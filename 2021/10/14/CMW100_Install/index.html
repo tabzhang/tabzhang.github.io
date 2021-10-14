@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="1.环境要求1.1 革新的设计理念  分离计算模块，让固件运行在外接电脑  速度提升更加实惠  通过更新电脑的CPU即可提升速度  可以最早时间升级到最快的CPU">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CMW100应用操作指引">
+<meta property="og:url" content="http://example.com/2021/10/14/CMW100_Install/index.html">
+<meta property="og:site_name" content="TabZ随意录">
+<meta property="og:description" content="1.环境要求1.1 革新的设计理念  分离计算模块，让固件运行在外接电脑  速度提升更加实惠  通过更新电脑的CPU即可提升速度  可以最早时间升级到最快的CPU">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2021/10/14/CMW100_Install/img16.png">
+<meta property="og:image" content="http://example.com/2021/10/14/CMW100_Install/img1.png">
+<meta property="og:image" content="http://example.com/2021/10/14/CMW100_Install/img2.png">
+<meta property="og:image" content="http://example.com/2021/10/14/CMW100_Install/img9.png">
+<meta property="og:image" content="http://example.com/2021/10/14/CMW100_Install/img3.png">
+<meta property="og:image" content="http://example.com/2021/10/14/CMW100_Install/img4.png">
+<meta property="og:image" content="http://example.com/2021/10/14/CMW100_Install/img5.png">
+<meta property="og:image" content="http://example.com/2021/10/14/CMW100_Install/img6.png">
+<meta property="og:image" content="http://example.com/2021/10/14/CMW100_Install/img0.png">
+<meta property="og:image" content="http://example.com/2021/10/14/CMW100_Install/img8.png">
+<meta property="og:image" content="http://example.com/2021/10/14/CMW100_Install/img10.png">
+<meta property="og:image" content="http://example.com/2021/10/14/CMW100_Install/img11.png">
+<meta property="og:image" content="http://example.com/2021/10/14/CMW100_Install/img12.png">
+<meta property="og:image" content="http://example.com/2021/10/14/CMW100_Install/img13.png">
+<meta property="article:published_time" content="2021-10-14T09:07:00.000Z">
+<meta property="article:modified_time" content="2021-10-14T09:10:41.458Z">
+<meta property="article:author" content="TabZ">
+<meta property="article:tag" content="CMW100">
+<meta property="article:tag" content="仪表">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2021/10/14/CMW100_Install/img16.png">
+
+<link rel="canonical" href="http://example.com/2021/10/14/CMW100_Install/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>CMW100应用操作指引 | TabZ随意录</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">TabZ随意录</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">学习笔记 | 个人作品</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-首页">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-归档">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-分类">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-标签">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-关于">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/14/CMW100_Install/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.svg">
+      <meta itemprop="name" content="TabZ">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="TabZ随意录">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          CMW100应用操作指引
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-10-14 17:07:00" itemprop="dateCreated datePublished" datetime="2021-10-14T17:07:00+08:00">2021-10-14</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%89%8B%E5%86%8C/" itemprop="url" rel="index"><span itemprop="name">手册</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/10/14/CMW100_Install/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/10/14/CMW100_Install/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>2.8k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="1-环境要求"><a href="#1-环境要求" class="headerlink" title="1.环境要求"></a>1.环境要求</h1><h2 id="1-1-革新的设计理念"><a href="#1-1-革新的设计理念" class="headerlink" title="1.1 革新的设计理念"></a>1.1 革新的设计理念</h2><p><img src="/2021/10/14/CMW100_Install/img16.png"></p>
+<p> <strong>分离计算模块，让固件运行在外接电脑</strong></p>
+<ul>
+<li><p>速度提升更加实惠</p>
+</li>
+<li><p>通过更新电脑的CPU即可提升速度</p>
+</li>
+<li><p>可以最早时间升级到最快的CPU</p>
+<span id="more"></span></li>
+<li><p>更加灵活</p>
+</li>
+</ul>
+<p><strong>体积小，质量轻，节能环保</strong></p>
+<ul>
+<li>功耗&lt;80W</li>
+<li>发热低，提高无故障工作时间</li>
+<li>安静</li>
+</ul>
+<p><strong>被动散热，无风扇，无通风孔，不会进灰尘</strong></p>
+<p><strong>多种测试效率提升方案，应对产线的不同需求， 实现最佳仪器利用率</strong> </p>
+<h2 id="1-2-硬件环境"><a href="#1-2-硬件环境" class="headerlink" title="1.2 硬件环境"></a>1.2 硬件环境</h2><p>&ensp; CPU ：Intel i5及以上版本<br>&ensp; 内存：4Gb以上<br>&ensp; USB ：3.0版本 </p>
+<h2 id="1-3-操作系统"><a href="#1-3-操作系统" class="headerlink" title="1.3 操作系统"></a>1.3 操作系统</h2><p>&ensp; &ensp; R&amp;S CMW100 Firmware需要运行在64位的操作系统上，不支持32位版本的操作系统，不支持WindowsXP系统，推荐使用如下版本操作系统。 Windows 7 Professional 64 Bit2.固件安装 </p>
+<h2 id="2-1-连接CMW100"><a href="#2-1-连接CMW100" class="headerlink" title="2.1 连接CMW100"></a>2.1 连接CMW100</h2><p>&ensp; &ensp; 将电源适配器与CMW100进行连接。 CWM100与PC使用USB3.0接口进行连接，USB 3.0 接口通常会使用两个“SS”进行标记，如下图所示： </p>
+<p><img src="/2021/10/14/CMW100_Install/img1.png"></p>
+<h2 id="2-2-安装CMW100固件"><a href="#2-2-安装CMW100固件" class="headerlink" title="2.2 安装CMW100固件"></a>2.2 安装CMW100固件</h2><p>&ensp; &ensp; 将CMW100的固件软件拷贝到PC任意目录中，以<strong>管理员的身份</strong>运行所选择的固件，如需要将各制式的固件一同安装，请勾选“Add other setups from current directory”，点击“<strong>Next</strong>” 进行安装，如下图所示：</p>
+<p><img src="/2021/10/14/CMW100_Install/img2.png"></p>
+<p>&ensp; &ensp; 固件安装完成后，您将看到“重新启动电脑”的提示对话框，点击“Yes”重新启动电脑，重新启动时，需要将CMW100断电关机，然后在重新上电开机。 </p>
+<h2 id="2-3-卸载CMW100固件"><a href="#2-3-卸载CMW100固件" class="headerlink" title="2.3 卸载CMW100固件"></a>2.3 卸载CMW100固件</h2><p>&ensp; &ensp;如果找不到桌面维护图标，按Win+R打开Windows的<strong>运行对话框</strong>，输入以下指令后ENTER，在弹出的对应框中卸载旧版本。</p>
+<blockquote>
+<p>“C:\Program Files (x86)\Rohde-Schwarz\RsDistributor\RsDistributor.exe” -maintenance</p>
+</blockquote>
+<p><img src="/2021/10/14/CMW100_Install/img9.png"></p>
+<h1 id="3-其它Windows系统设置"><a href="#3-其它Windows系统设置" class="headerlink" title="3.其它Windows系统设置"></a>3.其它Windows系统设置</h1><h2 id="3-1-防火墙设置"><a href="#3-1-防火墙设置" class="headerlink" title="3.1 防火墙设置"></a>3.1 防火墙设置</h2><p>&ensp; &ensp;在“控制面板”中找到“系统和安全”设置按钮，点击进入即可看到“Windows 防火墙”设置选项，选择关闭防火墙设置，如下图所示： </p>
+<p><img src="/2021/10/14/CMW100_Install/img3.png"></p>
+<h2 id="3-2-网络设置"><a href="#3-2-网络设置" class="headerlink" title="3.2 网络设置"></a>3.2 网络设置</h2><p>&ensp; &ensp;当远程手动或使用自动化程序控制CMW100时，需要先设置CMW100所在电脑与控制端电脑的网络，确保“控制端”与“被控端”电脑在<strong>同一网络内</strong>。 </p>
+<h3 id="3-3-1-CMW100固件与ATE工具运行在同一台电脑"><a href="#3-3-1-CMW100固件与ATE工具运行在同一台电脑" class="headerlink" title="3.3.1 CMW100固件与ATE工具运行在同一台电脑"></a>3.3.1 CMW100固件与ATE工具运行在同一台电脑</h3><p>&ensp; &ensp;在产线使用自动化程序进行测试时，如果自动化测试ATE工具软件与CMW100固件安装在同一同电脑上，本地电脑无需做任何设置，只需要在自动化程序中设置连接地址资源，与CMW100连接可以使用本地IP，即“127.0.0.1” ，程序中连接资源名称使用“<strong>TCPIP0:127.0.0.1::INSTR</strong>”  。 </p>
+<h3 id="3-3-2-CMW100固件与ATE工具运行在不同电脑"><a href="#3-3-2-CMW100固件与ATE工具运行在不同电脑" class="headerlink" title="3.3.2 CMW100固件与ATE工具运行在不同电脑"></a>3.3.2 CMW100固件与ATE工具运行在不同电脑</h3><p>&ensp; &ensp; 打开“网络和共享中心”，如下图： 在“网络协议属性”设置中为“控制端”与“被控端”电脑设置IP地址，确保两台电脑在同一网络内。 </p>
+<p><img src="/2021/10/14/CMW100_Install/img4.png"></p>
+<h2 id="3-3-关闭电源节能模式"><a href="#3-3-关闭电源节能模式" class="headerlink" title="3.3 关闭电源节能模式"></a>3.3 关闭电源节能模式</h2><p>&ensp; &ensp; 在控制面板中选择”系统&amp;安全”，在选择“电源管理”选项，选择“<strong>高性能</strong>”，并修改设置 “使电脑进入休眠模式”， 选择“永不” 选择“电源高级设置”选项，设置处理器电源管理，将“最小处理器状态“设置为100%。</p>
+<p> <img src="/2021/10/14/CMW100_Install/img5.png"></p>
+<p><img src="/2021/10/14/CMW100_Install/img6.png"></p>
+<h1 id="4-ARB波形文件安装位置"><a href="#4-ARB波形文件安装位置" class="headerlink" title="4.ARB波形文件安装位置"></a>4.ARB波形文件安装位置</h1><p>&ensp; &ensp; 使用CMW100波形文件安装包安装的波形文件其存储路径与CMW500存储路径不同，新的存储路径为： “<strong>C:\ProgramData\Rohde-Schwarz\CMW\Data\waveform</strong>”</p>
+<p> “C:\PROGRAMDATA”是一个隐藏目录，使用前需要在系统文件管理设置中将“显示隐藏”文件打   开，也可以打开文件浏览器直接输入以上路径。 </p>
+<h1 id="5-开启CMW100-固件"><a href="#5-开启CMW100-固件" class="headerlink" title="5.开启CMW100 固件"></a>5.开启CMW100 固件</h1><p>&ensp; &ensp; CMW100的固件正常安装完成后，您可以在Windows系统的桌面上找到一个“CMW”的图标，可以手动点击此图标打开CMW100固件，在首次开启CMW固件时，CMW100固件将进行“Fimware Update“固件更新，因此首次启动时间相对正常启动时间会长一些。 CMW100固件成功启动后，CMW100固件可以正常显示，没有其它保持信息。 </p>
+<p><img src="/2021/10/14/CMW100_Install/img0.png"></p>
+<h1 id="6-扩展操作及常见问题"><a href="#6-扩展操作及常见问题" class="headerlink" title="6.扩展操作及常见问题"></a>6.扩展操作及常见问题</h1><h2 id="6-1-CMW100-硬件无法识别"><a href="#6-1-CMW100-硬件无法识别" class="headerlink" title="6.1 CMW100 硬件无法识别"></a>6.1 CMW100 硬件无法识别</h2><p>&ensp; &ensp; 在设备管理器中显示“无法识别的USB设备”，遇到此问题请做如下检查： </p>
+<p><img src="/2021/10/14/CMW100_Install/img8.png"></p>
+<ul>
+<li>检查CMW100供电是否正常，重新开关电源。 </li>
+<li>USB 是否正常连接，USB端口是否正常，可以尝试更换到其它USB接口。</li>
+</ul>
+<p>&ensp; &ensp;正常情况下，设备管理器中将会显示一个“Rohde &amp; Schwarz supported devices“及“R&amp;S CMW100” </p>
+<h2 id="6-2-接入“SCardSvr”服务失败"><a href="#6-2-接入“SCardSvr”服务失败" class="headerlink" title="6.2  接入“SCardSvr”服务失败"></a>6.2  接入“SCardSvr”服务失败</h2><p>&ensp; &ensp;产生此问题是因为启动CMW100固件时没有以“管理员”身份启动，关闭CMW100固件，在 CMW100图标上右键点击“以管理员身份启动”。 </p>
+<h2 id="6-3-启动时显示“System-Error”"><a href="#6-3-启动时显示“System-Error”" class="headerlink" title="6.3  启动时显示“System Error”"></a>6.3  启动时显示“System Error”</h2><p>&ensp; &ensp;CMW100固件启动时会检查CMW100硬件及其Dongle，如果未能正确加载CMW100固件将提示“System Error”信息，遇到此信息提示时请做如下检查：</p>
+<ul>
+<li>CMW100供电是否正常。 </li>
+<li>CMW100与主机USB连接正常，在系统管理器中可以正常看“CMW100”设备。 </li>
+<li>USB主机控制器的驱动版本，建议1.0.10.255以上。 </li>
+<li>升级cmw100固件，或者固件升级失败后再升级，需要把CMW100的电源线和UsB线全部拔掉，这样才能全部断电，否则USB也能供电，导致下次升级失败。 </li>
+<li>CMW100最好不要和WINIQSIM2一起安装，因为用的compass不同，会导致冲突。</li>
+<li>V3.5.110.28以前版本，电脑的显示分辨率用100%，不要用推荐的125%。 </li>
+<li>Dongle读卡器可以正常识别，读卡器中SIM卡安装正常，方向正确。 </li>
+</ul>
+<h2 id="6-4-自检"><a href="#6-4-自检" class="headerlink" title="6.4 自检"></a>6.4 自检</h2><p>&ensp;&ensp;点击SETUP -&gt; Maintenance -&gt; Selftest，设置Repetition Mode = Single Shot，右键点击右侧Selftest选择On，等待自检完成。</p>
+<p><img src="/2021/10/14/CMW100_Install/img10.png"></p>
+<h2 id="6-5-USB3-0判断"><a href="#6-5-USB3-0判断" class="headerlink" title="6.5 USB3.0判断"></a>6.5 USB3.0判断</h2><p>&ensp;&ensp;自检完成以后，在<strong>C:\ProgramData\Rohde-Schwarz\CMW\Log</strong>路径下找到对应的固件版本下的<strong>selftest</strong>目录，打开日志找到<strong>USB Mode</strong>查看。</p>
+<p><img src="/2021/10/14/CMW100_Install/img11.png"></p>
+<h2 id="6-6查看固件版本"><a href="#6-6查看固件版本" class="headerlink" title="6.6查看固件版本"></a>6.6查看固件版本</h2><p><img src="/2021/10/14/CMW100_Install/img12.png"></p>
+<h2 id="6-7-查看仪表License"><a href="#6-7-查看仪表License" class="headerlink" title="6.7 查看仪表License"></a>6.7 查看仪表License</h2><p><img src="/2021/10/14/CMW100_Install/img13.png"></p>
+
+    </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div></div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.png" alt="TabZ 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.png" alt="TabZ 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/CMW100/" rel="tag"># CMW100</a>
+              <a href="/tags/%E4%BB%AA%E8%A1%A8/" rel="tag"># 仪表</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/10/13/SqlServer_ExtranetAccess/" rel="prev" title="SQLServer2008R2外网访问">
+      <i class="fa fa-chevron-left"></i> SQLServer2008R2外网访问
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E7%8E%AF%E5%A2%83%E8%A6%81%E6%B1%82"><span class="nav-number">1.</span> <span class="nav-text">1.环境要求</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-%E9%9D%A9%E6%96%B0%E7%9A%84%E8%AE%BE%E8%AE%A1%E7%90%86%E5%BF%B5"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 革新的设计理念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-%E7%A1%AC%E4%BB%B6%E7%8E%AF%E5%A2%83"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 硬件环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 操作系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-%E8%BF%9E%E6%8E%A5CMW100"><span class="nav-number">1.4.</span> <span class="nav-text">2.1 连接CMW100</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-%E5%AE%89%E8%A3%85CMW100%E5%9B%BA%E4%BB%B6"><span class="nav-number">1.5.</span> <span class="nav-text">2.2 安装CMW100固件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-%E5%8D%B8%E8%BD%BDCMW100%E5%9B%BA%E4%BB%B6"><span class="nav-number">1.6.</span> <span class="nav-text">2.3 卸载CMW100固件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-%E5%85%B6%E5%AE%83Windows%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE"><span class="nav-number">2.</span> <span class="nav-text">3.其它Windows系统设置</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-%E9%98%B2%E7%81%AB%E5%A2%99%E8%AE%BE%E7%BD%AE"><span class="nav-number">2.1.</span> <span class="nav-text">3.1 防火墙设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-%E7%BD%91%E7%BB%9C%E8%AE%BE%E7%BD%AE"><span class="nav-number">2.2.</span> <span class="nav-text">3.2 网络设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-1-CMW100%E5%9B%BA%E4%BB%B6%E4%B8%8EATE%E5%B7%A5%E5%85%B7%E8%BF%90%E8%A1%8C%E5%9C%A8%E5%90%8C%E4%B8%80%E5%8F%B0%E7%94%B5%E8%84%91"><span class="nav-number">2.2.1.</span> <span class="nav-text">3.3.1 CMW100固件与ATE工具运行在同一台电脑</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-2-CMW100%E5%9B%BA%E4%BB%B6%E4%B8%8EATE%E5%B7%A5%E5%85%B7%E8%BF%90%E8%A1%8C%E5%9C%A8%E4%B8%8D%E5%90%8C%E7%94%B5%E8%84%91"><span class="nav-number">2.2.2.</span> <span class="nav-text">3.3.2 CMW100固件与ATE工具运行在不同电脑</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-3-%E5%85%B3%E9%97%AD%E7%94%B5%E6%BA%90%E8%8A%82%E8%83%BD%E6%A8%A1%E5%BC%8F"><span class="nav-number">2.3.</span> <span class="nav-text">3.3 关闭电源节能模式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-ARB%E6%B3%A2%E5%BD%A2%E6%96%87%E4%BB%B6%E5%AE%89%E8%A3%85%E4%BD%8D%E7%BD%AE"><span class="nav-number">3.</span> <span class="nav-text">4.ARB波形文件安装位置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#5-%E5%BC%80%E5%90%AFCMW100-%E5%9B%BA%E4%BB%B6"><span class="nav-number">4.</span> <span class="nav-text">5.开启CMW100 固件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-%E6%89%A9%E5%B1%95%E6%93%8D%E4%BD%9C%E5%8F%8A%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="nav-number">5.</span> <span class="nav-text">6.扩展操作及常见问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#6-1-CMW100-%E7%A1%AC%E4%BB%B6%E6%97%A0%E6%B3%95%E8%AF%86%E5%88%AB"><span class="nav-number">5.1.</span> <span class="nav-text">6.1 CMW100 硬件无法识别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-2-%E6%8E%A5%E5%85%A5%E2%80%9CSCardSvr%E2%80%9D%E6%9C%8D%E5%8A%A1%E5%A4%B1%E8%B4%A5"><span class="nav-number">5.2.</span> <span class="nav-text">6.2  接入“SCardSvr”服务失败</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-3-%E5%90%AF%E5%8A%A8%E6%97%B6%E6%98%BE%E7%A4%BA%E2%80%9CSystem-Error%E2%80%9D"><span class="nav-number">5.3.</span> <span class="nav-text">6.3  启动时显示“System Error”</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-4-%E8%87%AA%E6%A3%80"><span class="nav-number">5.4.</span> <span class="nav-text">6.4 自检</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-5-USB3-0%E5%88%A4%E6%96%AD"><span class="nav-number">5.5.</span> <span class="nav-text">6.5 USB3.0判断</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-6%E6%9F%A5%E7%9C%8B%E5%9B%BA%E4%BB%B6%E7%89%88%E6%9C%AC"><span class="nav-number">5.6.</span> <span class="nav-text">6.6查看固件版本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-7-%E6%9F%A5%E7%9C%8B%E4%BB%AA%E8%A1%A8License"><span class="nav-number">5.7.</span> <span class="nav-text">6.7 查看仪表License</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="TabZ"
+      src="/images/avatar.svg">
+  <p class="site-author-name" itemprop="name">TabZ</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">18</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="mailto:tab.zhang@foxmail.com" title="E-Mail → mailto:tab.zhang@foxmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">TabZ</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">9k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">8 分钟</span>
+</div>
+
+<div>
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date();
+    function createtime() {
+        var grt= new Date("05/01/2016 00:00:00");
+        now.setTime(now.getTime()+250);
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days);
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours);
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;}
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;}
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 ";
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+setInterval("createtime()",250);
+</script>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+  <script>
+    (function(){
+      var canonicalURL, curProtocol;
+      //Get the <link> tag
+      var x=document.getElementsByTagName("link");
+		//Find the last canonical URL
+		if(x.length > 0){
+			for (i=0;i<x.length;i++){
+				if(x[i].rel.toLowerCase() == 'canonical' && x[i].href){
+					canonicalURL=x[i].href;
+				}
+			}
+		}
+    //Get protocol
+	    if (!canonicalURL){
+	    	curProtocol = window.location.protocol.split(':')[0];
+	    }
+	    else{
+	    	curProtocol = canonicalURL.split(':')[0];
+	    }
+      //Get current URL if the canonical URL does not exist
+	    if (!canonicalURL) canonicalURL = window.location.href;
+	    //Assign script content. Replace current URL with the canonical URL
+      !function(){var e=/([http|https]:\/\/[a-zA-Z0-9\_\.]+\.baidu\.com)/gi,r=canonicalURL,t=document.referrer;if(!e.test(r)){var n=(String(curProtocol).toLowerCase() === 'https')?"https://sp0.baidu.com/9_Q4simg2RQJ8t7jm9iCKT-xh_/s.gif":"//api.share.baidu.com/s.gif";t?(n+="?r="+encodeURIComponent(document.referrer),r&&(n+="&l="+r)):r&&(n+="?l="+r);var i=new Image;i.src=n}}(window);})();
+  </script>
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'lnqPtKKYJ6fzD0Kj6QcruDjU-gzGzoHsz',
+      appKey     : 'nl9DI2cRjApQt6hOLe2CNNKy',
+      placeholder: "走过路过，不留下点什么吗？",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+</html>

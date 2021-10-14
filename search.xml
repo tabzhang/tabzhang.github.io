@@ -33,14 +33,13 @@
     <title>增量自动升级AutoUpdater V1.2</title>
     <url>/2021/05/13/AutoUpdater/</url>
     <content><![CDATA[<p><img src="/2021/05/13/AutoUpdater/01.png" alt="img1"></p>
-<h2 id="【功能说明】"><a href="#【功能说明】" class="headerlink" title="【功能说明】"></a>【功能说明】</h2><p>1.自动对比程序文件，按需增量升级<br>2.可跨版本升级，不关心版本号，支持零代码集成<br>3.支持Auto/Normal/Silence三种运行模式<br>4.支持Update/Delete/SkipExist更新方式<br>5.提供独立升级包制作工具，支持自身升级<br>6.支持自动解除锁定文件<br>7.支持版本跳过，支持缺失文件检查等</p>
+<h2 id="【功能说明】"><a href="#【功能说明】" class="headerlink" title="【功能说明】"></a>【功能说明】</h2><p>1.自动对比程序文件，按需增量升级<br>2.可跨版本升级，不关心版本号，支持零代码集成<br>3.支持Auto/Normal/Silence三种运行模式<br>4.支持Update/Delete/SkipExist更新方式<br>5.提供独立升级包制作工具，支持自身升级<br>6.支持自动解除锁定文件<br>7.支持版本跳过，支持缺失文件检查等<br><a href="/download/AutoUpdaterV1.2.7z">点击下载</a></p>
 <span id="more"></span>
 
 <h2 id="升级包制件工具-AutoUpdaterBuilder"><a href="#升级包制件工具-AutoUpdaterBuilder" class="headerlink" title="升级包制件工具-AutoUpdaterBuilder"></a>升级包制件工具-AutoUpdaterBuilder</h2><p><img src="/2021/05/13/AutoUpdater/04.png" alt="img4"></p>
 <h2 id="其它相关界面参考…"><a href="#其它相关界面参考…" class="headerlink" title="其它相关界面参考…"></a>其它相关界面参考…</h2><p><img src="/2021/05/13/AutoUpdater/02.png" alt="img2"></p>
 <p><img src="/2021/05/13/AutoUpdater/03.png" alt="img3"></p>
 <p>欢迎提出您的建议与意见！</p>
-<p><a href="/download/AutoUpdaterV1.2.7z">点击下载</a></p>
 ]]></content>
       <categories>
         <category>原创</category>
@@ -51,17 +50,84 @@
       </tags>
   </entry>
   <entry>
-    <title>批量Xml文件格式化</title>
-    <url>/2021/05/18/BatchXmlFormater/</url>
-    <content><![CDATA[<p><img src="/2021/05/18/BatchXmlFormater/01.png" alt="image"></p>
-<p><a href="/download/BatchXmlFormater.7z">点击下载</a></p>
+    <title>CMW100应用操作指引</title>
+    <url>/2021/10/14/CMW100_Install/</url>
+    <content><![CDATA[<h1 id="1-环境要求"><a href="#1-环境要求" class="headerlink" title="1.环境要求"></a>1.环境要求</h1><h2 id="1-1-革新的设计理念"><a href="#1-1-革新的设计理念" class="headerlink" title="1.1 革新的设计理念"></a>1.1 革新的设计理念</h2><p><img src="/2021/10/14/CMW100_Install/img16.png"></p>
+<p> <strong>分离计算模块，让固件运行在外接电脑</strong></p>
+<ul>
+<li><p>速度提升更加实惠</p>
+</li>
+<li><p>通过更新电脑的CPU即可提升速度</p>
+</li>
+<li><p>可以最早时间升级到最快的CPU</p>
+<span id="more"></span></li>
+<li><p>更加灵活</p>
+</li>
+</ul>
+<p><strong>体积小，质量轻，节能环保</strong></p>
+<ul>
+<li>功耗&lt;80W</li>
+<li>发热低，提高无故障工作时间</li>
+<li>安静</li>
+</ul>
+<p><strong>被动散热，无风扇，无通风孔，不会进灰尘</strong></p>
+<p><strong>多种测试效率提升方案，应对产线的不同需求， 实现最佳仪器利用率</strong> </p>
+<h2 id="1-2-硬件环境"><a href="#1-2-硬件环境" class="headerlink" title="1.2 硬件环境"></a>1.2 硬件环境</h2><p>&ensp; CPU ：Intel i5及以上版本<br>&ensp; 内存：4Gb以上<br>&ensp; USB ：3.0版本 </p>
+<h2 id="1-3-操作系统"><a href="#1-3-操作系统" class="headerlink" title="1.3 操作系统"></a>1.3 操作系统</h2><p>&ensp; &ensp; R&amp;S CMW100 Firmware需要运行在64位的操作系统上，不支持32位版本的操作系统，不支持WindowsXP系统，推荐使用如下版本操作系统。 Windows 7 Professional 64 Bit2.固件安装 </p>
+<h2 id="2-1-连接CMW100"><a href="#2-1-连接CMW100" class="headerlink" title="2.1 连接CMW100"></a>2.1 连接CMW100</h2><p>&ensp; &ensp; 将电源适配器与CMW100进行连接。 CWM100与PC使用USB3.0接口进行连接，USB 3.0 接口通常会使用两个“SS”进行标记，如下图所示： </p>
+<p><img src="/2021/10/14/CMW100_Install/img1.png"></p>
+<h2 id="2-2-安装CMW100固件"><a href="#2-2-安装CMW100固件" class="headerlink" title="2.2 安装CMW100固件"></a>2.2 安装CMW100固件</h2><p>&ensp; &ensp; 将CMW100的固件软件拷贝到PC任意目录中，以<strong>管理员的身份</strong>运行所选择的固件，如需要将各制式的固件一同安装，请勾选“Add other setups from current directory”，点击“<strong>Next</strong>” 进行安装，如下图所示：</p>
+<p><img src="/2021/10/14/CMW100_Install/img2.png"></p>
+<p>&ensp; &ensp; 固件安装完成后，您将看到“重新启动电脑”的提示对话框，点击“Yes”重新启动电脑，重新启动时，需要将CMW100断电关机，然后在重新上电开机。 </p>
+<h2 id="2-3-卸载CMW100固件"><a href="#2-3-卸载CMW100固件" class="headerlink" title="2.3 卸载CMW100固件"></a>2.3 卸载CMW100固件</h2><p>&ensp; &ensp;如果找不到桌面维护图标，按Win+R打开Windows的<strong>运行对话框</strong>，输入以下指令后ENTER，在弹出的对应框中卸载旧版本。</p>
+<blockquote>
+<p>“C:\Program Files (x86)\Rohde-Schwarz\RsDistributor\RsDistributor.exe” -maintenance</p>
+</blockquote>
+<p><img src="/2021/10/14/CMW100_Install/img9.png"></p>
+<h1 id="3-其它Windows系统设置"><a href="#3-其它Windows系统设置" class="headerlink" title="3.其它Windows系统设置"></a>3.其它Windows系统设置</h1><h2 id="3-1-防火墙设置"><a href="#3-1-防火墙设置" class="headerlink" title="3.1 防火墙设置"></a>3.1 防火墙设置</h2><p>&ensp; &ensp;在“控制面板”中找到“系统和安全”设置按钮，点击进入即可看到“Windows 防火墙”设置选项，选择关闭防火墙设置，如下图所示： </p>
+<p><img src="/2021/10/14/CMW100_Install/img3.png"></p>
+<h2 id="3-2-网络设置"><a href="#3-2-网络设置" class="headerlink" title="3.2 网络设置"></a>3.2 网络设置</h2><p>&ensp; &ensp;当远程手动或使用自动化程序控制CMW100时，需要先设置CMW100所在电脑与控制端电脑的网络，确保“控制端”与“被控端”电脑在<strong>同一网络内</strong>。 </p>
+<h3 id="3-3-1-CMW100固件与ATE工具运行在同一台电脑"><a href="#3-3-1-CMW100固件与ATE工具运行在同一台电脑" class="headerlink" title="3.3.1 CMW100固件与ATE工具运行在同一台电脑"></a>3.3.1 CMW100固件与ATE工具运行在同一台电脑</h3><p>&ensp; &ensp;在产线使用自动化程序进行测试时，如果自动化测试ATE工具软件与CMW100固件安装在同一同电脑上，本地电脑无需做任何设置，只需要在自动化程序中设置连接地址资源，与CMW100连接可以使用本地IP，即“127.0.0.1” ，程序中连接资源名称使用“<strong>TCPIP0:127.0.0.1::INSTR</strong>”  。 </p>
+<h3 id="3-3-2-CMW100固件与ATE工具运行在不同电脑"><a href="#3-3-2-CMW100固件与ATE工具运行在不同电脑" class="headerlink" title="3.3.2 CMW100固件与ATE工具运行在不同电脑"></a>3.3.2 CMW100固件与ATE工具运行在不同电脑</h3><p>&ensp; &ensp; 打开“网络和共享中心”，如下图： 在“网络协议属性”设置中为“控制端”与“被控端”电脑设置IP地址，确保两台电脑在同一网络内。 </p>
+<p><img src="/2021/10/14/CMW100_Install/img4.png"></p>
+<h2 id="3-3-关闭电源节能模式"><a href="#3-3-关闭电源节能模式" class="headerlink" title="3.3 关闭电源节能模式"></a>3.3 关闭电源节能模式</h2><p>&ensp; &ensp; 在控制面板中选择”系统&amp;安全”，在选择“电源管理”选项，选择“<strong>高性能</strong>”，并修改设置 “使电脑进入休眠模式”， 选择“永不” 选择“电源高级设置”选项，设置处理器电源管理，将“最小处理器状态“设置为100%。</p>
+<p> <img src="/2021/10/14/CMW100_Install/img5.png"></p>
+<p><img src="/2021/10/14/CMW100_Install/img6.png"></p>
+<h1 id="4-ARB波形文件安装位置"><a href="#4-ARB波形文件安装位置" class="headerlink" title="4.ARB波形文件安装位置"></a>4.ARB波形文件安装位置</h1><p>&ensp; &ensp; 使用CMW100波形文件安装包安装的波形文件其存储路径与CMW500存储路径不同，新的存储路径为： “<strong>C:\ProgramData\Rohde-Schwarz\CMW\Data\waveform</strong>”</p>
+<p> “C:\PROGRAMDATA”是一个隐藏目录，使用前需要在系统文件管理设置中将“显示隐藏”文件打   开，也可以打开文件浏览器直接输入以上路径。 </p>
+<h1 id="5-开启CMW100-固件"><a href="#5-开启CMW100-固件" class="headerlink" title="5.开启CMW100 固件"></a>5.开启CMW100 固件</h1><p>&ensp; &ensp; CMW100的固件正常安装完成后，您可以在Windows系统的桌面上找到一个“CMW”的图标，可以手动点击此图标打开CMW100固件，在首次开启CMW固件时，CMW100固件将进行“Fimware Update“固件更新，因此首次启动时间相对正常启动时间会长一些。 CMW100固件成功启动后，CMW100固件可以正常显示，没有其它保持信息。 </p>
+<p><img src="/2021/10/14/CMW100_Install/img0.png"></p>
+<h1 id="6-扩展操作及常见问题"><a href="#6-扩展操作及常见问题" class="headerlink" title="6.扩展操作及常见问题"></a>6.扩展操作及常见问题</h1><h2 id="6-1-CMW100-硬件无法识别"><a href="#6-1-CMW100-硬件无法识别" class="headerlink" title="6.1 CMW100 硬件无法识别"></a>6.1 CMW100 硬件无法识别</h2><p>&ensp; &ensp; 在设备管理器中显示“无法识别的USB设备”，遇到此问题请做如下检查： </p>
+<p><img src="/2021/10/14/CMW100_Install/img8.png"></p>
+<ul>
+<li>检查CMW100供电是否正常，重新开关电源。 </li>
+<li>USB 是否正常连接，USB端口是否正常，可以尝试更换到其它USB接口。</li>
+</ul>
+<p>&ensp; &ensp;正常情况下，设备管理器中将会显示一个“Rohde &amp; Schwarz supported devices“及“R&amp;S CMW100” </p>
+<h2 id="6-2-接入“SCardSvr”服务失败"><a href="#6-2-接入“SCardSvr”服务失败" class="headerlink" title="6.2  接入“SCardSvr”服务失败"></a>6.2  接入“SCardSvr”服务失败</h2><p>&ensp; &ensp;产生此问题是因为启动CMW100固件时没有以“管理员”身份启动，关闭CMW100固件，在 CMW100图标上右键点击“以管理员身份启动”。 </p>
+<h2 id="6-3-启动时显示“System-Error”"><a href="#6-3-启动时显示“System-Error”" class="headerlink" title="6.3  启动时显示“System Error”"></a>6.3  启动时显示“System Error”</h2><p>&ensp; &ensp;CMW100固件启动时会检查CMW100硬件及其Dongle，如果未能正确加载CMW100固件将提示“System Error”信息，遇到此信息提示时请做如下检查：</p>
+<ul>
+<li>CMW100供电是否正常。 </li>
+<li>CMW100与主机USB连接正常，在系统管理器中可以正常看“CMW100”设备。 </li>
+<li>USB主机控制器的驱动版本，建议1.0.10.255以上。 </li>
+<li>升级cmw100固件，或者固件升级失败后再升级，需要把CMW100的电源线和UsB线全部拔掉，这样才能全部断电，否则USB也能供电，导致下次升级失败。 </li>
+<li>CMW100最好不要和WINIQSIM2一起安装，因为用的compass不同，会导致冲突。</li>
+<li>V3.5.110.28以前版本，电脑的显示分辨率用100%，不要用推荐的125%。 </li>
+<li>Dongle读卡器可以正常识别，读卡器中SIM卡安装正常，方向正确。 </li>
+</ul>
+<h2 id="6-4-自检"><a href="#6-4-自检" class="headerlink" title="6.4 自检"></a>6.4 自检</h2><p>&ensp;&ensp;点击SETUP -&gt; Maintenance -&gt; Selftest，设置Repetition Mode = Single Shot，右键点击右侧Selftest选择On，等待自检完成。</p>
+<p><img src="/2021/10/14/CMW100_Install/img10.png"></p>
+<h2 id="6-5-USB3-0判断"><a href="#6-5-USB3-0判断" class="headerlink" title="6.5 USB3.0判断"></a>6.5 USB3.0判断</h2><p>&ensp;&ensp;自检完成以后，在<strong>C:\ProgramData\Rohde-Schwarz\CMW\Log</strong>路径下找到对应的固件版本下的<strong>selftest</strong>目录，打开日志找到<strong>USB Mode</strong>查看。</p>
+<p><img src="/2021/10/14/CMW100_Install/img11.png"></p>
+<h2 id="6-6查看固件版本"><a href="#6-6查看固件版本" class="headerlink" title="6.6查看固件版本"></a>6.6查看固件版本</h2><p><img src="/2021/10/14/CMW100_Install/img12.png"></p>
+<h2 id="6-7-查看仪表License"><a href="#6-7-查看仪表License" class="headerlink" title="6.7 查看仪表License"></a>6.7 查看仪表License</h2><p><img src="/2021/10/14/CMW100_Install/img13.png"></p>
 ]]></content>
       <categories>
-        <category>原创</category>
+        <category>手册</category>
       </categories>
       <tags>
-        <tag>XML</tag>
-        <tag>文件格式化</tag>
+        <tag>CMW100</tag>
+        <tag>仪表</tag>
       </tags>
   </entry>
   <entry>
@@ -71,41 +137,24 @@
 <blockquote>
 <p>“C:\Program Files (x86)\Rohde-Schwarz\RsDistributor\RsDistributor.exe” -maintenance</p>
 </blockquote>
-<p>2.<strong>下载新固件与波形文件</strong>，阿里云盘不限速下载，地址如下：</p>
-<table>
-<thead>
-<tr>
-<th align="center">路径</th>
-<th align="center">备注</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"><a href="https://www.aliyundrive.com/s/1G9o4Z764z2">https://www.aliyundrive.com/s/1G9o4Z764z2</a></td>
-<td align="center">CMW100</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.aliyundrive.com/s/QCK1u5gyMyJ">https://www.aliyundrive.com/s/QCK1u5gyMyJ</a></td>
-<td align="center">CMW500</td>
-</tr>
-<tr>
-<td align="center"><a href="https://www.aliyundrive.com/s/gGYCzj2kXsC">https://www.aliyundrive.com/s/gGYCzj2kXsC</a></td>
-<td align="center">波形文件</td>
-</tr>
-<tr>
-<td align="center"><strong>固件版本选择，按项目找负责人确认，波形通用。</strong></td>
-<td align="center"></td>
-</tr>
-</tbody></table>
+<p>2.<strong>下载新固件与波形文件</strong>，<strong>阿里云盘不限速下载</strong>，地址如下：</p>
+<blockquote>
+<p><a href="https://www.aliyundrive.com/s/1G9o4Z764z2">CMW100</a>  |  <a href="https://www.aliyundrive.com/s/QCK1u5gyMyJ">CMW500</a>  |  <a href="https://www.aliyundrive.com/s/gGYCzj2kXsC">波形文件</a>  </p>
+</blockquote>
+<p>(固件版本选择，按项目请找相关人员确认，波形通用)</p>
 <span id="more"></span>
-<p>3.<strong>安装新固件</strong>，解压后双击其中一个安装包，在<strong>向导对话框</strong>中<strong>勾选</strong>如<strong>下图选项</strong>，并<strong>下一步</strong>等待安装完成即可，<strong>波形文件安装与固件类似</strong>。</p>
+<p>3.<strong>安装新固件</strong>，解压后双击其中一个安装包，在<strong>向导对话框</strong>中<strong>勾选</strong>如<strong>下图选项</strong>，并<strong>下一步</strong>等待安装完成即可，</p>
 <p><img src="/2021/10/12/CMW_FW/img1.png" alt="img1"></p>
-<p>4.<strong>切换成单窗口</strong> (推荐)：固件默认是多窗口模式，不方便操作，按下面<strong>红色标记</strong>找到<strong>Muliple Windows</strong>，<strong>取消勾选</strong>即可。</p>
+<p>4.<strong>波形文件安装</strong>。</p>
+<p>​        可以手动以默认路径安装，或者手动放置，路径如下：</p>
+<blockquote>
+<p>CMW500:    D:\Rohde-Schwarz\CMW\waveform\library1</p>
+<p>CMW100:    C:\ProgramData\Rohde-Schwarz\CMW\Data\waveform\</p>
+</blockquote>
+<p>5.<strong>切换成单窗口</strong> (推荐)：固件默认是多窗口模式，不方便操作，按下面<strong>红色标记</strong>找到<strong>Muliple Windows</strong>，<strong>取消勾选</strong>即可。</p>
 <p><img src="/2021/10/12/CMW_FW/img2.png" alt="img2"></p>
-<p>5.<strong>切换双通道</strong> (根据项目需要)：按第4步设置后，点击右侧DEVICE按钮，如下图进行设置，切换后要等待仪表自动重启后，方可使用。</p>
+<p>6.<strong>切换双通道</strong> (根据项目需要)：按第4步设置后，点击右侧DEVICE按钮，如下图进行设置，切换后要等待仪表自动重启后，方可使用。</p>
 <p><img src="/2021/10/12/CMW_FW/img3.png" alt="img3"></p>
-<p>6.<strong>更多设置</strong>，请参考以下文档：</p>
-<p><a href="/download/CMW100_Manual_V1.0.pdf">CMW100应用操作指引_V1.0 点击查看</a></p>
-<p><a href="/download/CMW100_Manual_V2.0.pdf">CMW100固件安装指引_V2.0 点击查看</a></p>
 ]]></content>
       <categories>
         <category>下载</category>
@@ -119,15 +168,15 @@
     <title>GIT学习笔记</title>
     <url>/2021/09/16/GitStudy/</url>
     <content><![CDATA[<h3 id="GIT配置"><a href="#GIT配置" class="headerlink" title="GIT配置"></a>GIT配置</h3><blockquote>
-<p>$ git config –global user.name “Your Name”<br>$ git config –global user.email “<a href="mailto:&#x65;&#x6d;&#x61;&#105;&#108;&#64;&#x65;&#120;&#97;&#x6d;&#x70;&#x6c;&#x65;&#x2e;&#99;&#x6f;&#x6d;">&#x65;&#x6d;&#x61;&#105;&#108;&#64;&#x65;&#120;&#97;&#x6d;&#x70;&#x6c;&#x65;&#x2e;&#99;&#x6f;&#x6d;</a>“</p>
+<p>$ git config –global user.name “Your Name”<br>$ git config –global user.email “<a href="mailto:&#101;&#x6d;&#x61;&#105;&#x6c;&#x40;&#x65;&#120;&#x61;&#109;&#112;&#108;&#101;&#x2e;&#x63;&#111;&#x6d;">&#101;&#x6d;&#x61;&#105;&#x6c;&#x40;&#x65;&#120;&#x61;&#109;&#112;&#108;&#101;&#x2e;&#x63;&#111;&#x6d;</a>“</p>
 </blockquote>
 <h3 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h3><blockquote>
 <p>初始化一个Git仓库，使用<strong>git init</strong>命令。</p>
 <p>添加文件到Git仓库，分两步：</p>
-<p>使用命令<strong>git add</strong>  FileName，注意，可反复多次使用，添加多个文件；</p>
-<p>使用命令<strong>git commit -m</strong>  Message，完成。</p>
-</blockquote>
 <span id="more"></span>
+<p>使用命令<strong>git add</strong>  <em>FileName</em>，注意，可反复多次使用，添加多个文件；</p>
+<p>使用命令<strong>git commit -m</strong>  <em>Message</em>，完成。</p>
+</blockquote>
 <h3 id="状态管理"><a href="#状态管理" class="headerlink" title="状态管理"></a>状态管理</h3><blockquote>
 <p>要随时掌握工作区的状态，使用<strong>git status</strong>命令。</p>
 <p>如果<code>git status</code>告诉你有文件被修改过，用<strong>git diff</strong>可以查看修改内容。</p>
@@ -142,15 +191,15 @@
 </blockquote>
 <h3 id="撤销修改"><a href="#撤销修改" class="headerlink" title="撤销修改"></a>撤销修改</h3><blockquote>
 <p>场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令<strong>git checkout – file</strong>。</p>
-<p>场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令<strong>git reset HEAD</strong> file，就回到了场景1，第二步按场景1操作。</p>
-<p>场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，参考<a href="https://www.liaoxuefeng.com/wiki/896043488029600/897013573512192">版本回退</a>一节，不过前提是没有推送到远程库。</p>
+<p>场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令<strong>git reset HEAD</strong> <em>file</em>，就回到了场景1，第二步按场景1操作。</p>
+<p>场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，参考[版本回退]一节，不过前提是没有推送到远程库。</p>
 </blockquote>
 <h3 id="删除文件"><a href="#删除文件" class="headerlink" title="删除文件"></a>删除文件</h3><blockquote>
 <p>命令<strong>git rm</strong>用于删除一个文件。如果一个文件已经被提交到版本库，那么你永远不用担心误删，但是要小心，你只能恢复文件到最新版本，你会丢失<strong>最近一次提交后你修改的内容</strong>。</p>
 </blockquote>
 <h3 id="注册远程仓库"><a href="#注册远程仓库" class="headerlink" title="注册远程仓库"></a>注册远程仓库</h3><blockquote>
 <p>第1步：创建SSH Key。在用户主目录下，看看有没有.ssh目录，如果有，再看看这个目录下有没有<code>id_rsa</code>和<code>id_rsa.pub</code>这两个文件，如果已经有了，可直接跳到下一步。如果没有，打开Shell（Windows下打开Git Bash），创建SSH Key：</p>
-<p>$ ssh-keygen -t rsa -C “<a href="mailto:&#x79;&#x6f;&#x75;&#114;&#x65;&#109;&#97;&#x69;&#x6c;&#x40;&#101;&#x78;&#97;&#x6d;&#112;&#108;&#101;&#x2e;&#x63;&#x6f;&#x6d;">&#x79;&#x6f;&#x75;&#114;&#x65;&#109;&#97;&#x69;&#x6c;&#x40;&#101;&#x78;&#97;&#x6d;&#112;&#108;&#101;&#x2e;&#x63;&#x6f;&#x6d;</a>“</p>
+<p>$ ssh-keygen -t rsa -C “<a href="mailto:&#121;&#111;&#x75;&#x72;&#x65;&#x6d;&#x61;&#105;&#108;&#x40;&#101;&#120;&#97;&#x6d;&#112;&#x6c;&#101;&#x2e;&#99;&#111;&#109;">&#121;&#111;&#x75;&#x72;&#x65;&#x6d;&#x61;&#105;&#108;&#x40;&#101;&#120;&#97;&#x6d;&#112;&#x6c;&#101;&#x2e;&#99;&#111;&#109;</a>“</p>
 <p>第2步：登陆GitHub，打开“Account settings”，“SSH Keys”页面：</p>
 <p>然后，点“Add SSH Key”，填上任意Title，在Key文本框里粘贴<code>id_rsa.pub</code>文件的内容：</p>
 </blockquote>
@@ -170,43 +219,27 @@
       </tags>
   </entry>
   <entry>
-    <title>LogParser使用说明</title>
-    <url>/2021/05/18/LogParser/</url>
-    <content><![CDATA[<ol>
-<li><p>工具默认Log在D:\LogFiles下，请排除不是本次需要解析Log。</p>
-</li>
-<li><p>点击 <strong>Add Folder</strong> 按钮，定位到Log目录，后点击确定; <strong>或者拖动部分子文件夹到列表中</strong>。</p>
-</li>
-</ol>
-<p><img src="/2021/05/18/LogParser/img1.png" alt="img1"></p>
-<span id="more"></span>
-
-<ol start="3">
-<li><p>点击 <strong>Start Parser</strong> 等待解析完成。 </p>
-</li>
-<li><p>桌面上会生成一个 Excel 文件汇总。 </p>
-</li>
-<li><p>把这个文件按电脑名称命名，比如 SMT4. xlsx，方便定位到问题后改善。 </p>
-</li>
-<li><p>如果要解析WBG工位的Log，请在增加文件前，选择WBG Log下接列表。</p>
-<p><a href="/download/LogParser.7z">点击下载</a></p>
-</li>
-</ol>
+    <title>批量Xml文件格式化</title>
+    <url>/2021/05/18/BatchXmlFormater/</url>
+    <content><![CDATA[<p><img src="/2021/05/18/BatchXmlFormater/01.png" alt="image"></p>
+<p><a href="/download/BatchXmlFormater.7z">点击下载</a></p>
 ]]></content>
       <categories>
         <category>原创</category>
       </categories>
       <tags>
-        <tag>LogParser</tag>
-        <tag>Log解析</tag>
+        <tag>XML</tag>
+        <tag>文件格式化</tag>
       </tags>
   </entry>
   <entry>
     <title>恢复QCN的方法(校准数据)</title>
     <url>/2021/09/16/RestoreQCN/</url>
     <content><![CDATA[<p>1.对比xqcn文件名的PSN与主板编号与PSN是否一致。</p>
-<p>2.关闭一切测试工具，把主板上电正常开机后，打开QPST中的<strong>Software Download</strong>,并切换到<strong>Restore页面</strong>如下图：<br><img src="/2021/09/16/RestoreQCN/img2.png" alt="img1"></p>
+<p>2.关闭一切测试工具，把主板上电正常开机后，打开QPST中的<strong>Software Download</strong>,并切换到<strong>Restore页面</strong>如下图：</p>
 <span id="more"></span>
+
+<p><img src="/2021/09/16/RestoreQCN/img2.png" alt="img1"></p>
 <p>3.点击红色标记<strong>1 选择手机端口</strong>，点击<strong>2 选择对应的.xqcn文件</strong>，然后点击<strong>3 Start</strong></p>
 <p>4.等待大概3分钟左右，直到<strong>4这里显示Memory Restore Completed</strong> 就完成了。</p>
 ]]></content>
@@ -231,8 +264,8 @@
 <p>3.<strong>IT天空万能驱动</strong>。</p>
 <p><img src="/2021/09/16/RuntimeAndDrivers/img4.png" alt="img4"></p>
 <p>4.<strong>Microsoft .NET Framework 4.5.2</strong>。</p>
-<p>官网下载  <a href="https://www.microsoft.com/zh-CN/download/details.aspx?id=42642">https://www.microsoft.com/zh-CN/download/details.aspx?id=42642</a></p>
-<p>下载地址：<a href="https://www.aliyundrive.com/s/nZCRhRmvRky">https://www.aliyundrive.com/s/nZCRhRmvRky</a></p>
+<p><a href="https://www.microsoft.com/zh-CN/download/details.aspx?id=42642">官网下载</a>  </p>
+<p>以上资源 <a href="https://www.aliyundrive.com/s/nZCRhRmvRky">网盘下载</a></p>
 ]]></content>
       <categories>
         <category>下载</category>
@@ -251,7 +284,7 @@
 <span id="more"></span>
 
 <h3 id="Genymotion无法启动"><a href="#Genymotion无法启动" class="headerlink" title="Genymotion无法启动"></a>Genymotion无法启动</h3><blockquote>
-<p>1 结束所有VirtualBox相关进程<br>2 以管理员方式启动VirtualBox 不关闭<br>3 以管理员方式启动Genymotion<br>Genymotion 账号 - zx.<br>Android模拟器 Genymotion / Username: tabzhang / Email address: <a href="mailto:&#116;&#97;&#98;&#x2e;&#x7a;&#x68;&#x61;&#x6e;&#x67;&#x40;&#x66;&#111;&#120;&#x6d;&#x61;&#105;&#x6c;&#46;&#99;&#x6f;&#109;">&#116;&#97;&#98;&#x2e;&#x7a;&#x68;&#x61;&#x6e;&#x67;&#x40;&#x66;&#111;&#120;&#x6d;&#x61;&#105;&#x6c;&#46;&#99;&#x6f;&#109;</a></p>
+<p>1 结束所有VirtualBox相关进程<br>2 以管理员方式启动VirtualBox 不关闭<br>3 以管理员方式启动Genymotion<br>Genymotion 账号 - zx.<br>Android模拟器 Genymotion / Username: tabzhang / Email address: <a href="mailto:&#x74;&#x61;&#98;&#x2e;&#x7a;&#x68;&#x61;&#x6e;&#103;&#x40;&#x66;&#111;&#120;&#x6d;&#x61;&#x69;&#108;&#46;&#x63;&#111;&#109;">&#x74;&#x61;&#98;&#x2e;&#x7a;&#x68;&#x61;&#x6e;&#103;&#x40;&#x66;&#111;&#120;&#x6d;&#x61;&#x69;&#108;&#46;&#x63;&#111;&#109;</a></p>
 </blockquote>
 <h3 id="C-调用-C-新方式"><a href="#C-调用-C-新方式" class="headerlink" title="C# 调用 C++ 新方式"></a>C# 调用 C++ 新方式</h3><blockquote>
 <p>用C++CLI搭建C++和C#之间的桥梁</p>
@@ -362,6 +395,38 @@
       <tags>
         <tag>SQLServer</tag>
         <tag>外网访问</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>LogParser使用说明</title>
+    <url>/2021/05/18/LogParser/</url>
+    <content><![CDATA[<ol>
+<li><p>工具默认Log在D:\LogFiles下，请排除不是本次需要解析Log。</p>
+</li>
+<li><p>点击 <strong>Add Folder</strong> 按钮，定位到Log目录，后点击确定; <strong>或者拖动部分子文件夹到列表中</strong>。</p>
+</li>
+</ol>
+<p><img src="/2021/05/18/LogParser/img1.png" alt="img1"></p>
+<span id="more"></span>
+
+<ol start="3">
+<li><p>点击 <strong>Start Parser</strong> 等待解析完成。 </p>
+</li>
+<li><p>桌面上会生成一个 Excel 文件汇总。 </p>
+</li>
+<li><p>把这个文件按电脑名称命名，比如 SMT4. xlsx，方便定位到问题后改善。 </p>
+</li>
+<li><p>如果要解析WBG工位的Log，请在增加文件前，选择WBG Log下接列表。</p>
+<p><a href="/download/LogParser.7z">点击下载</a></p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>原创</category>
+      </categories>
+      <tags>
+        <tag>LogParser</tag>
+        <tag>Log解析</tag>
       </tags>
   </entry>
 </search>
