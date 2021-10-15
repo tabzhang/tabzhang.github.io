@@ -50,31 +50,38 @@
       </tags>
   </entry>
   <entry>
+    <title>批量Xml文件格式化</title>
+    <url>/2021/05/18/BatchXmlFormater/</url>
+    <content><![CDATA[<p><img src="/2021/05/18/BatchXmlFormater/01.png" alt="image"></p>
+<p><a href="/download/BatchXmlFormater.7z">点击下载</a></p>
+]]></content>
+      <categories>
+        <category>原创</category>
+      </categories>
+      <tags>
+        <tag>XML</tag>
+        <tag>文件格式化</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CMW100应用操作指引</title>
     <url>/2021/10/14/CMW100_Install/</url>
     <content><![CDATA[<h1 id="1-环境要求"><a href="#1-环境要求" class="headerlink" title="1.环境要求"></a>1.环境要求</h1><h2 id="1-1-革新的设计理念"><a href="#1-1-革新的设计理念" class="headerlink" title="1.1 革新的设计理念"></a>1.1 革新的设计理念</h2><p><img src="/2021/10/14/CMW100_Install/img16.png"></p>
-<p> <strong>分离计算模块，让固件运行在外接电脑</strong></p>
 <ul>
-<li><p>速度提升更加实惠</p>
+<li><p><strong>分离计算模块，让固件运行在外接电脑</strong></p>
+<p>  速度提升更加实惠，通过更新电脑的CPU即可提升速度，可以最早时间升级到最快的CPU，更加灵活</p>
 </li>
-<li><p>通过更新电脑的CPU即可提升速度</p>
+<li><p><strong>体积小，质量轻，节能环保</strong></p>
+<p>  功耗&lt;80W，发热低，提高无故障工作时间，安静</p>
 </li>
-<li><p>可以最早时间升级到最快的CPU</p>
-<span id="more"></span></li>
-<li><p>更加灵活</p>
+<li><p><strong>被动散热，无风扇，无通风孔，不会进灰尘</strong></p>
 </li>
+<li><p><strong>多种测试效率提升方案，应对产线的不同需求， 实现最佳仪器利用率</strong> </p>
+  <span id="more"></span></li>
 </ul>
-<p><strong>体积小，质量轻，节能环保</strong></p>
-<ul>
-<li>功耗&lt;80W</li>
-<li>发热低，提高无故障工作时间</li>
-<li>安静</li>
-</ul>
-<p><strong>被动散热，无风扇，无通风孔，不会进灰尘</strong></p>
-<p><strong>多种测试效率提升方案，应对产线的不同需求， 实现最佳仪器利用率</strong> </p>
-<h2 id="1-2-硬件环境"><a href="#1-2-硬件环境" class="headerlink" title="1.2 硬件环境"></a>1.2 硬件环境</h2><p>&ensp; CPU ：Intel i5及以上版本<br>&ensp; 内存：4Gb以上<br>&ensp; USB ：3.0版本 </p>
-<h2 id="1-3-操作系统"><a href="#1-3-操作系统" class="headerlink" title="1.3 操作系统"></a>1.3 操作系统</h2><p>&ensp; &ensp; R&amp;S CMW100 Firmware需要运行在64位的操作系统上，不支持32位版本的操作系统，不支持WindowsXP系统，推荐使用如下版本操作系统。 Windows 7 Professional 64 Bit2.固件安装 </p>
-<h2 id="2-1-连接CMW100"><a href="#2-1-连接CMW100" class="headerlink" title="2.1 连接CMW100"></a>2.1 连接CMW100</h2><p>&ensp; &ensp; 将电源适配器与CMW100进行连接。 CWM100与PC使用USB3.0接口进行连接，USB 3.0 接口通常会使用两个“SS”进行标记，如下图所示： </p>
+<h2 id="1-2-硬件环境"><a href="#1-2-硬件环境" class="headerlink" title="1.2 硬件环境"></a>1.2 硬件环境</h2><p><strong>CPU</strong> ：Intel i5及以上版本;  <strong>内存</strong>：4Gb以上;  <strong>USB</strong> ：3.0版本 </p>
+<h2 id="1-3-操作系统"><a href="#1-3-操作系统" class="headerlink" title="1.3 操作系统"></a>1.3 操作系统</h2><p>&ensp; &ensp; R&amp;S CMW100 Firmware需要运行在64位的操作系统上，不支持32位版本的操作系统，不支持WindowsXP系统，推荐使用如下版本操作系统。 Windows 7 Professional 64 Bit</p>
+<h1 id="2-固件安装"><a href="#2-固件安装" class="headerlink" title="2.固件安装"></a>2.固件安装</h1><h2 id="2-1连接CMW100"><a href="#2-1连接CMW100" class="headerlink" title="2.1连接CMW100"></a>2.1连接CMW100</h2><p>&ensp; &ensp; 将电源适配器与CMW100进行连接。 CWM100与PC使用USB3.0接口进行连接，USB 3.0 接口通常会使用两个“SS”进行标记，如下图所示： </p>
 <p><img src="/2021/10/14/CMW100_Install/img1.png"></p>
 <h2 id="2-2-安装CMW100固件"><a href="#2-2-安装CMW100固件" class="headerlink" title="2.2 安装CMW100固件"></a>2.2 安装CMW100固件</h2><p>&ensp; &ensp; 将CMW100的固件软件拷贝到PC任意目录中，以<strong>管理员的身份</strong>运行所选择的固件，如需要将各制式的固件一同安装，请勾选“Add other setups from current directory”，点击“<strong>Next</strong>” 进行安装，如下图所示：</p>
 <p><img src="/2021/10/14/CMW100_Install/img2.png"></p>
@@ -168,7 +175,7 @@
     <title>GIT学习笔记</title>
     <url>/2021/09/16/GitStudy/</url>
     <content><![CDATA[<h3 id="GIT配置"><a href="#GIT配置" class="headerlink" title="GIT配置"></a>GIT配置</h3><blockquote>
-<p>$ git config –global user.name “Your Name”<br>$ git config –global user.email “<a href="mailto:&#101;&#x6d;&#x61;&#105;&#x6c;&#x40;&#x65;&#120;&#x61;&#109;&#112;&#108;&#101;&#x2e;&#x63;&#111;&#x6d;">&#101;&#x6d;&#x61;&#105;&#x6c;&#x40;&#x65;&#120;&#x61;&#109;&#112;&#108;&#101;&#x2e;&#x63;&#111;&#x6d;</a>“</p>
+<p>$ git config –global user.name “Your Name”<br>$ git config –global user.email “<a href="mailto:&#101;&#x6d;&#97;&#105;&#x6c;&#64;&#101;&#x78;&#x61;&#109;&#112;&#108;&#101;&#46;&#x63;&#x6f;&#x6d;">&#101;&#x6d;&#97;&#105;&#x6c;&#64;&#101;&#x78;&#x61;&#109;&#112;&#108;&#101;&#46;&#x63;&#x6f;&#x6d;</a>“</p>
 </blockquote>
 <h3 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h3><blockquote>
 <p>初始化一个Git仓库，使用<strong>git init</strong>命令。</p>
@@ -199,7 +206,7 @@
 </blockquote>
 <h3 id="注册远程仓库"><a href="#注册远程仓库" class="headerlink" title="注册远程仓库"></a>注册远程仓库</h3><blockquote>
 <p>第1步：创建SSH Key。在用户主目录下，看看有没有.ssh目录，如果有，再看看这个目录下有没有<code>id_rsa</code>和<code>id_rsa.pub</code>这两个文件，如果已经有了，可直接跳到下一步。如果没有，打开Shell（Windows下打开Git Bash），创建SSH Key：</p>
-<p>$ ssh-keygen -t rsa -C “<a href="mailto:&#121;&#111;&#x75;&#x72;&#x65;&#x6d;&#x61;&#105;&#108;&#x40;&#101;&#120;&#97;&#x6d;&#112;&#x6c;&#101;&#x2e;&#99;&#111;&#109;">&#121;&#111;&#x75;&#x72;&#x65;&#x6d;&#x61;&#105;&#108;&#x40;&#101;&#120;&#97;&#x6d;&#112;&#x6c;&#101;&#x2e;&#99;&#111;&#109;</a>“</p>
+<p>$ ssh-keygen -t rsa -C “<a href="mailto:&#x79;&#x6f;&#117;&#x72;&#101;&#109;&#97;&#x69;&#x6c;&#x40;&#x65;&#x78;&#97;&#109;&#112;&#108;&#101;&#46;&#99;&#111;&#x6d;">&#x79;&#x6f;&#117;&#x72;&#101;&#109;&#97;&#x69;&#x6c;&#x40;&#x65;&#x78;&#97;&#109;&#112;&#108;&#101;&#46;&#99;&#111;&#x6d;</a>“</p>
 <p>第2步：登陆GitHub，打开“Account settings”，“SSH Keys”页面：</p>
 <p>然后，点“Add SSH Key”，填上任意Title，在Key文本框里粘贴<code>id_rsa.pub</code>文件的内容：</p>
 </blockquote>
@@ -219,17 +226,35 @@
       </tags>
   </entry>
   <entry>
-    <title>批量Xml文件格式化</title>
-    <url>/2021/05/18/BatchXmlFormater/</url>
-    <content><![CDATA[<p><img src="/2021/05/18/BatchXmlFormater/01.png" alt="image"></p>
-<p><a href="/download/BatchXmlFormater.7z">点击下载</a></p>
+    <title>LogParser使用说明</title>
+    <url>/2021/05/18/LogParser/</url>
+    <content><![CDATA[<ol>
+<li><p>工具默认Log在D:\LogFiles下，请排除不是本次需要解析Log。</p>
+</li>
+<li><p>点击 <strong>Add Folder</strong> 按钮，定位到Log目录，后点击确定; <strong>或者拖动部分子文件夹到列表中</strong>。</p>
+</li>
+</ol>
+<p><img src="/2021/05/18/LogParser/img1.png" alt="img1"></p>
+<span id="more"></span>
+
+<ol start="3">
+<li><p>点击 <strong>Start Parser</strong> 等待解析完成。 </p>
+</li>
+<li><p>桌面上会生成一个 Excel 文件汇总。 </p>
+</li>
+<li><p>把这个文件按电脑名称命名，比如 SMT4. xlsx，方便定位到问题后改善。 </p>
+</li>
+<li><p>如果要解析WBG工位的Log，请在增加文件前，选择WBG Log下接列表。</p>
+<p><a href="/download/LogParser.7z">点击下载</a></p>
+</li>
+</ol>
 ]]></content>
       <categories>
         <category>原创</category>
       </categories>
       <tags>
-        <tag>XML</tag>
-        <tag>文件格式化</tag>
+        <tag>LogParser</tag>
+        <tag>Log解析</tag>
       </tags>
   </entry>
   <entry>
@@ -284,7 +309,7 @@
 <span id="more"></span>
 
 <h3 id="Genymotion无法启动"><a href="#Genymotion无法启动" class="headerlink" title="Genymotion无法启动"></a>Genymotion无法启动</h3><blockquote>
-<p>1 结束所有VirtualBox相关进程<br>2 以管理员方式启动VirtualBox 不关闭<br>3 以管理员方式启动Genymotion<br>Genymotion 账号 - zx.<br>Android模拟器 Genymotion / Username: tabzhang / Email address: <a href="mailto:&#x74;&#x61;&#98;&#x2e;&#x7a;&#x68;&#x61;&#x6e;&#103;&#x40;&#x66;&#111;&#120;&#x6d;&#x61;&#x69;&#108;&#46;&#x63;&#111;&#109;">&#x74;&#x61;&#98;&#x2e;&#x7a;&#x68;&#x61;&#x6e;&#103;&#x40;&#x66;&#111;&#120;&#x6d;&#x61;&#x69;&#108;&#46;&#x63;&#111;&#109;</a></p>
+<p>1 结束所有VirtualBox相关进程<br>2 以管理员方式启动VirtualBox 不关闭<br>3 以管理员方式启动Genymotion<br>Genymotion 账号 - zx.<br>Android模拟器 Genymotion / Username: tabzhang / Email address: <a href="mailto:&#116;&#x61;&#98;&#x2e;&#x7a;&#x68;&#97;&#x6e;&#103;&#64;&#102;&#x6f;&#120;&#109;&#x61;&#x69;&#108;&#46;&#99;&#111;&#109;">&#116;&#x61;&#98;&#x2e;&#x7a;&#x68;&#97;&#x6e;&#103;&#64;&#102;&#x6f;&#120;&#109;&#x61;&#x69;&#108;&#46;&#99;&#111;&#109;</a></p>
 </blockquote>
 <h3 id="C-调用-C-新方式"><a href="#C-调用-C-新方式" class="headerlink" title="C# 调用 C++ 新方式"></a>C# 调用 C++ 新方式</h3><blockquote>
 <p>用C++CLI搭建C++和C#之间的桥梁</p>
@@ -395,38 +420,6 @@
       <tags>
         <tag>SQLServer</tag>
         <tag>外网访问</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>LogParser使用说明</title>
-    <url>/2021/05/18/LogParser/</url>
-    <content><![CDATA[<ol>
-<li><p>工具默认Log在D:\LogFiles下，请排除不是本次需要解析Log。</p>
-</li>
-<li><p>点击 <strong>Add Folder</strong> 按钮，定位到Log目录，后点击确定; <strong>或者拖动部分子文件夹到列表中</strong>。</p>
-</li>
-</ol>
-<p><img src="/2021/05/18/LogParser/img1.png" alt="img1"></p>
-<span id="more"></span>
-
-<ol start="3">
-<li><p>点击 <strong>Start Parser</strong> 等待解析完成。 </p>
-</li>
-<li><p>桌面上会生成一个 Excel 文件汇总。 </p>
-</li>
-<li><p>把这个文件按电脑名称命名，比如 SMT4. xlsx，方便定位到问题后改善。 </p>
-</li>
-<li><p>如果要解析WBG工位的Log，请在增加文件前，选择WBG Log下接列表。</p>
-<p><a href="/download/LogParser.7z">点击下载</a></p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>原创</category>
-      </categories>
-      <tags>
-        <tag>LogParser</tag>
-        <tag>Log解析</tag>
       </tags>
   </entry>
 </search>
