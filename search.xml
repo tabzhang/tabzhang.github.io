@@ -64,40 +64,6 @@
       </tags>
   </entry>
   <entry>
-    <title>CMW固件更新及设置</title>
-    <url>/2021/10/12/CMW_FW/</url>
-    <content><![CDATA[<p>1.<strong>先卸载旧固件</strong>，如果找不到桌面维护图标，按<kbd>Win</kbd>+<kbd>R</kbd>打开Windows的<strong>运行对话框</strong>，输入以下指令后<kbd>ENTER</kbd>，在弹出的对应框中卸载旧版本。</p>
-<blockquote>
-<p>“C:\Program Files (x86)\Rohde-Schwarz\RsDistributor\RsDistributor.exe” -maintenance</p>
-</blockquote>
-<p>2.<strong>下载新固件与波形文件</strong>，<strong>阿里云盘不限速下载</strong>，地址如下：</p>
-<blockquote>
-<p><a href="https://www.aliyundrive.com/s/1G9o4Z764z2">CMW100</a>  |  <a href="https://www.aliyundrive.com/s/QCK1u5gyMyJ">CMW500</a>  |  <a href="https://www.aliyundrive.com/s/gGYCzj2kXsC">波形文件</a>  </p>
-</blockquote>
-<p>(固件版本选择，按项目请找相关人员确认，波形通用)</p>
-<span id="more"></span>
-<p>3.<strong>安装新固件</strong>，解压后双击其中一个安装包，在<strong>向导对话框</strong>中<strong>勾选</strong>如<strong>下图选项</strong>，并<strong>下一步</strong>等待安装完成即可，</p>
-<p><img src="/2021/10/12/CMW_FW/img1.png" alt="img1"></p>
-<p>4.<strong>波形文件安装</strong>。</p>
-<p>​        可以手动以默认路径安装，或者手动放置，路径如下：</p>
-<blockquote>
-<p>CMW500:    D:\Rohde-Schwarz\CMW\waveform\library1</p>
-<p>CMW100:    C:\ProgramData\Rohde-Schwarz\CMW\Data\waveform\</p>
-</blockquote>
-<p>5.<strong>切换成单窗口</strong> (推荐)：固件默认是多窗口模式，不方便操作，按下面<strong>红色标记</strong>找到<strong>Muliple Windows</strong>，<strong>取消勾选</strong>即可。</p>
-<p><img src="/2021/10/12/CMW_FW/img2.png" alt="img2"></p>
-<p>6.<strong>切换双通道</strong> (根据项目需要)：按第4步设置后，点击右侧DEVICE按钮，如下图进行设置，切换后要等待仪表自动重启后，方可使用。</p>
-<p><img src="/2021/10/12/CMW_FW/img3.png" alt="img3"></p>
-]]></content>
-      <categories>
-        <category>下载</category>
-      </categories>
-      <tags>
-        <tag>CMW100</tag>
-        <tag>仪表</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>CMW100应用操作指引</title>
     <url>/2021/10/14/CMW100_Install/</url>
     <content><![CDATA[<h1 id="1-环境要求"><a href="#1-环境要求" class="headerlink" title="1.环境要求"></a>1.环境要求</h1><h2 id="1-1-革新的设计理念"><a href="#1-1-革新的设计理念" class="headerlink" title="1.1 革新的设计理念"></a>1.1 革新的设计理念</h2><p><img src="/2021/10/14/CMW100_Install/img16.png"></p>
@@ -175,7 +141,7 @@
     <title>GIT学习笔记</title>
     <url>/2021/09/16/GitStudy/</url>
     <content><![CDATA[<h3 id="GIT配置"><a href="#GIT配置" class="headerlink" title="GIT配置"></a>GIT配置</h3><blockquote>
-<p>$ git config –global user.name “Your Name”<br>$ git config –global user.email “<a href="mailto:&#101;&#109;&#x61;&#x69;&#108;&#x40;&#101;&#120;&#x61;&#109;&#112;&#108;&#x65;&#46;&#x63;&#x6f;&#x6d;">&#101;&#109;&#x61;&#x69;&#108;&#x40;&#101;&#120;&#x61;&#109;&#112;&#108;&#x65;&#46;&#x63;&#x6f;&#x6d;</a>“</p>
+<p>$ git config –global user.name “Your Name”<br>$ git config –global user.email “<a href="mailto:&#x65;&#109;&#97;&#x69;&#108;&#x40;&#x65;&#x78;&#x61;&#109;&#112;&#108;&#x65;&#46;&#x63;&#111;&#x6d;">&#x65;&#109;&#97;&#x69;&#108;&#x40;&#x65;&#x78;&#x61;&#109;&#112;&#108;&#x65;&#46;&#x63;&#111;&#x6d;</a>“</p>
 </blockquote>
 <h3 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h3><blockquote>
 <p>初始化一个Git仓库，使用<strong>git init</strong>命令。</p>
@@ -206,7 +172,7 @@
 </blockquote>
 <h3 id="注册远程仓库"><a href="#注册远程仓库" class="headerlink" title="注册远程仓库"></a>注册远程仓库</h3><blockquote>
 <p>第1步：创建SSH Key。在用户主目录下，看看有没有.ssh目录，如果有，再看看这个目录下有没有<code>id_rsa</code>和<code>id_rsa.pub</code>这两个文件，如果已经有了，可直接跳到下一步。如果没有，打开Shell（Windows下打开Git Bash），创建SSH Key：</p>
-<p>$ ssh-keygen -t rsa -C “<a href="mailto:&#121;&#x6f;&#117;&#114;&#101;&#x6d;&#97;&#105;&#108;&#64;&#101;&#120;&#97;&#109;&#112;&#108;&#101;&#46;&#99;&#111;&#x6d;">&#121;&#x6f;&#117;&#114;&#101;&#x6d;&#97;&#105;&#108;&#64;&#101;&#120;&#97;&#109;&#112;&#108;&#101;&#46;&#99;&#111;&#x6d;</a>“</p>
+<p>$ ssh-keygen -t rsa -C “<a href="mailto:&#121;&#x6f;&#x75;&#114;&#x65;&#x6d;&#97;&#105;&#x6c;&#64;&#101;&#x78;&#x61;&#109;&#x70;&#x6c;&#101;&#46;&#x63;&#x6f;&#109;">&#121;&#x6f;&#x75;&#114;&#x65;&#x6d;&#97;&#105;&#x6c;&#64;&#101;&#x78;&#x61;&#109;&#x70;&#x6c;&#101;&#46;&#x63;&#x6f;&#109;</a>“</p>
 <p>第2步：登陆GitHub，打开“Account settings”，“SSH Keys”页面：</p>
 <p>然后，点“Add SSH Key”，填上任意Title，在Key文本框里粘贴<code>id_rsa.pub</code>文件的内容：</p>
 </blockquote>
@@ -223,6 +189,42 @@
       <tags>
         <tag>笔记</tag>
         <tag>GIT</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CMW固件更新及设置</title>
+    <url>/2021/10/12/CMW_FW/</url>
+    <content><![CDATA[<p>1.<strong>先卸载旧固件</strong>，如果找不到桌面维护图标，按<kbd>Win</kbd>+<kbd>R</kbd>打开Windows的<strong>运行对话框</strong>，输入以下指令后<kbd>ENTER</kbd>，在弹出的对应框中卸载旧版本。</p>
+<blockquote>
+<p>“C:\Program Files (x86)\Rohde-Schwarz\RsDistributor\RsDistributor.exe” -maintenance</p>
+</blockquote>
+<p>2.<strong>下载新固件与波形文件</strong>，<strong>阿里云盘不限速下载</strong>，地址如下：</p>
+<blockquote>
+<p><a href="https://www.aliyundrive.com/s/1G9o4Z764z2">CMW100</a>  |  <a href="https://www.aliyundrive.com/s/QCK1u5gyMyJ">CMW500</a>  |  <a href="https://www.aliyundrive.com/s/gGYCzj2kXsC">波形文件(安装版)</a> |  <a href="https://www.aliyundrive.com/s/Kfhwuz8hb29">波形文件(自动解压)</a>  </p>
+</blockquote>
+<p>(固件版本选择，按项目请找相关人员确认，波形通用)</p>
+<span id="more"></span>
+<p>3.<strong>安装新固件</strong>，解压后双击其中一个安装包，在<strong>向导对话框</strong>中<strong>勾选</strong>如<strong>下图选项</strong>，并<strong>下一步</strong>等待安装完成即可，</p>
+<p><img src="/2021/10/12/CMW_FW/img1.png" alt="img1"></p>
+<p>4.<strong>波形文件安装</strong>。</p>
+<p>​        可以使用安装版以默认路径安装，或者手动放置，路径如下：</p>
+<blockquote>
+<p>CMW500:    D:\Rohde-Schwarz\CMW\waveform\library1</p>
+<p>CMW100:    C:\ProgramData\Rohde-Schwarz\CMW\Data\waveform\</p>
+</blockquote>
+<p>​        也可以使用自动解压版，请下载上面对应的版本：</p>
+<p><img src="/2021/10/12/CMW_FW/img4.png" alt="img1"></p>
+<p>5.<strong>切换成单窗口</strong> (推荐)：固件默认是多窗口模式，不方便操作，按下面<strong>红色标记</strong>找到<strong>Muliple Windows</strong>，<strong>取消勾选</strong>即可。</p>
+<p><img src="/2021/10/12/CMW_FW/img2.png" alt="img2"></p>
+<p>6.<strong>切换双通道</strong> (根据项目需要)：按第4步设置后，点击右侧DEVICE按钮，如下图进行设置，切换后要等待仪表自动重启后，方可使用。</p>
+<p><img src="/2021/10/12/CMW_FW/img3.png" alt="img3"></p>
+]]></content>
+      <categories>
+        <category>下载</category>
+      </categories>
+      <tags>
+        <tag>CMW100</tag>
+        <tag>仪表</tag>
       </tags>
   </entry>
   <entry>
@@ -309,7 +311,7 @@
 <span id="more"></span>
 
 <h3 id="Genymotion无法启动"><a href="#Genymotion无法启动" class="headerlink" title="Genymotion无法启动"></a>Genymotion无法启动</h3><blockquote>
-<p>1 结束所有VirtualBox相关进程<br>2 以管理员方式启动VirtualBox 不关闭<br>3 以管理员方式启动Genymotion<br>Genymotion 账号 - zx.<br>Android模拟器 Genymotion / Username: tabzhang / Email address: <a href="mailto:&#116;&#x61;&#x62;&#46;&#x7a;&#104;&#97;&#110;&#x67;&#x40;&#102;&#x6f;&#120;&#x6d;&#97;&#105;&#x6c;&#x2e;&#x63;&#111;&#x6d;">&#116;&#x61;&#x62;&#46;&#x7a;&#104;&#97;&#110;&#x67;&#x40;&#102;&#x6f;&#120;&#x6d;&#97;&#105;&#x6c;&#x2e;&#x63;&#111;&#x6d;</a></p>
+<p>1 结束所有VirtualBox相关进程<br>2 以管理员方式启动VirtualBox 不关闭<br>3 以管理员方式启动Genymotion<br>Genymotion 账号 - zx.<br>Android模拟器 Genymotion / Username: tabzhang / Email address: <a href="mailto:&#116;&#97;&#x62;&#x2e;&#x7a;&#104;&#97;&#x6e;&#x67;&#x40;&#x66;&#x6f;&#x78;&#109;&#x61;&#105;&#108;&#x2e;&#x63;&#x6f;&#x6d;">&#116;&#97;&#x62;&#x2e;&#x7a;&#104;&#97;&#x6e;&#x67;&#x40;&#x66;&#x6f;&#x78;&#109;&#x61;&#105;&#108;&#x2e;&#x63;&#x6f;&#x6d;</a></p>
 </blockquote>
 <h3 id="C-调用-C-新方式"><a href="#C-调用-C-新方式" class="headerlink" title="C# 调用 C++ 新方式"></a>C# 调用 C++ 新方式</h3><blockquote>
 <p>用C++CLI搭建C++和C#之间的桥梁</p>
@@ -452,7 +454,7 @@
 <td align="center">1999</td>
 <td align="center">2003</td>
 <td align="center">2009</td>
-<td align="center">2013 wave1/2016 wave2</td>
+<td align="center">2013 wave1 / 2016 wave2</td>
 <td align="center">2018+</td>
 </tr>
 <tr>
@@ -479,7 +481,7 @@
 <td align="center"></td>
 <td align="center"></td>
 <td align="center">0~7</td>
-<td align="center">0`9</td>
+<td align="center">0~9</td>
 <td align="center">0~11</td>
 </tr>
 <tr>
