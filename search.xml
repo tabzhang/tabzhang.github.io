@@ -1,26 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>增量自动升级AutoUpdater V1.2</title>
-    <url>/2021/05/13/AutoUpdater/</url>
-    <content><![CDATA[<p><img src="/2021/05/13/AutoUpdater/01.png" alt="img1"></p>
-<h2 id="【功能说明】"><a href="#【功能说明】" class="headerlink" title="【功能说明】"></a>【功能说明】</h2><p>1.自动对比程序文件，按需增量升级<br>2.可跨版本升级，不关心版本号，支持零代码集成<br>3.支持Auto/Normal/Silence三种运行模式<br>4.支持Update/Delete/SkipExist更新方式<br>5.提供独立升级包制作工具，支持自身升级<br>6.支持自动解除锁定文件<br>7.支持版本跳过，支持缺失文件检查等<br><a href="/download/AutoUpdaterV1.2.7z">点击下载</a></p>
-<span id="more"></span>
-
-<h2 id="升级包制件工具-AutoUpdaterBuilder"><a href="#升级包制件工具-AutoUpdaterBuilder" class="headerlink" title="升级包制件工具-AutoUpdaterBuilder"></a>升级包制件工具-AutoUpdaterBuilder</h2><p><img src="/2021/05/13/AutoUpdater/04.png" alt="img4"></p>
-<h2 id="其它相关界面参考…"><a href="#其它相关界面参考…" class="headerlink" title="其它相关界面参考…"></a>其它相关界面参考…</h2><p><img src="/2021/05/13/AutoUpdater/02.png" alt="img2"></p>
-<p><img src="/2021/05/13/AutoUpdater/03.png" alt="img3"></p>
-<p>欢迎提出您的建议与意见！</p>
-]]></content>
-      <categories>
-        <category>原创</category>
-      </categories>
-      <tags>
-        <tag>AutoUpdater</tag>
-        <tag>增量</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Android学习笔记</title>
     <url>/2016/04/16/AndroidStudy/</url>
     <content><![CDATA[<p><strong>1.Xml 格式化Ctrl+Alt+L</strong></p>
@@ -47,6 +27,26 @@
       <tags>
         <tag>Android</tag>
         <tag>笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>增量自动升级AutoUpdater V1.2</title>
+    <url>/2021/05/13/AutoUpdater/</url>
+    <content><![CDATA[<p><img src="/2021/05/13/AutoUpdater/01.png" alt="img1"></p>
+<h2 id="【功能说明】"><a href="#【功能说明】" class="headerlink" title="【功能说明】"></a>【功能说明】</h2><p>1.自动对比程序文件，按需增量升级<br>2.可跨版本升级，不关心版本号，支持零代码集成<br>3.支持Auto/Normal/Silence三种运行模式<br>4.支持Update/Delete/SkipExist更新方式<br>5.提供独立升级包制作工具，支持自身升级<br>6.支持自动解除锁定文件<br>7.支持版本跳过，支持缺失文件检查等<br><a href="/download/AutoUpdaterV1.2.7z">点击下载</a></p>
+<span id="more"></span>
+
+<h2 id="升级包制件工具-AutoUpdaterBuilder"><a href="#升级包制件工具-AutoUpdaterBuilder" class="headerlink" title="升级包制件工具-AutoUpdaterBuilder"></a>升级包制件工具-AutoUpdaterBuilder</h2><p><img src="/2021/05/13/AutoUpdater/04.png" alt="img4"></p>
+<h2 id="其它相关界面参考…"><a href="#其它相关界面参考…" class="headerlink" title="其它相关界面参考…"></a>其它相关界面参考…</h2><p><img src="/2021/05/13/AutoUpdater/02.png" alt="img2"></p>
+<p><img src="/2021/05/13/AutoUpdater/03.png" alt="img3"></p>
+<p>欢迎提出您的建议与意见！</p>
+]]></content>
+      <categories>
+        <category>原创</category>
+      </categories>
+      <tags>
+        <tag>AutoUpdater</tag>
+        <tag>增量</tag>
       </tags>
   </entry>
   <entry>
@@ -192,7 +192,7 @@
     <title>GIT学习笔记</title>
     <url>/2021/09/16/GitStudy/</url>
     <content><![CDATA[<h3 id="GIT配置"><a href="#GIT配置" class="headerlink" title="GIT配置"></a>GIT配置</h3><blockquote>
-<p>$ git config –global user.name “Your Name”<br>$ git config –global user.email “<a href="mailto:&#101;&#x6d;&#x61;&#x69;&#x6c;&#64;&#x65;&#x78;&#97;&#109;&#x70;&#108;&#101;&#x2e;&#99;&#111;&#109;">&#101;&#x6d;&#x61;&#x69;&#x6c;&#64;&#x65;&#x78;&#97;&#109;&#x70;&#108;&#101;&#x2e;&#99;&#111;&#109;</a>“</p>
+<p>$ git config –global user.name “Your Name”<br>$ git config –global user.email “<a href="mailto:&#x65;&#109;&#x61;&#105;&#x6c;&#x40;&#x65;&#x78;&#x61;&#x6d;&#x70;&#x6c;&#101;&#x2e;&#99;&#111;&#x6d;">&#x65;&#109;&#x61;&#105;&#x6c;&#x40;&#x65;&#x78;&#x61;&#x6d;&#x70;&#x6c;&#101;&#x2e;&#99;&#111;&#x6d;</a>“</p>
 </blockquote>
 <h3 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h3><blockquote>
 <p>初始化一个Git仓库，使用<strong>git init</strong>命令。</p>
@@ -223,7 +223,7 @@
 </blockquote>
 <h3 id="注册远程仓库"><a href="#注册远程仓库" class="headerlink" title="注册远程仓库"></a>注册远程仓库</h3><blockquote>
 <p>第1步：创建SSH Key。在用户主目录下，看看有没有.ssh目录，如果有，再看看这个目录下有没有<code>id_rsa</code>和<code>id_rsa.pub</code>这两个文件，如果已经有了，可直接跳到下一步。如果没有，打开Shell（Windows下打开Git Bash），创建SSH Key：</p>
-<p>$ ssh-keygen -t rsa -C “<a href="mailto:&#x79;&#x6f;&#x75;&#114;&#x65;&#x6d;&#x61;&#105;&#108;&#x40;&#101;&#x78;&#x61;&#109;&#112;&#x6c;&#x65;&#46;&#x63;&#111;&#109;">&#x79;&#x6f;&#x75;&#114;&#x65;&#x6d;&#x61;&#105;&#108;&#x40;&#101;&#x78;&#x61;&#109;&#112;&#x6c;&#x65;&#46;&#x63;&#111;&#109;</a>“</p>
+<p>$ ssh-keygen -t rsa -C “<a href="mailto:&#x79;&#111;&#117;&#x72;&#101;&#109;&#x61;&#x69;&#x6c;&#x40;&#x65;&#x78;&#x61;&#109;&#112;&#108;&#101;&#x2e;&#99;&#111;&#x6d;">&#x79;&#111;&#117;&#x72;&#101;&#109;&#x61;&#x69;&#x6c;&#x40;&#x65;&#x78;&#x61;&#109;&#112;&#108;&#101;&#x2e;&#99;&#111;&#x6d;</a>“</p>
 <p>第2步：登陆GitHub，打开“Account settings”，“SSH Keys”页面：</p>
 <p>然后，点“Add SSH Key”，填上任意Title，在Key文本框里粘贴<code>id_rsa.pub</code>文件的内容：</p>
 </blockquote>
@@ -272,6 +272,28 @@
       <tags>
         <tag>LogParser</tag>
         <tag>Log解析</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何记录CMW完整的SCPI报告</title>
+    <url>/2022/05/11/RecordSCPI/</url>
+    <content><![CDATA[<ol>
+<li><p>当仪表被远程控制上，点击固件上“report file on”按钮，如下图：  程序跑完后，关闭掉 Report file.</p>
+<p><img src="/2022/05/11/RecordSCPI/1.jpg" alt="1.jpg"></p>
+</li>
+<li><p>进入电脑固件目录，3.8.10 是当前的 base 版本，进入和当前时间最接近的一个目录中.</p>
+<p><img src="/2022/05/11/RecordSCPI/2.jpg"></p>
+</li>
+<li><p>此时可以看到打开的文件夹里有个 RemoteTrace-current.xml 文件.</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>手册</category>
+      </categories>
+      <tags>
+        <tag>SCPI</tag>
+        <tag>调试</tag>
       </tags>
   </entry>
   <entry>
@@ -326,7 +348,7 @@
 <span id="more"></span>
 
 <h3 id="Genymotion无法启动"><a href="#Genymotion无法启动" class="headerlink" title="Genymotion无法启动"></a>Genymotion无法启动</h3><blockquote>
-<p>1 结束所有VirtualBox相关进程<br>2 以管理员方式启动VirtualBox 不关闭<br>3 以管理员方式启动Genymotion<br>Genymotion 账号 - zx.<br>Android模拟器 Genymotion / Username: tabzhang / Email address: <a href="mailto:&#x74;&#x61;&#98;&#46;&#x7a;&#104;&#97;&#110;&#x67;&#x40;&#102;&#111;&#x78;&#109;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#111;&#109;">&#x74;&#x61;&#98;&#46;&#x7a;&#104;&#97;&#110;&#x67;&#x40;&#102;&#111;&#x78;&#109;&#x61;&#x69;&#x6c;&#x2e;&#x63;&#111;&#109;</a></p>
+<p>1 结束所有VirtualBox相关进程<br>2 以管理员方式启动VirtualBox 不关闭<br>3 以管理员方式启动Genymotion<br>Genymotion 账号 - zx.<br>Android模拟器 Genymotion / Username: tabzhang / Email address: <a href="mailto:&#x74;&#97;&#x62;&#46;&#x7a;&#x68;&#97;&#x6e;&#103;&#x40;&#x66;&#x6f;&#120;&#109;&#97;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#109;">&#x74;&#97;&#x62;&#46;&#x7a;&#x68;&#97;&#x6e;&#103;&#x40;&#x66;&#x6f;&#120;&#109;&#97;&#x69;&#x6c;&#x2e;&#99;&#x6f;&#109;</a></p>
 </blockquote>
 <h3 id="C-调用-C-新方式"><a href="#C-调用-C-新方式" class="headerlink" title="C# 调用 C++ 新方式"></a>C# 调用 C++ 新方式</h3><blockquote>
 <p>用C++CLI搭建C++和C#之间的桥梁</p>
