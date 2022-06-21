@@ -64,7 +64,7 @@
 <span id="more"></span>
 
 <h2 id="操作实战"><a href="#操作实战" class="headerlink" title="操作实战"></a>操作实战</h2><p>1.准备要发布的程序，并放入在主程序目录AutoUpdater.exe与AutoUpdaterCfg.xml，如下图。</p>
-<p><img src="/2022/06/21/AutoUpdaterManual/01.png" alt="01.png"></p>
+<p><img src="/2022/06/21/AutoUpdaterManual/1.png" alt="01.png"></p>
 <p>2.在升级服务器建立对应的目录MeizuTest，如下图，左边是本地路径，右边是在服务器上建立的空目录：</p>
 <p><img src="/2022/06/21/AutoUpdaterManual/02.png" alt="02.png"></p>
 <p>3.建立好目录后，把对应的路径填入AutoUpdaterCfg.xml配置文件中，并配置主程序名称。</p>
@@ -238,7 +238,7 @@
     <title>GIT学习笔记</title>
     <url>/2021/09/16/GitStudy/</url>
     <content><![CDATA[<h3 id="GIT配置"><a href="#GIT配置" class="headerlink" title="GIT配置"></a>GIT配置</h3><blockquote>
-<p>$ git config –global user.name “Your Name”<br>$ git config –global user.email “<a href="mailto:&#x65;&#109;&#x61;&#105;&#108;&#x40;&#x65;&#120;&#97;&#109;&#x70;&#108;&#101;&#46;&#99;&#x6f;&#109;">&#x65;&#109;&#x61;&#105;&#108;&#x40;&#x65;&#120;&#97;&#109;&#x70;&#108;&#101;&#46;&#99;&#x6f;&#109;</a>“</p>
+<p>$ git config –global user.name “Your Name”<br>$ git config –global user.email “<a href="mailto:&#101;&#x6d;&#x61;&#105;&#x6c;&#x40;&#101;&#120;&#x61;&#109;&#112;&#x6c;&#x65;&#46;&#x63;&#x6f;&#109;">&#101;&#x6d;&#x61;&#105;&#x6c;&#x40;&#101;&#120;&#x61;&#109;&#112;&#x6c;&#x65;&#46;&#x63;&#x6f;&#109;</a>“</p>
 </blockquote>
 <h3 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h3><blockquote>
 <p>初始化一个Git仓库，使用<strong>git init</strong>命令。</p>
@@ -269,7 +269,7 @@
 </blockquote>
 <h3 id="注册远程仓库"><a href="#注册远程仓库" class="headerlink" title="注册远程仓库"></a>注册远程仓库</h3><blockquote>
 <p>第1步：创建SSH Key。在用户主目录下，看看有没有.ssh目录，如果有，再看看这个目录下有没有<code>id_rsa</code>和<code>id_rsa.pub</code>这两个文件，如果已经有了，可直接跳到下一步。如果没有，打开Shell（Windows下打开Git Bash），创建SSH Key：</p>
-<p>$ ssh-keygen -t rsa -C “<a href="mailto:&#121;&#x6f;&#117;&#114;&#x65;&#x6d;&#97;&#105;&#x6c;&#64;&#x65;&#120;&#97;&#x6d;&#112;&#108;&#101;&#x2e;&#x63;&#111;&#109;">&#121;&#x6f;&#117;&#114;&#x65;&#x6d;&#97;&#105;&#x6c;&#64;&#x65;&#120;&#97;&#x6d;&#112;&#108;&#101;&#x2e;&#x63;&#111;&#109;</a>“</p>
+<p>$ ssh-keygen -t rsa -C “<a href="mailto:&#121;&#x6f;&#x75;&#114;&#x65;&#109;&#97;&#x69;&#108;&#x40;&#101;&#120;&#97;&#x6d;&#112;&#x6c;&#x65;&#46;&#99;&#111;&#109;">&#121;&#x6f;&#x75;&#114;&#x65;&#109;&#97;&#x69;&#108;&#x40;&#101;&#120;&#97;&#x6d;&#112;&#x6c;&#x65;&#46;&#99;&#111;&#109;</a>“</p>
 <p>第2步：登陆GitHub，打开“Account settings”，“SSH Keys”页面：</p>
 <p>然后，点“Add SSH Key”，填上任意Title，在Key文本框里粘贴<code>id_rsa.pub</code>文件的内容：</p>
 </blockquote>
@@ -418,7 +418,7 @@
 <span id="more"></span>
 
 <h3 id="Genymotion无法启动"><a href="#Genymotion无法启动" class="headerlink" title="Genymotion无法启动"></a>Genymotion无法启动</h3><blockquote>
-<p>1 结束所有VirtualBox相关进程<br>2 以管理员方式启动VirtualBox 不关闭<br>3 以管理员方式启动Genymotion<br>Genymotion 账号 - zx.<br>Android模拟器 Genymotion &#x2F; Username: tabzhang &#x2F; Email address: <a href="mailto:&#x74;&#x61;&#x62;&#46;&#x7a;&#104;&#97;&#x6e;&#103;&#x40;&#102;&#111;&#120;&#109;&#97;&#105;&#108;&#46;&#x63;&#111;&#109;">&#x74;&#x61;&#x62;&#46;&#x7a;&#104;&#97;&#x6e;&#103;&#x40;&#102;&#111;&#120;&#109;&#97;&#105;&#108;&#46;&#x63;&#111;&#109;</a></p>
+<p>1 结束所有VirtualBox相关进程<br>2 以管理员方式启动VirtualBox 不关闭<br>3 以管理员方式启动Genymotion<br>Genymotion 账号 - zx.<br>Android模拟器 Genymotion &#x2F; Username: tabzhang &#x2F; Email address: <a href="mailto:&#x74;&#97;&#98;&#x2e;&#122;&#104;&#x61;&#x6e;&#x67;&#64;&#102;&#111;&#x78;&#x6d;&#x61;&#105;&#x6c;&#x2e;&#99;&#111;&#x6d;">&#x74;&#97;&#98;&#x2e;&#122;&#104;&#x61;&#x6e;&#x67;&#64;&#102;&#111;&#x78;&#x6d;&#x61;&#105;&#x6c;&#x2e;&#99;&#111;&#x6d;</a></p>
 </blockquote>
 <h3 id="C-调用-C-新方式"><a href="#C-调用-C-新方式" class="headerlink" title="C# 调用 C++ 新方式"></a>C# 调用 C++ 新方式</h3><blockquote>
 <p>用C++CLI搭建C++和C#之间的桥梁</p>
