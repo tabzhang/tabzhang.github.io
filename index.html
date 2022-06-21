@@ -373,35 +373,18 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">RunExeWithoutWaitExit(&quot;AutoUpdater.exe&quot;, &quot;Auto&quot;);</span><br></pre></td></tr></table></figure>
 
 <p>2.在升级服务器上建立目录，以存放升级包内容，并配置在中AutoUpdaterCfg.xml的ListURL中，配置文件也主程序也放在 exe目录。</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=&quot;1.0&quot;?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">AutoUpdaterCfg</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">ListURL</span>&gt;</span>http://172.16.180.194/MeizuFCT<span class="tag">&lt;/<span class="name">ListURL</span>&gt;</span>      <span class="comment">&lt;!--升级URL--&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">MainApplication</span>&gt;</span>mTest.exe<span class="tag">&lt;/<span class="name">MainApplication</span>&gt;</span>			<span class="comment">&lt;!--主程序名--&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">CheckLostFiles</span>&gt;</span>true<span class="tag">&lt;/<span class="name">CheckLostFiles</span>&gt;</span>				    <span class="comment">&lt;!--是否检查文件缺失--&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">IgnoreVersion</span>&gt;</span>2021-08-05 11:33:01<span class="tag">&lt;/<span class="name">IgnoreVersion</span>&gt;</span>	 <span class="comment">&lt;!--用于记录忽略的版本--&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">TimeOutMs</span>&gt;</span>750<span class="tag">&lt;/<span class="name">TimeOutMs</span>&gt;</span>						   <span class="comment">&lt;!--连接服务器超时时间--&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">AutoUpdaterCfg</span>&gt;</span>xm</span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=&quot;1.0&quot;?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">AutoUpdaterCfg</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">ListURL</span>&gt;</span>http://172.16.180.194/MeizuFCT<span class="tag">&lt;/<span class="name">ListURL</span>&gt;</span>      <span class="comment">&lt;!--升级URL--&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">MainApplication</span>&gt;</span>mTest.exe<span class="tag">&lt;/<span class="name">MainApplication</span>&gt;</span>	         <span class="comment">&lt;!--主程序名--&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">CheckLostFiles</span>&gt;</span>true<span class="tag">&lt;/<span class="name">CheckLostFiles</span>&gt;</span>			        <span class="comment">&lt;!--是否检查文件缺失--&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">IgnoreVersion</span>&gt;</span>2021-08-05 11:33:01<span class="tag">&lt;/<span class="name">IgnoreVersion</span>&gt;</span>	 <span class="comment">&lt;!--用于记录忽略的版本--&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">TimeOutMs</span>&gt;</span>750<span class="tag">&lt;/<span class="name">TimeOutMs</span>&gt;</span>						   <span class="comment">&lt;!--连接服务器超时时间--&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">AutoUpdaterCfg</span>&gt;</span>xm</span><br></pre></td></tr></table></figure>
 
 <p>3.[可选] 手动升级，建议在右键菜单中使用，升级后升级程序不会自动退出。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">RunExeWithoutWaitExit(&quot;AutoUpdater.exe&quot;, &quot;Normal&quot;);</span><br></pre></td></tr></table></figure>
-
-<h2 id="操作实战"><a href="#操作实战" class="headerlink" title="操作实战"></a>操作实战</h2><p>1.准备要发布的程序，并放入在主程序目录AutoUpdater.exe与AutoUpdaterCfg.xml，如下图。</p>
-<p><img src="/2022/06/21/AutoUpdaterManual/01.PNG" alt="01.png"></p>
-<p>2.在升级服务器建立对应的目录MeizuTest，如下图，左边是本地路径，右边是在服务器上建立的空目录：</p>
-<p><img src="/2022/06/21/AutoUpdaterManual/02.PNG" alt="02.png"></p>
-<p>3.建立好目录后，把对应的路径填入AutoUpdaterCfg.xml配置文件中，并配置主程序名称。</p>
-<p><img src="/2022/06/21/AutoUpdaterManual/03.PNG" alt="03.png"></p>
-<p>4.以本地路径D:\Demo\MeizuTest制作升级包，如下图，设置对应的路径（支持拖拽）后，支持开始制作升级包。</p>
-<ul>
-<li><p>​	设置对应的参数，配置升级内容（也可以写在Readme.txt中，程序会自动读取）。</p>
-</li>
-<li><p>​    配置文件升级方式，支持更新、删除，跳过存在等。</p>
-</li>
-</ul>
-<p><img src="/2022/06/21/AutoUpdaterManual/04.PNG" alt="04.png"></p>
-<p>5.制作好的升级包如下图，用于上传到服务器。</p>
-<ul>
-<li>此时观察原始工具目录，自动生成了一个AutoUpdaterList.xml，工具首次发布的时候，要包括此文件。</li>
-</ul>
-<p><img src="/2022/06/21/AutoUpdaterManual/05.PNG" alt="05.png"></p>
-<p>6.上传到服务器后，如下图所示。</p>
-<p><img src="/2022/06/21/AutoUpdaterManual/06.PNG" alt="06.png"></p>
-<p>7.测试一下，可以删除本地一个文件，再次打开主程序，增加升级程序发现更新。</p>
-<p><img src="/2022/06/21/AutoUpdaterManual/07.PNG" alt="07.png"></p>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/06/21/AutoUpdaterManual/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
