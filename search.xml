@@ -56,7 +56,7 @@
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">RunExeWithoutWaitExit(&quot;AutoUpdater.exe&quot;, &quot;Auto&quot;);</span><br></pre></td></tr></table></figure>
 
 <p>2.在升级服务器上建立目录，以存放升级包内容，并配置在中AutoUpdaterCfg.xml的ListURL中，配置文件也主程序也放在 exe目录。</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=&quot;1.0&quot;?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">AutoUpdaterCfg</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">ListURL</span>&gt;</span>http://172.16.180.194/MeizuFCT<span class="tag">&lt;/<span class="name">ListURL</span>&gt;</span>      <span class="comment">&lt;!--升级URL--&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">MainApplication</span>&gt;</span>mTest.exe<span class="tag">&lt;/<span class="name">MainApplication</span>&gt;</span>	         <span class="comment">&lt;!--主程序名--&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">CheckLostFiles</span>&gt;</span>true<span class="tag">&lt;/<span class="name">CheckLostFiles</span>&gt;</span>			        <span class="comment">&lt;!--是否检查文件缺失--&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">IgnoreVersion</span>&gt;</span>2021-08-05 11:33:01<span class="tag">&lt;/<span class="name">IgnoreVersion</span>&gt;</span>	 <span class="comment">&lt;!--用于记录忽略的版本--&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">TimeOutMs</span>&gt;</span>750<span class="tag">&lt;/<span class="name">TimeOutMs</span>&gt;</span>						   <span class="comment">&lt;!--连接服务器超时时间--&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">AutoUpdaterCfg</span>&gt;</span>xm</span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=&quot;1.0&quot;?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">AutoUpdaterCfg</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">ListURL</span>&gt;</span>http://172.16.180.194/MeizuFCT<span class="tag">&lt;/<span class="name">ListURL</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">MainApplication</span>&gt;</span>mTest.exe<span class="tag">&lt;/<span class="name">MainApplication</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">CheckLostFiles</span>&gt;</span>true<span class="tag">&lt;/<span class="name">CheckLostFiles</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">IgnoreVersion</span>&gt;</span>2021-08-05 11:33:01<span class="tag">&lt;/<span class="name">IgnoreVersion</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">TimeOutMs</span>&gt;</span>750<span class="tag">&lt;/<span class="name">TimeOutMs</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">AutoUpdaterCfg</span>&gt;</span>xm</span><br></pre></td></tr></table></figure>
 
 <p>3.[可选] 手动升级，建议在右键菜单中使用，升级后升级程序不会自动退出。</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">RunExeWithoutWaitExit(&quot;AutoUpdater.exe&quot;, &quot;Normal&quot;);</span><br></pre></td></tr></table></figure>
@@ -174,6 +174,7 @@
 <p><img src="/2021/10/14/CMW100_Install/img11.png"></p>
 <h2 id="6-6查看固件版本"><a href="#6-6查看固件版本" class="headerlink" title="6.6查看固件版本"></a>6.6查看固件版本</h2><p><img src="/2021/10/14/CMW100_Install/img12.png"></p>
 <h2 id="6-7-查看仪表License"><a href="#6-7-查看仪表License" class="headerlink" title="6.7 查看仪表License"></a>6.7 查看仪表License</h2><p><img src="/2021/10/14/CMW100_Install/img13.png"></p>
+<h2 id="6-8-生成Report路径"><a href="#6-8-生成Report路径" class="headerlink" title="6.8 生成Report路径"></a>6.8 生成Report路径</h2><p>&amp;ensp;&amp;ensp;C:\ProgramData\Rohde-Schwarz\CMW\Log\3.8.14</p>
 ]]></content>
       <categories>
         <category>手册</category>
@@ -255,18 +256,8 @@
   <entry>
     <title>固维PSS2005常用指令</title>
     <url>/2022/05/11/PSS2005_SCPI_Command/</url>
-    <content><![CDATA[<p>*IDN? -&gt; GW.Inc,PSS-2005,EO914759,FW1.07</p>
-<p>CHAN1:VOLT ? -&gt; 04.19</p>
-<p>Boolean 0, 1<br>NR1 Integers 0, 1, 18<br>NR2 Decimal numbers 1.5, 3.141, 8.4<br>NR3 Floating point numbers 4.5E-1, 8.25E+1<br>String Alphanumeric characters “No error”</p>
-<p>设置电流 :CHAN1:CURR <NR2><br>查询电流 :CHAN1:CURR ? </NR2></p>
-<p>设置电压 :CHAN1:VOLT <NR2><br>查询电压 :CHAN1:VOLT ? </NR2></p>
-<p>测量实际电流 :CHAN1:MEAS:CURR ?<br>测量实际电压 :CHAN1:MEAS:VOLT ?</p>
-<p>设置过流保护 :CHAN1:PROT:CURR <Boolean><br>查询过流保护 :CHAN1:PROT:CURR ? </Boolean></p>
-<p>设置过压保护 :CHAN1:PROT:VOLT <NR2><br>查询过流保护 :CHAN1:PROT:VOLT ? </NR2></p>
-<p>清理过流过压保护状态 :OUTP:PROT:CLE</p>
-<p>设置输出状态 :OUTP:STAT <Boolean></Boolean></p>
-<p>查询输出状态 :OUTP:STAT <Boolean></Boolean></p>
-<p>*CLS &#x2F; *RST &#x2F; *OPC? </p>
+    <content><![CDATA[<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">*IDN? -&gt; GW<span class="selector-class">.Inc</span>,PSS-<span class="number">2005</span>,EO914759,FW1.<span class="number">07</span></span><br><span class="line">CHAN1:VOLT ? -&gt; <span class="number">04.19</span></span><br><span class="line"></span><br><span class="line">Boolean <span class="number">0</span>, <span class="number">1</span></span><br><span class="line">NR1 Integers <span class="number">0</span>, <span class="number">1</span>, <span class="number">18</span></span><br><span class="line">NR2 Decimal numbers <span class="number">1.5</span>, <span class="number">3.141</span>, <span class="number">8.4</span></span><br><span class="line">NR3 Floating point numbers <span class="number">4.5</span>E-<span class="number">1</span>, <span class="number">8.25</span>E+<span class="number">1</span></span><br><span class="line">String Alphanumeric characters “No error”</span><br><span class="line"></span><br><span class="line">设置电流 :CHAN1:CURR &lt;NR2&gt; </span><br><span class="line">查询电流 :CHAN1:CURR ? </span><br><span class="line"></span><br><span class="line">设置电压 :CHAN1:VOLT &lt;NR2&gt;</span><br><span class="line">查询电压 :CHAN1:VOLT ? </span><br><span class="line"></span><br><span class="line">测量实际电流 :CHAN1:MEAS:CURR ? </span><br><span class="line">测量实际电压 :CHAN1:MEAS:VOLT ?</span><br><span class="line"></span><br><span class="line">设置过流保护 :CHAN1:PROT:CURR &lt;Boolean&gt;</span><br><span class="line">查询过流保护 :CHAN1:PROT:CURR ? </span><br><span class="line"></span><br><span class="line">设置过压保护 :CHAN1:PROT:VOLT &lt;NR2&gt;</span><br><span class="line">查询过流保护 :CHAN1:PROT:VOLT ? </span><br><span class="line"></span><br><span class="line">清理过流过压保护状态 :OUTP:PROT:CLE</span><br><span class="line">设置输出状态 :OUTP:STAT &lt;Boolean&gt;</span><br><span class="line">查询输出状态 :OUTP:STAT &lt;Boolean&gt;</span><br><span class="line"></span><br><span class="line">*CLS / *RST / *OPC? </span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
         <category>原创</category>
@@ -508,6 +499,7 @@
 <th align="center">WiFi 4</th>
 <th align="center">WiFi 5</th>
 <th align="center">WiFi 6</th>
+<th align="center">WiFi 7</th>
 </tr>
 </thead>
 <tbody><tr>
@@ -518,6 +510,7 @@
 <td align="center">802.11n</td>
 <td align="center">802.11ac</td>
 <td align="center">802.11ax</td>
+<td align="center">802.11be</td>
 </tr>
 <tr>
 <td align="center">年份</td>
@@ -527,6 +520,7 @@
 <td align="center">2009</td>
 <td align="center">2013 wave1 &#x2F; 2016 wave2</td>
 <td align="center">2018+</td>
+<td align="center">2022</td>
 </tr>
 <tr>
 <td align="center">工作频段</td>
@@ -536,6 +530,7 @@
 <td align="center">2.4G&#x2F;5G</td>
 <td align="center">5G</td>
 <td align="center">2.4G&#x2F;5G</td>
+<td align="center">2.4G&#x2F;5G&#x2F;6G</td>
 </tr>
 <tr>
 <td align="center">最大频宽</td>
@@ -545,6 +540,7 @@
 <td align="center">40MHz</td>
 <td align="center">80MHz &#x2F; 160MHz</td>
 <td align="center">160MHz</td>
+<td align="center">320MHz</td>
 </tr>
 <tr>
 <td align="center">MCS范围</td>
@@ -554,6 +550,7 @@
 <td align="center">0~7</td>
 <td align="center">0~9</td>
 <td align="center">0~11</td>
+<td align="center">0~13</td>
 </tr>
 <tr>
 <td align="center">最高调制</td>
@@ -563,6 +560,7 @@
 <td align="center">64QAM</td>
 <td align="center">256QAM</td>
 <td align="center">1024QAM</td>
+<td align="center">4096QAM</td>
 </tr>
 <tr>
 <td align="center">单流带宽</td>
@@ -572,6 +570,7 @@
 <td align="center">150Mbps</td>
 <td align="center">433Mbps &#x2F; 867Mbps</td>
 <td align="center">1201Mbps</td>
+<td align="center"></td>
 </tr>
 <tr>
 <td align="center">最大空间</td>
@@ -581,6 +580,7 @@
 <td align="center">4x4</td>
 <td align="center">8x8</td>
 <td align="center">8x8</td>
+<td align="center">16x16UL&#x2F;DL MU-MIMO</td>
 </tr>
 <tr>
 <td align="center">调试方式</td>
@@ -589,6 +589,7 @@
 <td align="center">CCK&#x2F;OFDM&#x2F;PBCC</td>
 <td align="center">OFDM</td>
 <td align="center">OFMD下行</td>
+<td align="center">OFDMA</td>
 <td align="center">OFDMA</td>
 </tr>
 </tbody></table>
@@ -651,6 +652,34 @@
       <tags>
         <tag>笔记</tag>
         <tag>UWB</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Agilent3500A指令</title>
+    <url>/2021/05/13/Agilent3500A/</url>
+    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*RST	Reset To Factory</span><br><span class="line">FREQ    设置频率</span><br><span class="line">*TRG	Trigger Power Read</span><br><span class="line">SETAVG  [0-5] 2=4个均</span><br><span class="line">BLON	背光亮</span><br><span class="line">BLOFF	背光关</span><br><span class="line">SN?     查询条码，55436003</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>仪表</category>
+      </categories>
+      <tags>
+        <tag>SCPI</tag>
+        <tag>3500A</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>命令行设置等宽字体</title>
+    <url>/2021/05/13/CmdFont/</url>
+    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"> </span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Console\TrueTypeFont]</span><br><span class="line">&quot;0&quot;=&quot;Lucida Console&quot;</span><br><span class="line">&quot;00&quot;=&quot;Consolas&quot;</span><br><span class="line">&quot;936&quot;=&quot;x&quot;</span><br><span class="line"> </span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontLink\SystemLink]</span><br><span class="line">&quot;Consolas&quot;=hex(7):53,00,49,00,4d,00,48,00,45,00,49,00,2e,00,54,00,54,00,46,00,\</span><br><span class="line">  2c,00,53,00,69,00,6d,00,48,00,65,00,69,00,00,00,00,00</span><br><span class="line"></span><br><span class="line">[HKEY_CURRENT_USER\Console%SystemRoot%_system32_cmd.exe]</span><br><span class="line">&quot;CodePage&quot;=dword:000003a8</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>原创</category>
+      </categories>
+      <tags>
+        <tag>CMD</tag>
+        <tag>字体</tag>
       </tags>
   </entry>
 </search>
