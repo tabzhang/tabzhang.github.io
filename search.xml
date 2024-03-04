@@ -706,4 +706,19 @@
         <tag>UWB</tag>
       </tags>
   </entry>
+  <entry>
+    <title>如何指定设备的COM口号</title>
+    <url>/2021/05/13/SpecifyComPort/</url>
+    <content><![CDATA[<p><img src="/2021/05/13/SpecifyComPort/01.png" alt="img1"></p>
+<p><img src="/2021/05/13/SpecifyComPort/02.png" alt="img2"></p>
+<p><img src="/2021/05/13/SpecifyComPort/03.png" alt="img3"></p>
+]]></content>
+      <categories>
+        <category>仪表</category>
+      </categories>
+      <tags>
+        <tag>COM</tag>
+        <tag>串口</tag>
+      </tags>
+  </entry>
 </search>
