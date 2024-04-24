@@ -188,7 +188,7 @@
     <title>GIT学习笔记</title>
     <url>/2021/09/16/GitStudy/</url>
     <content><![CDATA[<h3 id="GIT配置"><a href="#GIT配置" class="headerlink" title="GIT配置"></a>GIT配置</h3><blockquote>
-<p>$ git config –global user.name “Your Name”<br>$ git config –global user.email “<a href="mailto:&#x65;&#109;&#x61;&#105;&#x6c;&#64;&#x65;&#x78;&#x61;&#x6d;&#x70;&#x6c;&#x65;&#46;&#x63;&#111;&#109;">&#x65;&#109;&#x61;&#105;&#x6c;&#64;&#x65;&#x78;&#x61;&#x6d;&#x70;&#x6c;&#x65;&#46;&#x63;&#111;&#109;</a>“</p>
+<p>$ git config –global user.name “Your Name”<br>$ git config –global user.email “<a href="mailto:&#101;&#x6d;&#97;&#105;&#108;&#x40;&#x65;&#120;&#x61;&#109;&#x70;&#108;&#101;&#x2e;&#x63;&#111;&#109;">&#101;&#x6d;&#97;&#105;&#108;&#x40;&#x65;&#120;&#x61;&#109;&#x70;&#108;&#101;&#x2e;&#x63;&#111;&#109;</a>“</p>
 </blockquote>
 <h3 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h3><blockquote>
 <p>初始化一个Git仓库，使用<strong>git init</strong>命令。</p>
@@ -219,7 +219,7 @@
 </blockquote>
 <h3 id="注册远程仓库"><a href="#注册远程仓库" class="headerlink" title="注册远程仓库"></a>注册远程仓库</h3><blockquote>
 <p>第1步：创建SSH Key。在用户主目录下，看看有没有.ssh目录，如果有，再看看这个目录下有没有<code>id_rsa</code>和<code>id_rsa.pub</code>这两个文件，如果已经有了，可直接跳到下一步。如果没有，打开Shell（Windows下打开Git Bash），创建SSH Key：</p>
-<p>$ ssh-keygen -t rsa -C “<a href="mailto:&#x79;&#111;&#117;&#x72;&#x65;&#109;&#x61;&#x69;&#x6c;&#x40;&#x65;&#x78;&#x61;&#x6d;&#x70;&#x6c;&#x65;&#46;&#x63;&#x6f;&#x6d;">&#x79;&#111;&#117;&#x72;&#x65;&#109;&#x61;&#x69;&#x6c;&#x40;&#x65;&#x78;&#x61;&#x6d;&#x70;&#x6c;&#x65;&#46;&#x63;&#x6f;&#x6d;</a>“</p>
+<p>$ ssh-keygen -t rsa -C “<a href="mailto:&#121;&#x6f;&#x75;&#x72;&#101;&#x6d;&#x61;&#105;&#108;&#x40;&#101;&#120;&#x61;&#x6d;&#112;&#108;&#101;&#x2e;&#x63;&#111;&#x6d;">&#121;&#x6f;&#x75;&#x72;&#101;&#x6d;&#x61;&#105;&#108;&#x40;&#101;&#120;&#x61;&#x6d;&#112;&#108;&#101;&#x2e;&#x63;&#111;&#x6d;</a>“</p>
 <p>第2步：登陆GitHub，打开“Account settings”，“SSH Keys”页面：</p>
 <p>然后，点“Add SSH Key”，填上任意Title，在Key文本框里粘贴<code>id_rsa.pub</code>文件的内容：</p>
 </blockquote>
@@ -229,7 +229,32 @@
 <p>关联后，使用命令<strong>git push -u origin master</strong>第一次推送master分支的所有内容；</p>
 <p>此后，每次本地提交后，只要有必要，就可以使用命令<strong>git push origin master</strong>推送最新修改；</p>
 </blockquote>
-<h3 id="版本回退-1"><a href="#版本回退-1" class="headerlink" title="版本回退"></a>版本回退</h3>]]></content>
+<h3 id="版本回退-1"><a href="#版本回退-1" class="headerlink" title="版本回退"></a>版本回退</h3><blockquote>
+<p>git log</p>
+<p>git reset –hard <commit_hash></commit_hash></p>
+</blockquote>
+<h3 id="合并分支"><a href="#合并分支" class="headerlink" title="合并分支"></a>合并分支</h3><blockquote>
+<p>git merge dev</p>
+<p>然后git status查看冲突</p>
+</blockquote>
+<h3 id="删除分支"><a href="#删除分支" class="headerlink" title="删除分支"></a>删除分支</h3><blockquote>
+<p>删除本地：git branch -d dev</p>
+<p>删除远程：git push origin –delete dev</p>
+</blockquote>
+<h3 id="删除标签"><a href="#删除标签" class="headerlink" title="删除标签"></a>删除标签</h3><blockquote>
+<p>删除本地：git tag -d V4.2.0.0</p>
+<p>删除远程：git push origin –delete V4.2.0.0</p>
+</blockquote>
+<h3 id="增加标签"><a href="#增加标签" class="headerlink" title="增加标签"></a>增加标签</h3><blockquote>
+<p>本地：git tag <tag_name>   git tag -a <tag_name> -m “Tag message”</tag_name></tag_name></p>
+<p>git push origin <tag_name></tag_name></p>
+</blockquote>
+<h3 id="更新地址"><a href="#更新地址" class="headerlink" title="更新地址"></a>更新地址</h3><blockquote>
+<p>git remote set-url origin 新远程仓库地址</p>
+<p>git push -u origin –all</p>
+<p>git push -u origin –tags</p>
+</blockquote>
+]]></content>
       <categories>
         <category>资料</category>
       </categories>
