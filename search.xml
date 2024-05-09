@@ -187,8 +187,50 @@
   <entry>
     <title>GIT学习笔记</title>
     <url>/2021/09/16/GitStudy/</url>
-    <content><![CDATA[<h3 id="GIT配置"><a href="#GIT配置" class="headerlink" title="GIT配置"></a>GIT配置</h3><blockquote>
-<p>$ git config –global user.name “Your Name”<br>$ git config –global user.email “<a href="mailto:&#101;&#x6d;&#97;&#105;&#108;&#x40;&#x65;&#120;&#x61;&#109;&#x70;&#108;&#101;&#x2e;&#x63;&#111;&#109;">&#101;&#x6d;&#97;&#105;&#108;&#x40;&#x65;&#120;&#x61;&#109;&#x70;&#108;&#101;&#x2e;&#x63;&#111;&#109;</a>“</p>
+    <content><![CDATA[<h3 id="制作GitGUI中文语言文件"><a href="#制作GitGUI中文语言文件" class="headerlink" title="制作GitGUI中文语言文件"></a>制作GitGUI中文语言文件</h3><ul>
+<li>如果$GITROOT&#x2F;share&#x2F;git-gui&#x2F;lib&#x2F;msgs&#x2F;zh_cn.msg文件存在，在中文系统中Git-GUI就会自动显示中文界面。</li>
+<li>可以从<a href="https://github.com/git/git">源码</a>或<a href="https://npm.taobao.org/mirrors/git-for-windows/">镜像</a>中获得已经部分翻译的语言源文件：$git-2.22.0.windows\git-gui\po\zh_cn.po。</li>
+<li>$git-2.22.0.windows\git-gui\po\git-gui.pot是模板文件，包含了所有需要翻译的原文。</li>
+<li>制作语言文件就是把zh_cn.po或git-gui.pot转换成zh_cn.msg。</li>
+<li>po、pot、msg文件中，以井号(#)开头的行为注释行，不起作用。</li>
+<li>zh_cn.po或git-gui.pot文件中：<ul>
+<li># 开头的行位注释行</li>
+<li>msgid 开头的行为原文</li>
+<li>msgstr 开头的行为翻译后的文本</li>
+</ul>
+</li>
+<li>zh_cn.msg文件由若干行文本组成，以井号(#)开头的行为注释行，不起作用。</li>
+<li>zh_cn.msg文件有效行格式固定为：**::msgcat::mcset zh_cn “msgid” “msgstr”** 。</li>
+<li>其中，<strong>msgid</strong>为英文原文，<strong>msgstr</strong>为翻译后的中文。</li>
+</ul>
+<h3 id="制作过程概述"><a href="#制作过程概述" class="headerlink" title="制作过程概述"></a>制作过程概述</h3><ol start="0">
+<li><p>打开源文件zh_cn.po或git-gui.pot，另存为zh_cn.msg。</p>
+</li>
+<li><p>删除文件中以 <strong>#</strong> 开头的注释行。</p>
+</li>
+<li><p>合并文件中 <strong>msgid</strong> 和 <strong>msgstr</strong> 后面的多行字符串为1行。</p>
+</li>
+<li><p>合并 <strong>msgstr</strong> 行的内容到 <strong>msgid</strong> 行后面，并去除字符 <strong>msgstr</strong> ，保留空白符和字符串。</p>
+</li>
+<li><p>替换字符 <strong>msgid</strong> 为 <strong>::msgcat::mcset zh_cn</strong> ，保留空白字符。</p>
+</li>
+<li><p>格式为：**::msgcat::mcset zh_cn “msgid” “”** 的行需要添加相应的翻译内容；否则，Git-GUI 界面上原来显示 <strong>msgid</strong> 的地方将显示为空白。</p>
+</li>
+<li><p>也可以用在行首添加字符 <strong>#</strong> ，注释掉此行，则界面上将显示原文 <strong>msgid</strong>。</p>
+</li>
+<li><p>将文件zh_cn.msg拷贝到上述位置即可。</p>
+</li>
+</ol>
+<h3 id="更多工作"><a href="#更多工作" class="headerlink" title="更多工作"></a>更多工作</h3><ol>
+<li><p>经测试，Gui中的部分英文信息不会被翻译成中文。</p>
+</li>
+<li><p>git-gui.pot并没有包括全部界面信息。</p>
+</li>
+<li><p>根据GUI上的英文信息，手动添加翻译内容。</p>
+</li>
+</ol>
+<h3 id="GIT配置"><a href="#GIT配置" class="headerlink" title="GIT配置"></a>GIT配置</h3><blockquote>
+<p>$ git config –global user.name “Your Name”<br>$ git config –global user.email “<a href="mailto:&#101;&#x6d;&#97;&#105;&#108;&#x40;&#101;&#120;&#x61;&#109;&#x70;&#x6c;&#x65;&#x2e;&#x63;&#x6f;&#x6d;">&#101;&#x6d;&#97;&#105;&#108;&#x40;&#101;&#120;&#x61;&#109;&#x70;&#x6c;&#x65;&#x2e;&#x63;&#x6f;&#x6d;</a>“</p>
 </blockquote>
 <h3 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h3><blockquote>
 <p>初始化一个Git仓库，使用<strong>git init</strong>命令。</p>
@@ -219,7 +261,7 @@
 </blockquote>
 <h3 id="注册远程仓库"><a href="#注册远程仓库" class="headerlink" title="注册远程仓库"></a>注册远程仓库</h3><blockquote>
 <p>第1步：创建SSH Key。在用户主目录下，看看有没有.ssh目录，如果有，再看看这个目录下有没有<code>id_rsa</code>和<code>id_rsa.pub</code>这两个文件，如果已经有了，可直接跳到下一步。如果没有，打开Shell（Windows下打开Git Bash），创建SSH Key：</p>
-<p>$ ssh-keygen -t rsa -C “<a href="mailto:&#121;&#x6f;&#x75;&#x72;&#101;&#x6d;&#x61;&#105;&#108;&#x40;&#101;&#120;&#x61;&#x6d;&#112;&#108;&#101;&#x2e;&#x63;&#111;&#x6d;">&#121;&#x6f;&#x75;&#x72;&#101;&#x6d;&#x61;&#105;&#108;&#x40;&#101;&#120;&#x61;&#x6d;&#112;&#108;&#101;&#x2e;&#x63;&#111;&#x6d;</a>“</p>
+<p>$ ssh-keygen -t rsa -C “<a href="mailto:&#121;&#111;&#117;&#114;&#101;&#x6d;&#97;&#105;&#108;&#x40;&#x65;&#120;&#x61;&#x6d;&#x70;&#x6c;&#101;&#x2e;&#x63;&#x6f;&#x6d;">&#121;&#111;&#117;&#114;&#101;&#x6d;&#97;&#105;&#108;&#x40;&#x65;&#120;&#x61;&#x6d;&#x70;&#x6c;&#101;&#x2e;&#x63;&#x6f;&#x6d;</a>“</p>
 <p>第2步：登陆GitHub，打开“Account settings”，“SSH Keys”页面：</p>
 <p>然后，点“Add SSH Key”，填上任意Title，在Key文本框里粘贴<code>id_rsa.pub</code>文件的内容：</p>
 </blockquote>
@@ -744,6 +786,326 @@
       <tags>
         <tag>COM</tag>
         <tag>串口</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Blazor笔记</title>
+    <url>/2024/05/08/Blazor_Study/</url>
+    <content><![CDATA[<h4 id="MASA-Blazor可以用在哪些地方？"><a href="#MASA-Blazor可以用在哪些地方？" class="headerlink" title="MASA Blazor可以用在哪些地方？"></a>MASA Blazor可以用在哪些地方？</h4><ul>
+<li>MASA Stack提供了一系列云原生基建项目，如Auth、配置中心、任务中心、告警中心等，这些项目的前端开发全部使用MASA Blazor。</li>
+<li>开发Web应用，<em><strong>或许这不够有吸引力</strong></em>，但现在Blazor应用可以直接托管到MAUI（微软跨平台UI），类似electron一样，使用Blazor技术开发跨PC和APP端应用，且性能潜力上，PC端优于electron、APP端优于webview。</li>
+<li>Blazor是目前对WebAssemble支持最好、投资最大的前端技术，不都在说WebAssembly是未来吗？！</li>
+</ul>
+]]></content>
+      <categories>
+        <category>MAUI</category>
+      </categories>
+      <tags>
+        <tag>Blazor</tag>
+        <tag>MAUI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo教程</title>
+    <url>/2024/05/09/Hexo_Using/</url>
+    <content><![CDATA[<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">npm <span class="keyword">install</span> -g hexo</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h3><figure class="highlight excel"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">hexo <span class="built_in">clean</span>	清除缓存文件 </span><br><span class="line">hexo s 		启动本地服务器</span><br><span class="line">hexo g 		生成网站</span><br><span class="line">hexo d 		部署网站</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h3><figure class="highlight verilog"><table><tr><td class="code"><pre><span class="line">git <span class="keyword">config</span> --<span class="keyword">global</span> user<span class="variable">.name</span> <span class="string">&quot;tabzhang&quot;</span></span><br><span class="line">git <span class="keyword">config</span> --<span class="keyword">global</span> user<span class="variable">.email</span> <span class="string">&quot;tab.z@qq.com&quot;</span></span><br><span class="line">输入 ssh-keygen -t rsa -C <span class="string">&quot;tab.z@qq.com&quot;</span>然后一路回车。</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="添加密匙"><a href="#添加密匙" class="headerlink" title="添加密匙"></a>添加密匙</h3><pre><code>进入 [C:\Users\用户名\.ssh] 目录（要勾选显示“隐藏的项目”），用记事本打开公钥 id_rsa.pub 文件并复制里面的内容。
+
+登陆 GitHub ，进入 Settings 页面，选择左边栏的 SSH and GPG keys，点击 New SSH key。
+
+Title 随便取个名字，粘贴复制的 id_rsa.pub 内容到 Key 中，点击 Add SSH key 完成添加。
+</code></pre>
+]]></content>
+      <categories>
+        <category>资料</category>
+      </categories>
+      <tags>
+        <tag>HEXO</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Html CSS笔记</title>
+    <url>/2024/05/08/HtmlCSS_Study/</url>
+    <content><![CDATA[<h5 id="1）文档结构类："><a href="#1）文档结构类：" class="headerlink" title="1）文档结构类："></a>1）文档结构类：</h5><ul>
+<li><p><code>!DOCTYPE html</code>：声明为HTML5文档</p>
+</li>
+<li><p><code>html</code>：页面的根元素</p>
+</li>
+<li><p><code>head</code>：包含了文档的元（meta）数据</p>
+</li>
+<li><p><code>meta</code>：定义网页编码格式为 utf-8</p>
+</li>
+<li><p><code>title</code>：页面标题</p>
+</li>
+<li><p><code>link</code>：外部资源</p>
+</li>
+<li><p><code>script</code>：脚本文件</p>
+</li>
+<li><p><code>style</code>：样式文件</p>
+</li>
+<li><p><code>body</code>：可见的页面主体内容</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>MASA Blazor<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="handlebars"><span class="xml">...<span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="handlebars"><span class="xml"></span></span></span></span></span><br><span class="line"><span class="xml"><span class="handlebars"><span class="xml"><span class="handlebars">    <span class="tag">&lt;<span class="name">style</span>&gt;</span>...<span class="tag">&lt;/<span class="name">style</span>&gt;</span></span></span></span></span></span><br><span class="line"><span class="xml"><span class="handlebars"><span class="xml"><span class="handlebars">    ......</span></span></span></span></span><br><span class="line"><span class="xml"><span class="handlebars"><span class="xml"><span class="handlebars">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span></span></span></span></span><br><span class="line"><span class="xml"><span class="handlebars"><span class="xml"><span class="handlebars">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span></span></span></span></span><br><span class="line"><span class="xml"><span class="handlebars"><span class="xml"><span class="handlebars">    ......</span></span></span></span></span><br><span class="line"><span class="xml"><span class="handlebars"><span class="xml"><span class="handlebars">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span></span></span></span></span><br><span class="line"><span class="xml"><span class="handlebars"><span class="xml"><span class="handlebars"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span></span></span></span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h5 id="2）布局类："><a href="#2）布局类：" class="headerlink" title="2）布局类："></a>2）布局类：</h5><ul>
+<li>区块（块级）：<code>div</code></li>
+<li>列表（块级）：<code>ul</code>-有序列表、<code>ol</code>-无序列表、<code>li</code>-列表项</li>
+<li>表格（块&#x2F;行）：<code>table</code>-表-块级、<code>thead</code>&#x2F;<code>tfoot</code>-页眉页脚-块级、<code>th</code>&#x2F;<code>tbody</code>-表头&#x2F;主体-块级、<code>tr</code>-行-块级、<code>td</code>-单元格（行内）</li>
+</ul>
+<h5 id="3）文本类："><a href="#3）文本类：" class="headerlink" title="3）文本类："></a>3）文本类：</h5><ul>
+<li>标题（块级）：<code>h1</code>、<code>h2</code>、<code>h3</code>、<code>h4</code>、<code>h5</code>、<code>h6</code></li>
+<li>大段落（块级）：<code>p</code>、<code>br</code></li>
+<li>行内小段落（行内）：<code>span</code></li>
+<li>格式化（行内）：<code>strong</code>&#x2F;<code>b</code>-加粗、<code>em</code>&#x2F;<code>i</code>-斜体、<code>ins</code>-下滑线、<code>del</code>-删除线、<code>sub</code>-下标、<code>sup</code>-上标</li>
+</ul>
+<h5 id="4）表单类："><a href="#4）表单类：" class="headerlink" title="4）表单类："></a>4）表单类：</h5><ul>
+<li>表单（块级）：<code>form</code></li>
+<li>输入框（块级）：<code>input</code>-含文本、单选、复选、日期、数字等丰富类型</li>
+<li>选择框（块级）：<code>select</code>&gt;<code>option</code></li>
+<li>按钮（块级）：<code>button</code></li>
+<li>输入框标题（行内）：<code>lable</code></li>
+<li>多行文本框（行内）：<code>textarea</code></li>
+</ul>
+<h5 id="5）富内容类："><a href="#5）富内容类：" class="headerlink" title="5）富内容类："></a>5）富内容类：</h5><ul>
+<li>图片（行内）：<code>img</code></li>
+<li>SVG（行内）：<code>svg</code>&gt;<code>circle</code>等</li>
+<li>视频（行内）：<code>video</code></li>
+<li>音频（行内）：<code>audio</code></li>
+<li>地图（行内）：<code>map</code>&gt;<code>area</code></li>
+<li>画布（行内）：<code>canvas</code></li>
+</ul>
+<h2 id="CSS规则"><a href="#CSS规则" class="headerlink" title="CSS规则"></a>CSS规则</h2><h5 id="1）样式定义：选择器-key1-value1-key2-value2"><a href="#1）样式定义：选择器-key1-value1-key2-value2" class="headerlink" title="1）样式定义：选择器 {key1:value1; key2:value2...}"></a>1）样式定义：<code>选择器 &#123;key1:value1; key2:value2...&#125;</code></h5><h3 id="2、选择器"><a href="#2、选择器" class="headerlink" title="2、选择器"></a>2、选择器</h3><ul>
+<li>所有元素：<code>*</code></li>
+<li>元素选择器：如<code>div&#123;&#125;</code>。应用到所有div元素。</li>
+<li>Class选择器：如①元素中标记<code>&lt;div class=&quot;d1&quot;&gt;</code>；②<code>.d1&#123;&#125;</code>。应用于所有class为d1的元素。</li>
+<li>Id选择器：如①元素中标记<code>&lt;div id=&quot;d1&quot;&gt;</code>；②<code>#d1&#123;&#125;</code>。应用到id为d1的元素。</li>
+<li>常用组合选择器：<ul>
+<li><code>div,p</code>：并集，所有div和p元素</li>
+<li><code>div p</code>：后代，div元素内的所有p元素</li>
+<li><code>div&gt;p</code>：亲儿子，所有父级是div的p元素</li>
+<li><code>div+p</code>：相邻兄弟，紧跟在div后的同级p元素</li>
+<li><code>div~p</code>：所有兄弟，div后的所有同级p元素</li>
+<li><code>div:link</code>：链接未访问</li>
+<li><code>div:visited</code>：链接已访问</li>
+<li><code>div:hover</code>：链接鼠标悬停</li>
+<li><code>div:active</code>：链接活动状态</li>
+<li><code>div:first-child</code>：div的第一个子元素</li>
+<li><code>div:last-child</code>：div的最后一个子元素</li>
+<li><code>div:nth-child(n)</code>：div的第n个子元素（n用数字代替）</li>
+<li><code>div:not(:nth-child(n))</code>：除了div的第n个子元素（n用数字代替）</li>
+</ul>
+</li>
+</ul>
+<p> </p>
+<h3 id="3、内联样式：可以通过style属性，在元素内直接定义样式"><a href="#3、内联样式：可以通过style属性，在元素内直接定义样式" class="headerlink" title="3、内联样式：可以通过style属性，在元素内直接定义样式"></a>3、内联样式：可以通过style属性，在元素内直接定义样式</h3><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&quot;background-color:red; width:100px; height:100px&quot;</span>&gt;</span>ABC<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p> </p>
+<h3 id="4、CSS常见属性"><a href="#4、CSS常见属性" class="headerlink" title="4、CSS常见属性"></a>4、CSS常见属性</h3><h5 id="1）背景："><a href="#1）背景：" class="headerlink" title="1）背景："></a>1）背景：</h5><ul>
+<li><code>opacity</code>：透明度，0-1</li>
+<li><code>background-color</code>：背景颜色，十六进制-#00FF00,RGB-rgb(0,255,0),颜色名-red</li>
+<li><code>background-image</code>：背景图</li>
+<li><code>background-repeat</code>：背景图平衡方式,repeat&#x2F;no-repeat&#x2F;repeat-x&#x2F;repeat-y</li>
+<li><code>background-attachment</code>：背景图位置是否固定，scroll&#x2F;fixed&#x2F;locall</li>
+<li><code>background-position</code>：背景图位置,center&#x2F;right top&#x2F;…，x% y%, xpos ypos</li>
+<li><code>background:#ffffff url(&#39;img1.png&#39;) no-repeat fixed right top;</code>：简写，注意顺序</li>
+</ul>
+<h5 id="2）字体（单个字）："><a href="#2）字体（单个字）：" class="headerlink" title="2）字体（单个字）："></a>2）字体（单个字）：</h5><ul>
+<li><code>font-family</code>：字体</li>
+<li><code>font-size</code>：大小</li>
+<li><code>font-style</code>：样式,normal&#x2F;italic&#x2F;oblique</li>
+<li><code>font-weight</code>：粗细，normal&#x2F;bold&#x2F;bolder&#x2F;lighter&#x2F;100&#x2F;200&#x2F;300…&#x2F;900</li>
+<li><code>font:italic bold 12px/30px Georgia, serif;</code>：简写，注意顺序</li>
+</ul>
+<h5 id="3）文本（一段字）："><a href="#3）文本（一段字）：" class="headerlink" title="3）文本（一段字）："></a>3）文本（一段字）：</h5><ul>
+<li><code>color</code>：颜色</li>
+<li><code>direction</code>：方向，rtl&#x2F;ltr</li>
+<li><code>text-align</code>：水平对齐,left&#x2F;right&#x2F;center&#x2F;justify</li>
+<li><code>vertical-align</code>：垂直对齐,baseline&#x2F;top&#x2F;middle&#x2F;bottom&#x2F;text-top&#x2F;text-bottom&#x2F;sub&#x2F;super</li>
+<li><code>white-space</code>：是否换行,normal&#x2F;nowrap&#x2F;pre&#x2F;pre-wrap&#x2F;pre-line</li>
+<li><code>text-decoration</code>：样式，none&#x2F;underline&#x2F;overline&#x2F;line-through&#x2F;blink</li>
+<li><code>line-height</code>：行高，x%</li>
+<li><code>text-decoration</code>：样式，none&#x2F;underline&#x2F;overline&#x2F;line-through&#x2F;blink</li>
+<li><code>text-transform</code>：大小写，none&#x2F;uppercase&#x2F;lowercase&#x2F;capitalize</li>
+<li><code>text-indent</code>：首行缩进</li>
+<li><code>text-shadow:2px 2px 5px red</code>：文字阴影，值按顺序分别为<code>水平偏移 垂直偏移 模糊效果 阴影颜色</code>，还可以定义多个阴影值，用逗号分隔</li>
+</ul>
+<h5 id="4）尺寸："><a href="#4）尺寸：" class="headerlink" title="4）尺寸："></a>4）尺寸：</h5><ul>
+<li><code>height</code>：高度</li>
+<li><code>width</code>：宽度</li>
+<li><code>max-height</code>：最大高度</li>
+<li><code>max-width</code>：最大宽度</li>
+<li><code>min-height</code>：最小高度</li>
+<li><code>min-width</code>：最小宽度</li>
+</ul>
+<h5 id="5）边框："><a href="#5）边框：" class="headerlink" title="5）边框："></a>5）边框：</h5><ul>
+<li><code>border-width</code>：内边框宽度【内边框位于margin和padding之间】</li>
+<li><code>border-style</code>：内边框样式，none&#x2F;dotted&#x2F;dashed&#x2F;solid&#x2F;double</li>
+<li><code>border-color</code>：内边框颜色</li>
+<li><code>border-radius</code>：内边框圆角</li>
+<li><code>border-bottom-color</code>：单独设置上下左右的宽度、颜色和样式，left&#x2F;right&#x2F;bottom&#x2F;top</li>
+<li><code>border:5px solid red;</code>：边框简写，注意顺序</li>
+<li><code>border-bottom:5px dotted #ff0000;</code>：单边的边框简写，注意顺序</li>
+<li><code>outline-width</code>：外边框宽度【外边框位于盒子的最外围】</li>
+<li><code>outline-style</code>：外边框样式，none&#x2F;dotted&#x2F;dashed&#x2F;solid&#x2F;double</li>
+<li><code>outline-color</code>：外边框颜色</li>
+<li><code>outline:#00FF00 dotted thick;;</code>：外边框简写，注意顺序</li>
+<li><code>box-shadow:2px 2px 5px 2px red</code>：边框阴影，值按顺序分别为<code>水平偏移 垂直偏移 模糊半径 扩散半径 阴影颜色</code>，还可以定义多个阴影值，用逗号分隔</li>
+</ul>
+<h5 id="6）间隔："><a href="#6）间隔：" class="headerlink" title="6）间隔："></a>6）间隔：</h5><ul>
+<li><code>margin</code>：外边距，auto&#x2F;x%&#x2F;5px&#x2F;5px 10px&#x2F;5px 10px 15px&#x2F;5px 10px 15px 20px</li>
+<li><code>margin-bottom</code>：单独设置上下左右的外边距，left&#x2F;right&#x2F;bottom&#x2F;top</li>
+<li><code>padding</code>：内边距，auto&#x2F;x%&#x2F;5px&#x2F;5px 10px&#x2F;5px 10px 15px&#x2F;5px 10px 15px 20px</li>
+<li><code>margin-bottom</code>：单独设置上下左右的内边距，left&#x2F;right&#x2F;bottom&#x2F;top</li>
+</ul>
+<h5 id="97）列表："><a href="#97）列表：" class="headerlink" title="97）列表："></a>97）列表：</h5><ul>
+<li><code>list-style-type</code>：列表项标志的类型，none&#x2F;disc&#x2F;circle&#x2F;square&#x2F;decimal……</li>
+<li><code>list-style-position</code>：列表项标志的位置，inside&#x2F;outside</li>
+<li><code>list-style-image</code>：列表项标志设置为图片</li>
+<li><code>list-style:square inside url(&quot;sqpurple.gif&quot;);</code>：简写，注意顺序</li>
+</ul>
+<h5 id="8）显示："><a href="#8）显示：" class="headerlink" title="8）显示："></a>8）显示：</h5><ul>
+<li><code>display:none;</code>：隐藏元素，且被隐藏的元素不占有任何空间</li>
+<li><code>li &#123;display:inline;&#125;</code>：将元素转为行内元素</li>
+<li><code>span &#123;display:block;&#125;</code>：将元素转为块级元素</li>
+<li><code>div &#123;display:inline-block;&#125;</code>：将元素转为行内元素，但又具有块级特征，可以设置宽高</li>
+<li><code>visibility:hidden;</code>：隐藏元素，但被隐藏的元素仍占用原有空间</li>
+<li><code>overflow: visible;</code>：内容溢出，visible&#x2F;hidden&#x2F;scroll&#x2F;auto</li>
+<li><code>overflow-x: visible;</code>：内容溢出，指定x或y轴方向</li>
+</ul>
+<h5 id="9）定位："><a href="#9）定位：" class="headerlink" title="9）定位："></a>9）定位：</h5><ul>
+<li><code>position:static</code>：静态定位。定位默认值，按照元素正常的位置显示，相当于没有定位</li>
+<li><code>position:relative;top:25px;left:10px</code>：相对定位。元素相对于自己的正常位置，向四个方向进行偏移，通过top、bottom、left和right四个属性的组合来设置偏移量。</li>
+<li><code>position:absolute;bottom:25px;right:10px</code>：绝对定位。相对于第一个非静态的父级元素进行定位，如果找不到符合条件的父级元素则会相对与浏览器窗口来进行定位，通过使用top、bottom、left和right四个属性来设置元素相对于父元素或浏览器窗口不同方向上的偏移量。绝对定位的元素会脱离原来的位置，相当于自起一层，可以与页面中的其它元素重叠。使用绝对定位的元素可以有外边距，并且外边距不会与其它元素的外边距发生重叠。</li>
+<li><code>position:fixed;right:20px;bottom:20px;</code>：固定定位。元素相对于浏览器窗口进行定位，不会因为浏览器窗口的滚动而移动，就像是固定在页面上一样，我们经常在网页上看到的返回顶部按钮就是使用固定定位实现的。</li>
+<li><code>position:sticky;top:0px;</code>：粘性定位。它像是相对定位和固定定位的结合体，当页面开始滚动时它的效果与相对定位相同，当元素滚动超过一定阀值时它又会呈现出固定定位的效果。比如一些网页上的导航菜单，当页面加载完成时它在自己默认的位置，当我们向下滚动页面到一定程度时，它又会固定在页面的最顶端。特定阈值指的是top、right、bottom或left之一，换言之，指定top、right、bottom或left四个阈值其中之一，才可使粘性定位生效，否则其行为与相对定位相同。</li>
+<li><code>float:left;</code>：元素向左或向右浮动，浮动元素之前的元素将不会受到影响，浮动元素之后的元素将围绕它</li>
+</ul>
+<h5 id="10）弹性布局Flex："><a href="#10）弹性布局Flex：" class="headerlink" title="10）弹性布局Flex："></a>10）弹性布局Flex：</h5><ul>
+<li><p>任何元素都可以指定为弹性布局</p>
+<p>：</p>
+<ul>
+<li>块级元素使用<code>&#123;display:flex;&#125;</code></li>
+<li>行内元素使用<code>&#123;display:inline-flex;&#125;</code></li>
+<li>定义为弹性布局的元素称为容器container，容器内的子元素称为项目item</li>
+</ul>
+</li>
+<li><p>定义在容器上的属性</p>
+<p>：</p>
+<ul>
+<li><code>flex-direction</code>：主轴方向，或者说是项目的排列方向，row&#x2F;row-reverse&#x2F;column&#x2F;column-reverse</li>
+<li><code>flex-wrap</code>：当主轴上无法排列项目时是否换行（大多数情况下，横向排列时才有意义），nowrap&#x2F;wrap|wrap-reverse</li>
+<li><code>justify-content</code>：项目在主轴上的对齐方式，flex-start&#x2F;flex-end&#x2F;center&#x2F;space-between&#x2F;space-around</li>
+<li><code>align-items</code>：项目在交轴上的对齐方式，flex-start&#x2F;flex-end&#x2F;center&#x2F;baseline&#x2F;stretch</li>
+<li><code>align-content</code>：项目存在warp情况下在交叉轴上的对齐方式，flex-start&#x2F;flex-end&#x2F;center&#x2F;space-between&#x2F;space-around&#x2F;stretch</li>
+</ul>
+</li>
+<li><p>定义在项目上的属性</p>
+<p>：</p>
+<ul>
+<li><code>order</code>：本项目在容器中排列顺序，数值越小越靠前，默认值为0</li>
+<li><code>flex-basis</code>：容器在分配主轴多余空间之前，本项目占据的主轴空间，浏览器根据这个属性，计算主轴是否有多余空间，length|auto，默认值为auto，表示项目本来大小</li>
+<li><code>flex-grow</code>：如果主轴方向上存在剩余空间，本项目参与分配剩余空间的比例。如项目A值为1，项目B值为2，空间还剩90px，则A扩大30px，B扩大60px。默认值为0，即默认空间有多时，不参与分配剩余空间。</li>
+<li><code>flex-shrink</code>：如果主轴方向上的空间不够，本项目参与分配缩小空间的比例，如项目A值为1，项目B值为2，空间还差90px，则A缩小30px，B缩小60它。默认值为1，即默认空间不够时，会等比缩小。</li>
+<li><code>align-self</code>：本项目在交叉轴上的对齐方式，将覆盖容器上设置的align-items，nowrap时有效。auto&#x2F;flex-start&#x2F;flex-end&#x2F;center&#x2F;baseline&#x2F;stretch</li>
+</ul>
+</li>
+<li><p>align-items和align-content区别</p>
+<p>：</p>
+<ul>
+<li>总体原则：nowrap时使用align-items，wrap时使用align-content</li>
+<li>align-content只对wrap有效</li>
+<li>items是针对每一行进行对齐，如果是多行，第一行先对齐后，再对齐第二行，行与行之间可能出现间隔不可控情况，而content是将所有行视为整体进行对齐，不会出现items的不可控情况</li>
+</ul>
+</li>
+</ul>
+<h5 id="11）媒体查询-media：CSS3的媒体查询功能，可以根据当前媒体类型及其特征，设置不一样的样式，相当于一个switch表达式。如下："><a href="#11）媒体查询-media：CSS3的媒体查询功能，可以根据当前媒体类型及其特征，设置不一样的样式，相当于一个switch表达式。如下：" class="headerlink" title="11）媒体查询@media：CSS3的媒体查询功能，可以根据当前媒体类型及其特征，设置不一样的样式，相当于一个switch表达式。如下："></a>11）媒体查询@media：CSS3的媒体查询功能，可以根据当前媒体类型及其特征，设置不一样的样式，相当于一个switch表达式。如下：</h5><figure class="highlight scss"><table><tr><td class="code"><pre><span class="line"><span class="comment">//格式</span></span><br><span class="line"><span class="keyword">@media</span> screen <span class="keyword">and</span> (<span class="attribute">max-width</span>: <span class="number">1200px</span>) &#123;</span><br><span class="line">    <span class="selector-tag">body</span> &#123;</span><br><span class="line">        <span class="attribute">background-color</span>:blue;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//案例：</span></span><br><span class="line"><span class="comment">//手机、平板或电脑类型，且页面可视区域小等于600px时，使用以下样式</span></span><br><span class="line"><span class="keyword">@media</span> screen <span class="keyword">and</span> (<span class="attribute">max-width</span>: <span class="number">600px</span>) &#123;</span><br><span class="line">    <span class="selector-tag">body</span> &#123;</span><br><span class="line">        <span class="attribute">background-color</span>:lightblue;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//手机、平板或电脑类型，且页面可视区域小等于1200px时，使用以下样式</span></span><br><span class="line"><span class="keyword">@media</span> screen <span class="keyword">and</span> (<span class="attribute">max-width</span>: <span class="number">1200px</span>) &#123;</span><br><span class="line">    <span class="selector-tag">body</span> &#123;</span><br><span class="line">        <span class="attribute">background-color</span>:red;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>媒体类型：<ul>
+<li>all-所有</li>
+<li>screen-手机&#x2F;平板&#x2F;电脑</li>
+<li>print-打印机</li>
+<li>speech-屏幕阅读器</li>
+</ul>
+</li>
+<li>媒体特性1-宽高：<ul>
+<li>height：页面可视区域高度</li>
+<li>device-height：屏幕可视区域高度</li>
+<li>width：页面可视区域宽度</li>
+<li>device-width：屏幕可视区域宽度</li>
+<li>max-height：页面可视区域最大高度</li>
+<li>max-device-height：屏幕可视区域最大高度</li>
+<li>max-width：页面可视区域最大宽度</li>
+<li>max-device-width：屏幕可视区域最大宽度</li>
+<li>min-height：页面可视区域最小高度</li>
+<li>min-device-height：屏幕可视区域最小高度</li>
+<li>min-width：页面可视区域最小宽度</li>
+<li>min-device-width：屏幕可视区域最小宽度</li>
+</ul>
+</li>
+<li>媒体特性2-宽高比例：<ul>
+<li>aspect-ratio：页面可视区域宽高比例</li>
+<li>device-aspect-ratio：屏幕可视区域宽高比例</li>
+<li>max-aspect-ratio：页面可视区域最大宽高比例</li>
+<li>max-device-aspect-ratio：屏幕可视区域最大宽高比例</li>
+<li>min-aspect-ratio：页面可视区域最小宽高比例</li>
+<li>min-device-aspect-ratio：屏幕可视区域最小宽高比例</li>
+</ul>
+</li>
+<li>媒体特性3-分辨率：<ul>
+<li>resolution：分辨率，**dpi</li>
+<li>max-resolution：最大分辨率</li>
+<li>min-resolution：最小分辨率</li>
+</ul>
+</li>
+<li>媒体特性4-屏幕方向：<ul>
+<li>orientation：屏幕方向portrait|landscape</li>
+</ul>
+</li>
+<li><strong>还有颜色、栅格、点阵等，较少涉及，略</strong></li>
+</ul>
+<h5 id="11）过渡："><a href="#11）过渡：" class="headerlink" title="11）过渡："></a>11）过渡：</h5><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"> </span></span><br><span class="line"><span class="css"><span class="selector-tag">div</span> &#123;</span></span><br><span class="line"><span class="css">    <span class="attribute">width</span>: <span class="number">100px</span>; <span class="comment">/*原始宽度*/</span></span></span><br><span class="line"><span class="css">    <span class="attribute">height</span>: <span class="number">100px</span>; <span class="comment">/*原始高度*/</span></span></span><br><span class="line"><span class="css">    <span class="attribute">transition</span>: width <span class="number">2s</span>, height <span class="number">2s</span>, transform <span class="number">2s</span>; <span class="comment">/*指定具有过渡效果的属性及持续时间，可指定多个属性*/</span></span></span><br><span class="line"><span class="css">    -webkit-<span class="attribute">transition</span>: width <span class="number">2s</span>, height <span class="number">2s</span>, -webkit-transform <span class="number">2s</span>; <span class="comment">/*针对Safari浏览器*/</span></span></span><br><span class="line"><span class="css">&#125;</span></span><br><span class="line"><span class="css"></span></span><br><span class="line"><span class="css"><span class="selector-tag">div</span><span class="selector-pseudo">:hover</span> &#123; <span class="comment">/*鼠标移入悬浮时开始过渡效果*/</span></span></span><br><span class="line"><span class="css">    <span class="attribute">width</span>: <span class="number">200px</span>; <span class="comment">/*2s内，宽度从100px扩大到200px*/</span></span></span><br><span class="line"><span class="css">    <span class="attribute">height</span>: <span class="number">200px</span>; <span class="comment">/*2s内，高度从100px扩大到200px*/</span></span></span><br><span class="line"><span class="css">    <span class="attribute">transform</span>: <span class="built_in">rotate</span>(<span class="number">180deg</span>); <span class="comment">/*2s内，旋转180度*/</span></span></span><br><span class="line"><span class="css">    -webkit-<span class="attribute">transform</span>: <span class="built_in">rotate</span>(<span class="number">180deg</span>); <span class="comment">/*针对Safari浏览器*/</span></span></span><br><span class="line"><span class="css">&#125;</span></span><br><span class="line"><span class="css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="11）动画："><a href="#11）动画：" class="headerlink" title="11）动画："></a>11）动画：</h5><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="css"> </span></span><br><span class="line"><span class="css"><span class="selector-tag">div</span></span></span><br><span class="line"><span class="css">&#123;</span></span><br><span class="line"><span class="css">    <span class="attribute">width</span>:<span class="number">100px</span>;</span></span><br><span class="line"><span class="css">    <span class="attribute">height</span>:<span class="number">100px</span>;</span></span><br><span class="line"><span class="css">    <span class="attribute">background</span>:red; <span class="comment">/*原始背景*/</span></span></span><br><span class="line"><span class="css">    <span class="attribute">animation</span>:myfirst <span class="number">5s</span>; <span class="comment">/*创建一个5S动画，动画的名称为myfirst*/</span></span></span><br><span class="line"><span class="css">    -moz-<span class="attribute">animation</span>:myfirst <span class="number">5s</span>; <span class="comment">/*Firefox浏览器*/</span></span></span><br><span class="line"><span class="css">    -webkit-<span class="attribute">animation</span>:myfirst <span class="number">5s</span>; <span class="comment">/*Safari and Chrome浏览器*/</span></span></span><br><span class="line"><span class="css">&#125;</span></span><br><span class="line"><span class="css"></span></span><br><span class="line"><span class="css"><span class="keyword">@keyframes</span> myfirst /*创建动画*/</span></span><br><span class="line"><span class="css">&#123;</span></span><br><span class="line"><span class="css">    <span class="number">0%</span>   &#123;<span class="attribute">background</span>:red;&#125; <span class="comment">/*开始背景为红色*/</span></span></span><br><span class="line"><span class="css">    <span class="number">50%</span>  &#123;<span class="attribute">background</span>:blue;&#125; <span class="comment">/*在前50%时间内，背景由红色过渡到蓝色*/</span></span></span><br><span class="line"><span class="css">    <span class="number">100%</span> &#123;<span class="attribute">background</span>:green;&#125; <span class="comment">/*在后50%时间内，背景由蓝色过渡到绿色*/</span></span></span><br><span class="line"><span class="css">&#125;</span></span><br><span class="line"><span class="css"></span></span><br><span class="line"><span class="css"><span class="keyword">@-moz-keyframes</span> myfirst /* Firefox浏览器 */</span></span><br><span class="line"><span class="css">&#123;</span></span><br><span class="line"><span class="css">    <span class="number">0%</span>   &#123;<span class="attribute">background</span>:red;&#125;</span></span><br><span class="line"><span class="css">    <span class="number">50%</span>  &#123;<span class="attribute">background</span>:blue;&#125;</span></span><br><span class="line"><span class="css">    <span class="number">100%</span> &#123;<span class="attribute">background</span>:green;&#125;</span></span><br><span class="line"><span class="css">&#125;</span></span><br><span class="line"><span class="css"></span></span><br><span class="line"><span class="css"><span class="keyword">@-webkit-keyframes</span> myfirst /* Safari <span class="keyword">and</span> Chrome浏览器 */</span></span><br><span class="line"><span class="css">&#123;</span></span><br><span class="line"><span class="css">    <span class="number">0%</span>   &#123;<span class="attribute">background</span>:red;&#125;</span></span><br><span class="line"><span class="css">    <span class="number">50%</span>  &#123;<span class="attribute">background</span>:blue;&#125;</span></span><br><span class="line"><span class="css">    <span class="number">100%</span> &#123;<span class="attribute">background</span>:green;&#125;</span></span><br><span class="line"><span class="css">&#125;</span></span><br><span class="line"><span class="css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>MAUI</category>
+      </categories>
+      <tags>
+        <tag>html</tag>
+        <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MAUI 框架笔记</title>
+    <url>/2024/05/08/MAUI_Study/</url>
+    <content><![CDATA[<h4 id="桌面版设置可直接运行"><a href="#桌面版设置可直接运行" class="headerlink" title="桌面版设置可直接运行"></a>桌面版设置可直接运行</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;PropertyGroup&gt;		</span><br><span class="line">	//...</span><br><span class="line">	&lt;WindowsPackageType&gt;None&lt;/WindowsPackageType&gt;</span><br><span class="line">	&lt;WindowsAppSDKSelfContained&gt;true&lt;/WindowsAppSDKSelfContained&gt;</span><br><span class="line">&lt;/PropertyGroup&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="Android版本减少发布体积"><a href="#Android版本减少发布体积" class="headerlink" title="Android版本减少发布体积"></a>Android版本减少发布体积</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;PropertyGroup &gt;</span><br><span class="line">	//...</span><br><span class="line">	&lt;RuntimeIdentifiers&gt;android-arm64&lt;/RuntimeIdentifiers&gt;</span><br><span class="line">&lt;/PropertyGroup&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="改窗口标题"><a href="#改窗口标题" class="headerlink" title="改窗口标题"></a>改窗口标题</h4><figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">override</span> Window <span class="title">CreateWindow</span>(<span class="params">IActivationState activationState</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">var</span> Window =  <span class="keyword">base</span>.CreateWindow(activationState);</span><br><span class="line">	Window.Title = <span class="string">&quot;计算器&quot;</span>;</span><br><span class="line">	<span class="keyword">return</span> Window;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>没有Main入口的错误</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">可以设置不生成，但不要删除多余的平台引用。</span><br></pre></td></tr></table></figure>
+
+<p>- </p>
+]]></content>
+      <categories>
+        <category>MAUI</category>
+      </categories>
+      <tags>
+        <tag>html</tag>
+        <tag>CSS</tag>
       </tags>
   </entry>
 </search>
