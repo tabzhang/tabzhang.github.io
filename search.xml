@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Agilent3500A指令</title>
+    <url>/2021/05/13/Agilent3500A/</url>
+    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*RST	Reset To Factory</span><br><span class="line">FREQ    设置频率</span><br><span class="line">*TRG	Trigger Power Read</span><br><span class="line">SETAVG  [0-5] 2=4个均</span><br><span class="line">BLON	背光亮</span><br><span class="line">BLOFF	背光关</span><br><span class="line">SN?     查询条码，55436003</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>仪表</category>
+      </categories>
+      <tags>
+        <tag>3500A</tag>
+        <tag>SCPI</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Android学习笔记</title>
     <url>/2016/04/16/AndroidStudy/</url>
     <content><![CDATA[<p><strong>1.Xml 格式化Ctrl+Alt+L</strong></p>
@@ -50,6 +64,20 @@
       </tags>
   </entry>
   <entry>
+    <title>批量Xml文件格式化</title>
+    <url>/2021/05/18/BatchXmlFormater/</url>
+    <content><![CDATA[<p><img src="/2021/05/18/BatchXmlFormater/01.png" alt="image"></p>
+<p><a href="/download/BatchXmlFormater.7z">点击下载</a></p>
+]]></content>
+      <categories>
+        <category>原创</category>
+      </categories>
+      <tags>
+        <tag>XML</tag>
+        <tag>文件格式化</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>增量自动升级AutoUpdater使用方法</title>
     <url>/2022/06/21/AutoUpdaterManual/</url>
     <content><![CDATA[<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p>1.在目标主程序中调用AutoUpdater.exe，并将其放在主程序同级目录 ,主程序启动时，可以带参数调用如下，无需等待它启动完成，让其后台运行：</p>
@@ -96,17 +124,70 @@
       </tags>
   </entry>
   <entry>
-    <title>批量Xml文件格式化</title>
-    <url>/2021/05/18/BatchXmlFormater/</url>
-    <content><![CDATA[<p><img src="/2021/05/18/BatchXmlFormater/01.png" alt="image"></p>
-<p><a href="/download/BatchXmlFormater.7z">点击下载</a></p>
+    <title>Blazor笔记</title>
+    <url>/2024/05/08/Blazor_Study/</url>
+    <content><![CDATA[<h4 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h4><ul>
+<li>MASA Stack提供了一系列云原生基建项目，如Auth、配置中心、任务中心、告警中心等，这些项目的前端开发全部使用MASA Blazor。</li>
+<li>开发Web应用，<em><strong>或许这不够有吸引力</strong></em>，但现在Blazor应用可以直接托管到MAUI（微软跨平台UI），类似electron一样，使用Blazor技术开发跨PC和APP端应用，且性能潜力上，PC端优于electron、APP端优于webview。</li>
+<li>Blazor是目前对WebAssemble支持最好、投资最大的前端技术，不都在说WebAssembly是未来吗？！</li>
+</ul>
+]]></content>
+      <categories>
+        <category>MAUI</category>
+      </categories>
+      <tags>
+        <tag>Blazor</tag>
+        <tag>MAUI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CMW固件更新及设置</title>
+    <url>/2021/10/12/CMW_FW/</url>
+    <content><![CDATA[<p>1.<strong>先卸载旧固件</strong>，如果找不到桌面维护图标，按<kbd>Win</kbd>+<kbd>R</kbd>打开Windows的<strong>运行对话框</strong>，输入以下指令后<kbd>ENTER</kbd>，在弹出的对应框中卸载旧版本。</p>
+<blockquote>
+<p>“C:\Program Files (x86)\Rohde-Schwarz\RsDistributor\RsDistributor.exe” -maintenance</p>
+</blockquote>
+<p>2.<strong>下载新固件与波形文件</strong>，<strong>阿里云盘不限速下载</strong>，地址如下：</p>
+<blockquote>
+<p><a href="https://www.aliyundrive.com/s/1G9o4Z764z2">CMW100</a>  |  <a href="https://www.aliyundrive.com/s/QCK1u5gyMyJ">CMW500</a>  |  <a href="https://www.aliyundrive.com/s/gGYCzj2kXsC">波形文件(安装版)</a> |  <a href="https://www.aliyundrive.com/s/Kfhwuz8hb29">波形文件(自动解压)</a>  </p>
+</blockquote>
+<p>(固件版本选择，按项目请找相关人员确认，波形通用)</p>
+<span id="more"></span>
+<p>3.<strong>安装新固件</strong>，解压后双击其中一个安装包，在<strong>向导对话框</strong>中<strong>勾选</strong>如<strong>下图选项</strong>，并<strong>下一步</strong>等待安装完成即可，</p>
+<p><img src="/2021/10/12/CMW_FW/img1.png" alt="img1"></p>
+<p>4.<strong>波形文件安装</strong>。</p>
+<p>​		可以使用安装版以默认路径安装，或者手动放置，路径如下：</p>
+<blockquote>
+<p>CMW500:	D:\Rohde-Schwarz\CMW\waveform\library1</p>
+<p>CMW100:	C:\ProgramData\Rohde-Schwarz\CMW\Data\waveform\</p>
+</blockquote>
+<p>​		也可以使用自动解压版，请下载上面对应的版本：</p>
+<p><img src="/2021/10/12/CMW_FW/img4.png" alt="img1"></p>
+<p>5.<strong>切换成单窗口</strong> (推荐)：固件默认是多窗口模式，不方便操作，按下面<strong>红色标记</strong>找到<strong>Muliple Windows</strong>，<strong>取消勾选</strong>即可。</p>
+<p><img src="/2021/10/12/CMW_FW/img2.png" alt="img2"></p>
+<p>6.<strong>切换双通道</strong> (根据项目需要)：按第4步设置后，点击右侧DEVICE按钮，如下图进行设置，切换后要等待仪表自动重启后，方可使用。</p>
+<p><img src="/2021/10/12/CMW_FW/img3.png" alt="img3"></p>
+]]></content>
+      <categories>
+        <category>下载</category>
+      </categories>
+      <tags>
+        <tag>CMW100</tag>
+        <tag>仪表</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>命令行设置等宽字体</title>
+    <url>/2021/05/13/CmdFont/</url>
+    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"> </span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Console\TrueTypeFont]</span><br><span class="line">&quot;0&quot;=&quot;Lucida Console&quot;</span><br><span class="line">&quot;00&quot;=&quot;Consolas&quot;</span><br><span class="line">&quot;936&quot;=&quot;x&quot;</span><br><span class="line"> </span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontLink\SystemLink]</span><br><span class="line">&quot;Consolas&quot;=hex(7):53,00,49,00,4d,00,48,00,45,00,49,00,2e,00,54,00,54,00,46,00,\</span><br><span class="line">  2c,00,53,00,69,00,6d,00,48,00,65,00,69,00,00,00,00,00</span><br><span class="line"></span><br><span class="line">[HKEY_CURRENT_USER\Console%SystemRoot%_system32_cmd.exe]</span><br><span class="line">&quot;CodePage&quot;=dword:000003a8</span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
         <category>原创</category>
       </categories>
       <tags>
-        <tag>XML</tag>
-        <tag>文件格式化</tag>
+        <tag>CMD</tag>
+        <tag>字体</tag>
       </tags>
   </entry>
   <entry>
@@ -185,6 +266,50 @@
       </tags>
   </entry>
   <entry>
+    <title>批量查找小工具DataFinder V2.0</title>
+    <url>/2021/10/22/DataFinder/</url>
+    <content><![CDATA[<p><img src="/2021/10/22/DataFinder/img1.png" alt="img1"></p>
+<h2 id="【功能说明】"><a href="#【功能说明】" class="headerlink" title="【功能说明】"></a>【功能说明】</h2><p>1.支持批量查找<br>2.支持按文件名及内容查找<br>3.支持自定义查找类型<br>4.查找到的结果自动复制到目标目录</p>
+<p><a href="/download/DataFinder_V2.0.7z">点击下载</a></p>
+]]></content>
+      <categories>
+        <category>原创</category>
+      </categories>
+      <tags>
+        <tag>DataFinder</tag>
+        <tag>查找工具</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo教程</title>
+    <url>/2024/05/09/Hexo_Using/</url>
+    <content><![CDATA[<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">npm <span class="keyword">install</span> -g hexo</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h3><figure class="highlight excel"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">hexo <span class="built_in">clean</span>	清除缓存文件 </span><br><span class="line">hexo s 		启动本地服务器</span><br><span class="line">hexo g 		生成网站</span><br><span class="line">hexo d 		部署网站</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h3><figure class="highlight verilog"><table><tr><td class="code"><pre><span class="line">git <span class="keyword">config</span> --<span class="keyword">global</span> user<span class="variable">.name</span> <span class="string">&quot;username&quot;</span></span><br><span class="line">git <span class="keyword">config</span> --<span class="keyword">global</span> user<span class="variable">.email</span> <span class="string">&quot;email&quot;</span></span><br><span class="line">输入 ssh-keygen -t rsa -C <span class="string">&quot;email&quot;</span>然后一路回车。</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="添加密匙"><a href="#添加密匙" class="headerlink" title="添加密匙"></a>添加密匙</h3><pre><code>进入 [C:\Users\用户名\.ssh] 目录（要勾选显示“隐藏的项目”），用记事本打开公钥 id_rsa.pub 文件并复制里面的内容。
+
+登陆 GitHub ，进入 Settings 页面，选择左边栏的 SSH and GPG keys，点击 New SSH key。
+
+Title 随便取个名字，粘贴复制的 id_rsa.pub 内容到 Key 中，点击 Add SSH key 完成添加。
+</code></pre>
+]]></content>
+      <categories>
+        <category>资料</category>
+      </categories>
+      <tags>
+        <tag>HEXO</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>GIT学习笔记</title>
     <url>/2021/09/16/GitStudy/</url>
     <content><![CDATA[<h3 id="制作GitGUI中文语言文件"><a href="#制作GitGUI中文语言文件" class="headerlink" title="制作GitGUI中文语言文件"></a>制作GitGUI中文语言文件</h3><ul>
@@ -230,7 +355,7 @@
 </li>
 </ol>
 <h3 id="GIT配置"><a href="#GIT配置" class="headerlink" title="GIT配置"></a>GIT配置</h3><blockquote>
-<p>$ git config –global user.name “Your Name”<br>$ git config –global user.email “<a href="mailto:&#101;&#x6d;&#97;&#105;&#108;&#x40;&#101;&#120;&#x61;&#109;&#x70;&#x6c;&#x65;&#x2e;&#x63;&#x6f;&#x6d;">&#101;&#x6d;&#97;&#105;&#108;&#x40;&#101;&#120;&#x61;&#109;&#x70;&#x6c;&#x65;&#x2e;&#x63;&#x6f;&#x6d;</a>“</p>
+<p>$ git config –global user.name “Your Name”<br>$ git config –global user.email “<a href="mailto:&#101;&#x6d;&#97;&#x69;&#108;&#64;&#101;&#120;&#x61;&#109;&#x70;&#x6c;&#101;&#x2e;&#x63;&#111;&#x6d;">&#101;&#x6d;&#97;&#x69;&#108;&#64;&#101;&#120;&#x61;&#109;&#x70;&#x6c;&#101;&#x2e;&#x63;&#111;&#x6d;</a>“</p>
 </blockquote>
 <h3 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h3><blockquote>
 <p>初始化一个Git仓库，使用<strong>git init</strong>命令。</p>
@@ -261,7 +386,7 @@
 </blockquote>
 <h3 id="注册远程仓库"><a href="#注册远程仓库" class="headerlink" title="注册远程仓库"></a>注册远程仓库</h3><blockquote>
 <p>第1步：创建SSH Key。在用户主目录下，看看有没有.ssh目录，如果有，再看看这个目录下有没有<code>id_rsa</code>和<code>id_rsa.pub</code>这两个文件，如果已经有了，可直接跳到下一步。如果没有，打开Shell（Windows下打开Git Bash），创建SSH Key：</p>
-<p>$ ssh-keygen -t rsa -C “<a href="mailto:&#121;&#111;&#117;&#114;&#101;&#x6d;&#97;&#105;&#108;&#x40;&#x65;&#120;&#x61;&#x6d;&#x70;&#x6c;&#101;&#x2e;&#x63;&#x6f;&#x6d;">&#121;&#111;&#117;&#114;&#101;&#x6d;&#97;&#105;&#108;&#x40;&#x65;&#120;&#x61;&#x6d;&#x70;&#x6c;&#101;&#x2e;&#x63;&#x6f;&#x6d;</a>“</p>
+<p>$ ssh-keygen -t rsa -C “<a href="mailto:&#x79;&#x6f;&#x75;&#114;&#101;&#x6d;&#97;&#105;&#x6c;&#64;&#101;&#120;&#x61;&#109;&#112;&#108;&#x65;&#x2e;&#99;&#111;&#109;">&#x79;&#x6f;&#x75;&#114;&#101;&#x6d;&#97;&#105;&#x6c;&#64;&#101;&#120;&#x61;&#109;&#112;&#108;&#x65;&#x2e;&#99;&#111;&#109;</a>“</p>
 <p>第2步：登陆GitHub，打开“Account settings”，“SSH Keys”页面：</p>
 <p>然后，点“Add SSH Key”，填上任意Title，在Key文本框里粘贴<code>id_rsa.pub</code>文件的内容：</p>
 </blockquote>
@@ -303,535 +428,6 @@
       <tags>
         <tag>笔记</tag>
         <tag>GIT</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>批量查找小工具DataFinder V2.0</title>
-    <url>/2021/10/22/DataFinder/</url>
-    <content><![CDATA[<p><img src="/2021/10/22/DataFinder/img1.png" alt="img1"></p>
-<h2 id="【功能说明】"><a href="#【功能说明】" class="headerlink" title="【功能说明】"></a>【功能说明】</h2><p>1.支持批量查找<br>2.支持按文件名及内容查找<br>3.支持自定义查找类型<br>4.查找到的结果自动复制到目标目录</p>
-<p><a href="/download/DataFinder_V2.0.7z">点击下载</a></p>
-]]></content>
-      <categories>
-        <category>原创</category>
-      </categories>
-      <tags>
-        <tag>DataFinder</tag>
-        <tag>查找工具</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>固维PSS2005常用指令</title>
-    <url>/2022/05/11/PSS2005_SCPI_Command/</url>
-    <content><![CDATA[<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">*IDN? -&gt; GW<span class="selector-class">.Inc</span>,PSS-<span class="number">2005</span>,EO914759,FW1.<span class="number">07</span></span><br><span class="line">CHAN1:VOLT ? -&gt; <span class="number">04.19</span></span><br><span class="line"></span><br><span class="line">Boolean <span class="number">0</span>, <span class="number">1</span></span><br><span class="line">NR1 Integers <span class="number">0</span>, <span class="number">1</span>, <span class="number">18</span></span><br><span class="line">NR2 Decimal numbers <span class="number">1.5</span>, <span class="number">3.141</span>, <span class="number">8.4</span></span><br><span class="line">NR3 Floating point numbers <span class="number">4.5</span>E-<span class="number">1</span>, <span class="number">8.25</span>E+<span class="number">1</span></span><br><span class="line">String Alphanumeric characters “No error”</span><br><span class="line"></span><br><span class="line">设置电流 :CHAN1:CURR &lt;NR2&gt; </span><br><span class="line">查询电流 :CHAN1:CURR ? </span><br><span class="line"></span><br><span class="line">设置电压 :CHAN1:VOLT &lt;NR2&gt;</span><br><span class="line">查询电压 :CHAN1:VOLT ? </span><br><span class="line"></span><br><span class="line">测量实际电流 :CHAN1:MEAS:CURR ? </span><br><span class="line">测量实际电压 :CHAN1:MEAS:VOLT ?</span><br><span class="line"></span><br><span class="line">设置过流保护 :CHAN1:PROT:CURR &lt;Boolean&gt;</span><br><span class="line">查询过流保护 :CHAN1:PROT:CURR ? </span><br><span class="line"></span><br><span class="line">设置过压保护 :CHAN1:PROT:VOLT &lt;NR2&gt;</span><br><span class="line">查询过流保护 :CHAN1:PROT:VOLT ? </span><br><span class="line"></span><br><span class="line">清理过流过压保护状态 :OUTP:PROT:CLE</span><br><span class="line">设置输出状态 :OUTP:STAT &lt;Boolean&gt;</span><br><span class="line">查询输出状态 :OUTP:STAT &lt;Boolean&gt;</span><br><span class="line"></span><br><span class="line">*CLS / *RST / *OPC? </span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>原创</category>
-      </categories>
-      <tags>
-        <tag>PSS2005</tag>
-        <tag>电源，SCPI</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>LogParser使用说明</title>
-    <url>/2021/05/18/LogParser/</url>
-    <content><![CDATA[<ol>
-<li><p>工具默认Log在D:\LogFiles下，请排除不是本次需要解析Log。</p>
-</li>
-<li><p>点击 <strong>Add Folder</strong> 按钮，定位到Log目录，后点击确定; <strong>或者拖动部分子文件夹到列表中</strong>。</p>
-</li>
-</ol>
-<p><img src="/2021/05/18/LogParser/img1.png" alt="img1"></p>
-<span id="more"></span>
-
-<ol start="3">
-<li><p>点击 <strong>Start Parser</strong> 等待解析完成。 </p>
-</li>
-<li><p>桌面上会生成一个 Excel 文件汇总。 </p>
-</li>
-<li><p>把这个文件按电脑名称命名，比如 SMT4. xlsx，方便定位到问题后改善。 </p>
-</li>
-<li><p>如果要解析WBG工位的Log，请在增加文件前，选择WBG Log下接列表。</p>
-<p><a href="/download/LogParser.7z">点击下载</a></p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>原创</category>
-      </categories>
-      <tags>
-        <tag>LogParser</tag>
-        <tag>Log解析</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>如何记录CMW完整的SCPI报告</title>
-    <url>/2022/05/11/RecordSCPI/</url>
-    <content><![CDATA[<ol>
-<li><p>当仪表被远程控制上，点击固件上“report file on”按钮，如下图：  程序跑完后，关闭掉 Report file.</p>
-<p><img src="/2022/05/11/RecordSCPI/1.jpg" alt="1.jpg"></p>
-</li>
-<li><p>进入电脑固件目录，3.8.10 是当前的 base 版本，进入和当前时间最接近的一个目录中.</p>
-<p><img src="/2022/05/11/RecordSCPI/2.jpg"></p>
-</li>
-<li><p>此时可以看到打开的文件夹里有个 RemoteTrace-current.xml 文件.</p>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>手册</category>
-      </categories>
-      <tags>
-        <tag>SCPI</tag>
-        <tag>调试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>恢复QCN的方法(校准数据)</title>
-    <url>/2021/09/16/RestoreQCN/</url>
-    <content><![CDATA[<p>1.对比xqcn文件名的PSN与主板编号与PSN是否一致。</p>
-<p>2.关闭一切测试工具，把主板上电正常开机后，打开QPST中的<strong>Software Download</strong>,并切换到<strong>Restore页面</strong>如下图：</p>
-<span id="more"></span>
-
-<p><img src="/2021/09/16/RestoreQCN/img2.png" alt="img1"></p>
-<p>3.点击红色标记<strong>1 选择手机端口</strong>，点击<strong>2 选择对应的.xqcn文件</strong>，然后点击<strong>3 Start</strong></p>
-<p>4.等待大概3分钟左右，直到<strong>4这里显示Memory Restore Completed</strong> 就完成了。</p>
-]]></content>
-      <categories>
-        <category>手册</category>
-      </categories>
-      <tags>
-        <tag>QCN</tag>
-        <tag>金板</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>常用运行库及驱动安装</title>
-    <url>/2021/09/16/RuntimeAndDrivers/</url>
-    <content><![CDATA[<p>1.<strong>微软常用运行库</strong>。安装运行库合集，可以解决类似下图2中的错误提示。</p>
-<p><img src="/2021/09/16/RuntimeAndDrivers/img2.png" alt="img2"></p>
-<span id="more"></span>
-
-<p><img src="/2021/09/16/RuntimeAndDrivers/img1.png" alt="img1"></p>
-<p>2.<strong>NI 488.2安装</strong>。如果下图，<strong>要勾选.Net Framework支持</strong>。</p>
-<p><img src="/2021/09/16/RuntimeAndDrivers/img3.png" alt="img3"></p>
-<p>3.<strong>IT天空万能驱动</strong>。</p>
-<p><img src="/2021/09/16/RuntimeAndDrivers/img4.png" alt="img4"></p>
-<p>4.<strong>Microsoft .NET Framework 4.5.2</strong>。</p>
-<p><a href="https://www.microsoft.com/zh-CN/download/details.aspx?id=42642">官网下载</a>  </p>
-<p>以上资源 <a href="https://www.aliyundrive.com/s/nZCRhRmvRky">网盘下载</a></p>
-]]></content>
-      <categories>
-        <category>下载</category>
-      </categories>
-      <tags>
-        <tag>常用运行库</tag>
-        <tag>驱动</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>杂类拾零</title>
-    <url>/2021/10/13/Skills/</url>
-    <content><![CDATA[<h3 id="Excel小技巧"><a href="#Excel小技巧" class="headerlink" title="Excel小技巧"></a>Excel小技巧</h3><blockquote>
-<p>Excel批量删除公式错误Ctrl+G	<br>定位条件-&gt;公式-&gt;错误<br>改好后按Ctrl+enter</p>
-</blockquote>
-<span id="more"></span>
-
-<h3 id="Genymotion无法启动"><a href="#Genymotion无法启动" class="headerlink" title="Genymotion无法启动"></a>Genymotion无法启动</h3><blockquote>
-<p>1 结束所有VirtualBox相关进程<br>2 以管理员方式启动VirtualBox 不关闭<br>3 以管理员方式启动Genymotion<br>Genymotion 账号 - zx.<br>Android模拟器 Genymotion &#x2F; Username: tabzhang &#x2F; Email address: <a href="mailto:&#116;&#x61;&#x62;&#46;&#122;&#x68;&#97;&#110;&#103;&#64;&#102;&#111;&#120;&#x6d;&#x61;&#105;&#x6c;&#x2e;&#x63;&#111;&#x6d;">&#116;&#x61;&#x62;&#46;&#122;&#x68;&#97;&#110;&#103;&#64;&#102;&#111;&#120;&#x6d;&#x61;&#105;&#x6c;&#x2e;&#x63;&#111;&#x6d;</a></p>
-</blockquote>
-<h3 id="C-调用-C-新方式"><a href="#C-调用-C-新方式" class="headerlink" title="C# 调用 C++ 新方式"></a>C# 调用 C++ 新方式</h3><blockquote>
-<p>用C++CLI搭建C++和C#之间的桥梁</p>
-<p><a href="https://www.cnblogs.com/ceachy/p/Cpp-Cli-Overview.html">https://www.cnblogs.com/ceachy/p/Cpp-Cli-Overview.html</a> </p>
-<p><strong>直接调用</strong></p>
-<p>SWIG 技术：<a href="http://www.swig.org/">http://www.swig.org/</a></p>
-<p>Conari： <a href="https://github.com/3F/Conari">https://github.com/3F/Conari</a> </p>
-<p>.Net DllExport : <a href="https://github.com/3F/DllExport">https://github.com/3F/DllExport</a> </p>
-<p>CppSharp : <a href="https://github.com/mono/CppSharp">https://github.com/mono/CppSharp</a> </p>
-</blockquote>
-<h3 id="VS-快捷键"><a href="#VS-快捷键" class="headerlink" title="VS 快捷键"></a>VS 快捷键</h3><blockquote>
-<ul>
-<li>“F12 “ 快速查找引用</li>
-<li>“Ctrl + -“ 快速返回方法调用处，两者是互逆操作</li>
-<li>VS中批量删除注释，按<kbd>Ctrl</kbd>+<kbd>H</kbd> 选上正则表达式<br>Find what: &#x2F;&#x2F;.*\n，Replace with: (空)，点replace all就行了</li>
-</ul>
-</blockquote>
-<h3 id="术语"><a href="#术语" class="headerlink" title="术语"></a>术语</h3><blockquote>
-<p>First Piece Qualification (FPQ) 首件资格认证</p>
-<p>Pilot Lot Qualification (PLQ) 试验批量资格认证</p>
-<p>bi-weekly 两星期一次</p>
-<p>Double Bag Kit 双袋包 Half Kit 半包 FullKit 全副装备</p>
-<p>die-casting 美 [‘dai:k’ɑ:st] 压铸; 压模法，铸造法</p>
-<p>1毫米&#x3D;100丝&#x3D;100道&#x3D;1000微米 (南方称‘丝’，北方称‘道’，台湾称‘条’) 1毫米&#x3D;10</p>
-<p>丝米&#x3D;100忽米&#x3D;1000微米，习惯上用的丝和丝米不是一个概念</p>
-</blockquote>
-<h3 id="MkKink-用法示例"><a href="#MkKink-用法示例" class="headerlink" title="MkKink 用法示例"></a>MkKink 用法示例</h3><blockquote>
-<p>mklink &#x2F;j “C:\Users\Librarys” “D:\MzDevelop\Librarys”<br>第一个参数是目标，第二个参数是原始文件夹</p>
-</blockquote>
-<h3 id="开源加密计事本"><a href="#开源加密计事本" class="headerlink" title="开源加密计事本"></a>开源加密计事本</h3><blockquote>
-<p>Crypto Notepad </p>
-</blockquote>
-<h3 id="高通-禁用驱动签名"><a href="#高通-禁用驱动签名" class="headerlink" title="高通-禁用驱动签名"></a>高通-禁用驱动签名</h3><blockquote>
-<p>打开 Driver Signature Enforcement Overrider 应用程序。</p>
-</blockquote>
-<h3 id="治具探针安全距离"><a href="#治具探针安全距离" class="headerlink" title="治具探针安全距离"></a>治具探针安全距离</h3><blockquote>
-<p> 注: 1in&#x3D;1000mil-2.54cm-25.4mm  1mm-0.3937inch-39.37mil</p>
-<p>1，100mil和100mil之间的最小安全距离（要求： 2.1mm） 2.095mm &#x3D; 82.5mil</p>
-<p>2、75mil和75mil之间的最小安全距离（要求： 1.75mm） 1.74mm &#x3D; 68.5mil</p>
-<p>3、50mil和50mil之间的最小安全距离（要求： 1.21mm） 1.2065mm &#x3D; 47.5mil</p>
-<p>4、100mil和75mil之间的最小安全距离（要求： 1.92mm） 1.9177mm &#x3D; 75.5mil</p>
-<p>5、100mil和50mil之间的最小安全距离（要求： 1.72mm） 1.7145mm &#x3D; 67.5mil</p>
-<p>6、75mil和50mil之间的最小安全距离（要求： 1.55mm） 1.5367mm &#x3D; 60.5mil</p>
-</blockquote>
-<h3 id="批处理去文件夹的隐藏属性"><a href="#批处理去文件夹的隐藏属性" class="headerlink" title="批处理去文件夹的隐藏属性"></a>批处理去文件夹的隐藏属性</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">attrib c:\&quot;ABC&quot; -s -h</span><br></pre></td></tr></table></figure>
-
-<h3 id="打印机地址"><a href="#打印机地址" class="headerlink" title="打印机地址"></a>打印机地址</h3><blockquote>
-<p>工艺换打印机，看网络摘要<br>彩色打印机:172.16.148.220,HP Color LaserJet MFP M277dw</p>
-</blockquote>
-<h2 id="C-展开和折叠代码的快捷键"><a href="#C-展开和折叠代码的快捷键" class="headerlink" title="C# 展开和折叠代码的快捷键"></a>C# 展开和折叠代码的快捷键</h2><blockquote>
-<p>Ctrl + M + O: 折叠所有方法</p>
-<p>Ctrl + M + M: 折叠或者展开当前方法</p>
-<p>Ctrl + M + L:  展开所有方法</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>资料</category>
-      </categories>
-      <tags>
-        <tag>杂类</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>SQLServer2008R2外网访问</title>
-    <url>/2021/10/13/SqlServer_ExtranetAccess/</url>
-    <content><![CDATA[<p>1.Sql Server 2008R2，确保可通过sa进行登录，先关掉防火墙，以免因为防火墙导致连接不上。</p>
-<p>2.配置管理器中需要打开TCP&#x2F;IP，路径为Sql Server Configuration Manager-SqlServer网络配置-SqlServer的协议，并双击确定端口是1433</p>
-<p><img src="/2021/10/13/SqlServer_ExtranetAccess/img1.png" alt="img"></p>
-<span id="more"></span>
-
-<p>3.SqlServer Management Studio配置，右键–方面–外围应用配置-RemoteDecEnable-True。</p>
-<p><img src="/2021/10/13/SqlServer_ExtranetAccess/img2.png" alt="img"></p>
-<p>4.配置连接</p>
-<p><img src="/2021/10/13/SqlServer_ExtranetAccess/img3.png" alt="img"></p>
-<p>配置一下安全性，允许连接，启用登录。</p>
-<p><img src="/2021/10/13/SqlServer_ExtranetAccess/img4.png" alt="img"></p>
-<p>5.重启服务，再次进入配置管理器，重启服务，因为没有重启这个，一直导致外网访问失败，故一定要注意此项。</p>
-<p><img src="/2021/10/13/SqlServer_ExtranetAccess/img5.png" alt="img"></p>
-<p>6.测试，使用外网电脑，通过程序或sql 数据库 连接进行测试。</p>
-<p>7.防火墙配置,这块做网站经常会用到，一般都比较熟练。这里我简单说一下，新建入站规则，打开1433端口。</p>
-<p>8.如果按照以上配置还有问题，请尝试进行更多配置</p>
-<blockquote>
-<p>1.程序例外</p>
-<p>Windows 防火墙中，选择”例外”选项卡，单击”添加程序”，在“添加程序”窗口中，单击“浏览”，选择 “C:\Program Files\Microsoft SQL Server\MSSQL10.MSSQLSERVER\MSSQL\Binn\sqlservr.exe” 可执行文件，然后单击“确定”按钮：</p>
-<p>2.服务确保开启</p>
-<p>配置管理器中，左侧的“SQL Server服务”，确保右侧的“SQL Server”以及“SQL Server Browser”正在运行。</p>
-</blockquote>
-<h3 id="SQLServer创建用户登录出现错误18456"><a href="#SQLServer创建用户登录出现错误18456" class="headerlink" title="SQLServer创建用户登录出现错误18456"></a>SQLServer创建用户登录出现错误18456</h3><p>使用SQLServer创建用户并登录的过程中总是出现问题，查找方法不易，于是就打算把解决方法写一下，方便后来的小伙伴查找<br>1、在本机数据库处右键，选择属性，点击打开。</p>
-<p><img src="/2021/10/13/SqlServer_ExtranetAccess/img6.png" alt="img"></p>
-<p>选择左侧的安全性，右侧服务器身份验证选择SQL Sever和Windos身份验证模式，点击确定。</p>
-<p><img src="/2021/10/13/SqlServer_ExtranetAccess/img7.png" alt="img"></p>
-<p>2、数据库–&gt;安全性–&gt;登录名，打开后下方选择你已经设置好的登录名，在登录名上右键，选择属性。</p>
-<p><img src="/2021/10/13/SqlServer_ExtranetAccess/img8.png" alt="img"></p>
-<p>将强制实施密码策略的选择取消，同时注意下方选择你想要登陆的数据库。</p>
-<p><img src="/2021/10/13/SqlServer_ExtranetAccess/img9.png" alt="img"></p>
-<p>左侧选择状态，注意将右侧的选项改成授予和启用，点击确定。</p>
-<p><img src="/2021/10/13/SqlServer_ExtranetAccess/img4.png" alt="img"></p>
-<p>此时断开重新使用创建的账号连接可能会出现18456错误。</p>
-<p>解决方法：<br>1、关闭SQLServer。</p>
-<p>2、打开菜单栏，找到SQL的配置管理器，打开。选择网络设置下的MSSQLSWEVER的协议，将右侧下面的两项启用。</p>
-<p><img src="/2021/10/13/SqlServer_ExtranetAccess/img1.png" alt="img"></p>
-<p>3、选择SQLSever服务，将第一项先停止再启动。关闭配置管理器，重新打开SQLSever 用创建的用户身份登录就可以了。</p>
-<p><img src="/2021/10/13/SqlServer_ExtranetAccess/img5.png" alt="img"></p>
-]]></content>
-      <categories>
-        <category>手册</category>
-      </categories>
-      <tags>
-        <tag>SQLServer</tag>
-        <tag>外网访问</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Wifi历代记</title>
-    <url>/2021/10/13/Wifi_History/</url>
-    <content><![CDATA[<table>
-<thead>
-<tr>
-<th align="center">历代记</th>
-<th align="center">WiFi 1</th>
-<th align="center">WiFi 2</th>
-<th align="center">WiFi 3</th>
-<th align="center">WiFi 4</th>
-<th align="center">WiFi 5</th>
-<th align="center">WiFi 6</th>
-<th align="center">WiFi 7</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">协议</td>
-<td align="center">802.11b</td>
-<td align="center">802.11a</td>
-<td align="center">802.11g</td>
-<td align="center">802.11n</td>
-<td align="center">802.11ac</td>
-<td align="center">802.11ax</td>
-<td align="center">802.11be</td>
-</tr>
-<tr>
-<td align="center">年份</td>
-<td align="center">1999</td>
-<td align="center">1999</td>
-<td align="center">2003</td>
-<td align="center">2009</td>
-<td align="center">2013 wave1 &#x2F; 2016 wave2</td>
-<td align="center">2018+</td>
-<td align="center">2022</td>
-</tr>
-<tr>
-<td align="center">工作频段</td>
-<td align="center">2.4G</td>
-<td align="center">5G</td>
-<td align="center">2.4G</td>
-<td align="center">2.4G&#x2F;5G</td>
-<td align="center">5G</td>
-<td align="center">2.4G&#x2F;5G</td>
-<td align="center">2.4G&#x2F;5G&#x2F;6G</td>
-</tr>
-<tr>
-<td align="center">最大频宽</td>
-<td align="center">20MHz</td>
-<td align="center">20MHz</td>
-<td align="center">20MHz</td>
-<td align="center">40MHz</td>
-<td align="center">80MHz &#x2F; 160MHz</td>
-<td align="center">160MHz</td>
-<td align="center">320MHz</td>
-</tr>
-<tr>
-<td align="center">MCS范围</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center">0~7</td>
-<td align="center">0~9</td>
-<td align="center">0~11</td>
-<td align="center">0~13</td>
-</tr>
-<tr>
-<td align="center">最高调制</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center">64QAM</td>
-<td align="center">256QAM</td>
-<td align="center">1024QAM</td>
-<td align="center">4096QAM</td>
-</tr>
-<tr>
-<td align="center">单流带宽</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center">150Mbps</td>
-<td align="center">433Mbps &#x2F; 867Mbps</td>
-<td align="center">1201Mbps</td>
-<td align="center">Up to 30G</td>
-</tr>
-<tr>
-<td align="center">最大空间</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center">4x4</td>
-<td align="center">8x8</td>
-<td align="center">8x8</td>
-<td align="center">16x16UL&#x2F;DL MU-MIMO</td>
-</tr>
-<tr>
-<td align="center">调试方式</td>
-<td align="center">CCK&#x2F;DSSS</td>
-<td align="center">OFDM</td>
-<td align="center">CCK&#x2F;OFDM&#x2F;PBCC</td>
-<td align="center">OFDM</td>
-<td align="center">OFMD下行</td>
-<td align="center">OFDMA</td>
-<td align="center">OFDMA</td>
-</tr>
-</tbody></table>
-]]></content>
-      <categories>
-        <category>资料</category>
-      </categories>
-      <tags>
-        <tag>WIFI</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>CMW固件更新及设置</title>
-    <url>/2021/10/12/CMW_FW/</url>
-    <content><![CDATA[<p>1.<strong>先卸载旧固件</strong>，如果找不到桌面维护图标，按<kbd>Win</kbd>+<kbd>R</kbd>打开Windows的<strong>运行对话框</strong>，输入以下指令后<kbd>ENTER</kbd>，在弹出的对应框中卸载旧版本。</p>
-<blockquote>
-<p>“C:\Program Files (x86)\Rohde-Schwarz\RsDistributor\RsDistributor.exe” -maintenance</p>
-</blockquote>
-<p>2.<strong>下载新固件与波形文件</strong>，<strong>阿里云盘不限速下载</strong>，地址如下：</p>
-<blockquote>
-<p><a href="https://www.aliyundrive.com/s/1G9o4Z764z2">CMW100</a>  |  <a href="https://www.aliyundrive.com/s/QCK1u5gyMyJ">CMW500</a>  |  <a href="https://www.aliyundrive.com/s/gGYCzj2kXsC">波形文件(安装版)</a> |  <a href="https://www.aliyundrive.com/s/Kfhwuz8hb29">波形文件(自动解压)</a>  </p>
-</blockquote>
-<p>(固件版本选择，按项目请找相关人员确认，波形通用)</p>
-<span id="more"></span>
-<p>3.<strong>安装新固件</strong>，解压后双击其中一个安装包，在<strong>向导对话框</strong>中<strong>勾选</strong>如<strong>下图选项</strong>，并<strong>下一步</strong>等待安装完成即可，</p>
-<p><img src="/2021/10/12/CMW_FW/img1.png" alt="img1"></p>
-<p>4.<strong>波形文件安装</strong>。</p>
-<p>​		可以使用安装版以默认路径安装，或者手动放置，路径如下：</p>
-<blockquote>
-<p>CMW500:	D:\Rohde-Schwarz\CMW\waveform\library1</p>
-<p>CMW100:	C:\ProgramData\Rohde-Schwarz\CMW\Data\waveform\</p>
-</blockquote>
-<p>​		也可以使用自动解压版，请下载上面对应的版本：</p>
-<p><img src="/2021/10/12/CMW_FW/img4.png" alt="img1"></p>
-<p>5.<strong>切换成单窗口</strong> (推荐)：固件默认是多窗口模式，不方便操作，按下面<strong>红色标记</strong>找到<strong>Muliple Windows</strong>，<strong>取消勾选</strong>即可。</p>
-<p><img src="/2021/10/12/CMW_FW/img2.png" alt="img2"></p>
-<p>6.<strong>切换双通道</strong> (根据项目需要)：按第4步设置后，点击右侧DEVICE按钮，如下图进行设置，切换后要等待仪表自动重启后，方可使用。</p>
-<p><img src="/2021/10/12/CMW_FW/img3.png" alt="img3"></p>
-]]></content>
-      <categories>
-        <category>下载</category>
-      </categories>
-      <tags>
-        <tag>CMW100</tag>
-        <tag>仪表</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Agilent3500A指令</title>
-    <url>/2021/05/13/Agilent3500A/</url>
-    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">*RST	Reset To Factory</span><br><span class="line">FREQ    设置频率</span><br><span class="line">*TRG	Trigger Power Read</span><br><span class="line">SETAVG  [0-5] 2=4个均</span><br><span class="line">BLON	背光亮</span><br><span class="line">BLOFF	背光关</span><br><span class="line">SN?     查询条码，55436003</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>仪表</category>
-      </categories>
-      <tags>
-        <tag>SCPI</tag>
-        <tag>3500A</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>命令行设置等宽字体</title>
-    <url>/2021/05/13/CmdFont/</url>
-    <content><![CDATA[<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"> </span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Console\TrueTypeFont]</span><br><span class="line">&quot;0&quot;=&quot;Lucida Console&quot;</span><br><span class="line">&quot;00&quot;=&quot;Consolas&quot;</span><br><span class="line">&quot;936&quot;=&quot;x&quot;</span><br><span class="line"> </span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontLink\SystemLink]</span><br><span class="line">&quot;Consolas&quot;=hex(7):53,00,49,00,4d,00,48,00,45,00,49,00,2e,00,54,00,54,00,46,00,\</span><br><span class="line">  2c,00,53,00,69,00,6d,00,48,00,65,00,69,00,00,00,00,00</span><br><span class="line"></span><br><span class="line">[HKEY_CURRENT_USER\Console%SystemRoot%_system32_cmd.exe]</span><br><span class="line">&quot;CodePage&quot;=dword:000003a8</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>原创</category>
-      </categories>
-      <tags>
-        <tag>CMD</tag>
-        <tag>字体</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>江城子</title>
-    <url>/2021/05/13/Literary/</url>
-    <content><![CDATA[<h3 id="《江城子-教师》"><a href="#《江城子-教师》" class="headerlink" title="《江城子.教师》"></a>《江城子.教师》</h3><p>老师工作不寻常，待学生，似爹娘。学海无边，促学子远航。一生清贫无尤怨，为解惑，常奔忙。<br>从教多年鬓如霜，仍执着，未彷徨。满腔热血，守寂寞战场。若要桃李成良木，做蜡烛，又何妨。</p>
-<h3 id="《江城子-程序员》"><a href="#《江城子-程序员》" class="headerlink" title="《江城子.程序员》"></a>《江城子.程序员》</h3><p>十年生死两茫茫，写程序，到天亮。千行代码，Bug到处藏。纵使上线又怎样，朝令改，夕断肠。<br>客户每天新想法，天天改，日忙忙。相顾无言，惟有泪千行。每晚灯火阑珊处，程序员，加班忙。</p>
-<span id="more"></span>
-
-<h3 id="《江城子·打工》"><a href="#《江城子·打工》" class="headerlink" title="《江城子·打工》"></a>《江城子·打工》</h3><p>十年打工两茫茫，没有车，没有房。千里锦绣不关己，无处话凄凉。没有钱，纵是身处闹市中，又何妨？<br>幸有共享连日起，任租借，奔小康。物美价廉，满目琳琅。不愁商物，不愁车房。再无年年断肠处，共盛世，享小康。</p>
-<h3 id="《江城子·高考》"><a href="#《江城子·高考》" class="headerlink" title="《江城子·高考》"></a>《江城子·高考》</h3><p>吾辈学子本应狂，心豪放，志高昂。何惧路远，刻苦争朝夕。为展心中宏图志，迎难上，斗志旺！<br>高考号角已吹响，汗泪交，又何妨？遨游题海，乘风破巨浪！揽满豪情冲万丈，笑考场，登金榜！</p>
-<h3 id="《江城子·微信群》"><a href="#《江城子·微信群》" class="headerlink" title="《江城子·微信群》"></a>《江城子·微信群》</h3><p>即时通讯聚同窗。说豪强，问安康。老成经历，不必叹炎凉。岁月留痕犹在目，家道好，友情长。</p>
-<h3 id="《江城子·同学群》"><a href="#《江城子·同学群》" class="headerlink" title="《江城子·同学群》"></a>《江城子·同学群》</h3><p>三十余载各奔忙，叹离长，实堪伤。网络相牵，微信话衷肠。共忆当年多感慨，光易逝，梦一场。</p>
-<p>同窗数载情谊长，不思量，自难忘。盼望重逢，再现旧时光 。纵酒放歌将兴尽，霜染鬓，又何妨。</p>
-<h3 id="《江城子·朋友圈》"><a href="#《江城子·朋友圈》" class="headerlink" title="《江城子·朋友圈》"></a>《江城子·朋友圈》</h3><p>朋友圈内有华章。正观望，霞瑞亮。孤寂心灵，立马闪光茫。即使评判不尽滋，言若炭，心飞翔。<br>梦中思绪传芬芳。文轩窗，飘清香。异地观山，不见紫丘庄。必瞾网络长虹处，群星外，神圣王。</p>
-<h3 id="《江城子·战疫情》"><a href="#《江城子·战疫情》" class="headerlink" title="《江城子·战疫情》"></a>《江城子·战疫情》</h3><p>疫情肆虐宇寰惊。地天倾，海河烹。天使白衣，除夕出神兵。忘死舍生除魍魉。高车旆，大旗旌。<br>人民子弟尽精英。凤凰鸣，汉江声。雷火神山，分秒又须争。万众一心擎社稷，抛天命，保民生。</p>
-<p>学历代表你的过去，能力代表你的现在，学习代表你的将来<br>十年河东，十年河西，莫欺少年穷<br>学无止境，精益求精</p>
-<p>上海一大学生在灯迷会上出了一则上联： 上海自来水来自海上。 顺念倒念完全一样！<br>北京大学生对曰： 香山碧云寺云碧山香。 山东大学生对曰： 山东落花生花落东山。<br>山西大学生对曰： 山西悬空寺空悬西山。 安徽大学生对曰： 黄山落叶松叶落山黄。<br>海南大学生也不示弱，对曰： 海南护卫舰卫护南海。<br>这‘对曰’顺倒工整，这是汉字的妙处，与大家分享。</p>
-]]></content>
-      <categories>
-        <category>摘抄</category>
-      </categories>
-      <tags>
-        <tag>江城子</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>什么是UWB技术</title>
-    <url>/2022/06/27/UWBTech/</url>
-    <content><![CDATA[<p>1.UWB（Ultra Wide Band）超宽带技术是一种使用1GHz以上频率带宽的无线载波通信技术，它不采用传统通信体制中的正弦载波，而是利用纳秒级的非正弦波窄脉冲传输数据，因此其所占的频谱范围很大，尽管使用无线通信，但其数据传输速率可以达到几百兆比特每秒以上。</p>
-<p><img src="/2022/06/27/UWBTech/01.png" alt="img1"></p>
-<p>2.UWB技术具有系统复杂度低，发射信号功率谱密度低，对信道衰落不敏感，截获能力低，定位精度高，穿透能力强等优点，尤其适用于室内等密集多径场所的高速无线接入。</p>
-<p><strong>3.UWB并非是一项新技术</strong>，它最早应用于军用雷达和通信应用中，名称为“脉冲无线电”，自2002年起，美国联邦通信委员会（FCC）授权其未经许可使用，为其划分了3.1~10.6GHz频段，占用500MHz以上的带宽。</p>
-<p><img src="/2022/06/27/UWBTech/02.png" alt="img2"></p>
-]]></content>
-      <categories>
-        <category>资料</category>
-      </categories>
-      <tags>
-        <tag>笔记</tag>
-        <tag>UWB</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>如何指定设备的COM口号</title>
-    <url>/2021/05/13/SpecifyComPort/</url>
-    <content><![CDATA[<p><img src="/2021/05/13/SpecifyComPort/01.png" alt="img1"></p>
-<p><img src="/2021/05/13/SpecifyComPort/02.png" alt="img2"></p>
-<p><img src="/2021/05/13/SpecifyComPort/03.png" alt="img3"></p>
-]]></content>
-      <categories>
-        <category>仪表</category>
-      </categories>
-      <tags>
-        <tag>COM</tag>
-        <tag>串口</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Blazor笔记</title>
-    <url>/2024/05/08/Blazor_Study/</url>
-    <content><![CDATA[<h4 id="MASA-Blazor可以用在哪些地方？"><a href="#MASA-Blazor可以用在哪些地方？" class="headerlink" title="MASA Blazor可以用在哪些地方？"></a>MASA Blazor可以用在哪些地方？</h4><ul>
-<li>MASA Stack提供了一系列云原生基建项目，如Auth、配置中心、任务中心、告警中心等，这些项目的前端开发全部使用MASA Blazor。</li>
-<li>开发Web应用，<em><strong>或许这不够有吸引力</strong></em>，但现在Blazor应用可以直接托管到MAUI（微软跨平台UI），类似electron一样，使用Blazor技术开发跨PC和APP端应用，且性能潜力上，PC端优于electron、APP端优于webview。</li>
-<li>Blazor是目前对WebAssemble支持最好、投资最大的前端技术，不都在说WebAssembly是未来吗？！</li>
-</ul>
-]]></content>
-      <categories>
-        <category>MAUI</category>
-      </categories>
-      <tags>
-        <tag>Blazor</tag>
-        <tag>MAUI</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo教程</title>
-    <url>/2024/05/09/Hexo_Using/</url>
-    <content><![CDATA[<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">npm <span class="keyword">install</span> -g hexo</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h3><figure class="highlight excel"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">hexo <span class="built_in">clean</span>	清除缓存文件 </span><br><span class="line">hexo s 		启动本地服务器</span><br><span class="line">hexo g 		生成网站</span><br><span class="line">hexo d 		部署网站</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h3><figure class="highlight verilog"><table><tr><td class="code"><pre><span class="line">git <span class="keyword">config</span> --<span class="keyword">global</span> user<span class="variable">.name</span> <span class="string">&quot;tabzhang&quot;</span></span><br><span class="line">git <span class="keyword">config</span> --<span class="keyword">global</span> user<span class="variable">.email</span> <span class="string">&quot;tab.z@qq.com&quot;</span></span><br><span class="line">输入 ssh-keygen -t rsa -C <span class="string">&quot;tab.z@qq.com&quot;</span>然后一路回车。</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="添加密匙"><a href="#添加密匙" class="headerlink" title="添加密匙"></a>添加密匙</h3><pre><code>进入 [C:\Users\用户名\.ssh] 目录（要勾选显示“隐藏的项目”），用记事本打开公钥 id_rsa.pub 文件并复制里面的内容。
-
-登陆 GitHub ，进入 Settings 页面，选择左边栏的 SSH and GPG keys，点击 New SSH key。
-
-Title 随便取个名字，粘贴复制的 id_rsa.pub 内容到 Key 中，点击 Add SSH key 完成添加。
-</code></pre>
-]]></content>
-      <categories>
-        <category>资料</category>
-      </categories>
-      <tags>
-        <tag>HEXO</tag>
       </tags>
   </entry>
   <entry>
@@ -1087,6 +683,38 @@ Title 随便取个名字，粘贴复制的 id_rsa.pub 内容到 Key 中，点击
       </tags>
   </entry>
   <entry>
+    <title>LogParser使用说明</title>
+    <url>/2021/05/18/LogParser/</url>
+    <content><![CDATA[<ol>
+<li><p>工具默认Log在D:\LogFiles下，请排除不是本次需要解析Log。</p>
+</li>
+<li><p>点击 <strong>Add Folder</strong> 按钮，定位到Log目录，后点击确定; <strong>或者拖动部分子文件夹到列表中</strong>。</p>
+</li>
+</ol>
+<p><img src="/2021/05/18/LogParser/img1.png" alt="img1"></p>
+<span id="more"></span>
+
+<ol start="3">
+<li><p>点击 <strong>Start Parser</strong> 等待解析完成。 </p>
+</li>
+<li><p>桌面上会生成一个 Excel 文件汇总。 </p>
+</li>
+<li><p>把这个文件按电脑名称命名，比如 SMT4. xlsx，方便定位到问题后改善。 </p>
+</li>
+<li><p>如果要解析WBG工位的Log，请在增加文件前，选择WBG Log下接列表。</p>
+<p><a href="/download/LogParser.7z">点击下载</a></p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>原创</category>
+      </categories>
+      <tags>
+        <tag>LogParser</tag>
+        <tag>Log解析</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>MAUI 框架笔记</title>
     <url>/2024/05/08/MAUI_Study/</url>
     <content><![CDATA[<h4 id="桌面版设置可直接运行"><a href="#桌面版设置可直接运行" class="headerlink" title="桌面版设置可直接运行"></a>桌面版设置可直接运行</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;PropertyGroup&gt;		</span><br><span class="line">	//...</span><br><span class="line">	&lt;WindowsPackageType&gt;None&lt;/WindowsPackageType&gt;</span><br><span class="line">	&lt;WindowsAppSDKSelfContained&gt;true&lt;/WindowsAppSDKSelfContained&gt;</span><br><span class="line">&lt;/PropertyGroup&gt;</span><br></pre></td></tr></table></figure>
@@ -1106,6 +734,354 @@ Title 随便取个名字，粘贴复制的 id_rsa.pub 内容到 Key 中，点击
       <tags>
         <tag>html</tag>
         <tag>CSS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>固维PSS2005常用指令</title>
+    <url>/2022/05/11/PSS2005_SCPI_Command/</url>
+    <content><![CDATA[<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">*IDN? -&gt; GW<span class="selector-class">.Inc</span>,PSS-<span class="number">2005</span>,EO914759,FW1.<span class="number">07</span></span><br><span class="line">CHAN1:VOLT ? -&gt; <span class="number">04.19</span></span><br><span class="line"></span><br><span class="line">Boolean <span class="number">0</span>, <span class="number">1</span></span><br><span class="line">NR1 Integers <span class="number">0</span>, <span class="number">1</span>, <span class="number">18</span></span><br><span class="line">NR2 Decimal numbers <span class="number">1.5</span>, <span class="number">3.141</span>, <span class="number">8.4</span></span><br><span class="line">NR3 Floating point numbers <span class="number">4.5</span>E-<span class="number">1</span>, <span class="number">8.25</span>E+<span class="number">1</span></span><br><span class="line">String Alphanumeric characters “No error”</span><br><span class="line"></span><br><span class="line">设置电流 :CHAN1:CURR &lt;NR2&gt; </span><br><span class="line">查询电流 :CHAN1:CURR ? </span><br><span class="line"></span><br><span class="line">设置电压 :CHAN1:VOLT &lt;NR2&gt;</span><br><span class="line">查询电压 :CHAN1:VOLT ? </span><br><span class="line"></span><br><span class="line">测量实际电流 :CHAN1:MEAS:CURR ? </span><br><span class="line">测量实际电压 :CHAN1:MEAS:VOLT ?</span><br><span class="line"></span><br><span class="line">设置过流保护 :CHAN1:PROT:CURR &lt;Boolean&gt;</span><br><span class="line">查询过流保护 :CHAN1:PROT:CURR ? </span><br><span class="line"></span><br><span class="line">设置过压保护 :CHAN1:PROT:VOLT &lt;NR2&gt;</span><br><span class="line">查询过流保护 :CHAN1:PROT:VOLT ? </span><br><span class="line"></span><br><span class="line">清理过流过压保护状态 :OUTP:PROT:CLE</span><br><span class="line">设置输出状态 :OUTP:STAT &lt;Boolean&gt;</span><br><span class="line">查询输出状态 :OUTP:STAT &lt;Boolean&gt;</span><br><span class="line"></span><br><span class="line">*CLS / *RST / *OPC? </span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>原创</category>
+      </categories>
+      <tags>
+        <tag>PSS2005</tag>
+        <tag>电源，SCPI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何记录CMW完整的SCPI报告</title>
+    <url>/2022/05/11/RecordSCPI/</url>
+    <content><![CDATA[<ol>
+<li><p>当仪表被远程控制上，点击固件上“report file on”按钮，如下图：  程序跑完后，关闭掉 Report file.</p>
+<p><img src="/2022/05/11/RecordSCPI/1.jpg" alt="1.jpg"></p>
+</li>
+<li><p>进入电脑固件目录，3.8.10 是当前的 base 版本，进入和当前时间最接近的一个目录中.</p>
+<p><img src="/2022/05/11/RecordSCPI/2.jpg"></p>
+</li>
+<li><p>此时可以看到打开的文件夹里有个 RemoteTrace-current.xml 文件.</p>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>手册</category>
+      </categories>
+      <tags>
+        <tag>SCPI</tag>
+        <tag>调试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>恢复QCN的方法(校准数据)</title>
+    <url>/2021/09/16/RestoreQCN/</url>
+    <content><![CDATA[<p>1.对比xqcn文件名的PSN与主板编号与PSN是否一致。</p>
+<p>2.关闭一切测试工具，把主板上电正常开机后，打开QPST中的<strong>Software Download</strong>,并切换到<strong>Restore页面</strong>如下图：</p>
+<span id="more"></span>
+
+<p><img src="/2021/09/16/RestoreQCN/img2.png" alt="img1"></p>
+<p>3.点击红色标记<strong>1 选择手机端口</strong>，点击<strong>2 选择对应的.xqcn文件</strong>，然后点击<strong>3 Start</strong></p>
+<p>4.等待大概3分钟左右，直到<strong>4这里显示Memory Restore Completed</strong> 就完成了。</p>
+]]></content>
+      <categories>
+        <category>手册</category>
+      </categories>
+      <tags>
+        <tag>QCN</tag>
+        <tag>金板</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>常用运行库及驱动安装</title>
+    <url>/2021/09/16/RuntimeAndDrivers/</url>
+    <content><![CDATA[<p>1.<strong>微软常用运行库</strong>。安装运行库合集，可以解决类似下图2中的错误提示。</p>
+<p><img src="/2021/09/16/RuntimeAndDrivers/img2.png" alt="img2"></p>
+<span id="more"></span>
+
+<p><img src="/2021/09/16/RuntimeAndDrivers/img1.png" alt="img1"></p>
+<p>2.<strong>NI 488.2安装</strong>。如果下图，<strong>要勾选.Net Framework支持</strong>。</p>
+<p><img src="/2021/09/16/RuntimeAndDrivers/img3.png" alt="img3"></p>
+<p>3.<strong>IT天空万能驱动</strong>。</p>
+<p><img src="/2021/09/16/RuntimeAndDrivers/img4.png" alt="img4"></p>
+<p>4.<strong>Microsoft .NET Framework 4.5.2</strong>。</p>
+<p><a href="https://www.microsoft.com/zh-CN/download/details.aspx?id=42642">官网下载</a>  </p>
+<p>以上资源 <a href="https://www.aliyundrive.com/s/nZCRhRmvRky">网盘下载</a></p>
+]]></content>
+      <categories>
+        <category>下载</category>
+      </categories>
+      <tags>
+        <tag>常用运行库</tag>
+        <tag>驱动</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>杂类拾零</title>
+    <url>/2021/10/13/Skills/</url>
+    <content><![CDATA[<h3 id="Excel小技巧"><a href="#Excel小技巧" class="headerlink" title="Excel小技巧"></a>Excel小技巧</h3><blockquote>
+<p>Excel批量删除公式错误Ctrl+G	<br>定位条件-&gt;公式-&gt;错误<br>改好后按Ctrl+enter</p>
+</blockquote>
+<span id="more"></span>
+
+<h3 id="Genymotion无法启动"><a href="#Genymotion无法启动" class="headerlink" title="Genymotion无法启动"></a>Genymotion无法启动</h3><blockquote>
+<p>1 结束所有VirtualBox相关进程<br>2 以管理员方式启动VirtualBox 不关闭<br>3 以管理员方式启动Genymotion<br>Genymotion 账号 - zx.<br>Android模拟器 Genymotion &#x2F; Username: tabzhang &#x2F; Email address: <a href="mailto:&#x74;&#x61;&#x62;&#x2e;&#x7a;&#x68;&#x61;&#110;&#x67;&#64;&#102;&#x6f;&#x78;&#x6d;&#97;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#109;">&#x74;&#x61;&#x62;&#x2e;&#x7a;&#x68;&#x61;&#110;&#x67;&#64;&#102;&#x6f;&#x78;&#x6d;&#97;&#105;&#x6c;&#x2e;&#x63;&#x6f;&#109;</a></p>
+</blockquote>
+<h3 id="C-调用-C-新方式"><a href="#C-调用-C-新方式" class="headerlink" title="C# 调用 C++ 新方式"></a>C# 调用 C++ 新方式</h3><blockquote>
+<p>用C++CLI搭建C++和C#之间的桥梁</p>
+<p><a href="https://www.cnblogs.com/ceachy/p/Cpp-Cli-Overview.html">https://www.cnblogs.com/ceachy/p/Cpp-Cli-Overview.html</a> </p>
+<p><strong>直接调用</strong></p>
+<p>SWIG 技术：<a href="http://www.swig.org/">http://www.swig.org/</a></p>
+<p>Conari： <a href="https://github.com/3F/Conari">https://github.com/3F/Conari</a> </p>
+<p>.Net DllExport : <a href="https://github.com/3F/DllExport">https://github.com/3F/DllExport</a> </p>
+<p>CppSharp : <a href="https://github.com/mono/CppSharp">https://github.com/mono/CppSharp</a> </p>
+</blockquote>
+<h3 id="VS-快捷键"><a href="#VS-快捷键" class="headerlink" title="VS 快捷键"></a>VS 快捷键</h3><blockquote>
+<ul>
+<li>“F12 “ 快速查找引用</li>
+<li>“Ctrl + -“ 快速返回方法调用处，两者是互逆操作</li>
+<li>VS中批量删除注释，按<kbd>Ctrl</kbd>+<kbd>H</kbd> 选上正则表达式<br>Find what: &#x2F;&#x2F;.*\n，Replace with: (空)，点replace all就行了</li>
+</ul>
+</blockquote>
+<h3 id="术语"><a href="#术语" class="headerlink" title="术语"></a>术语</h3><blockquote>
+<p>First Piece Qualification (FPQ) 首件资格认证</p>
+<p>Pilot Lot Qualification (PLQ) 试验批量资格认证</p>
+<p>bi-weekly 两星期一次</p>
+<p>Double Bag Kit 双袋包 Half Kit 半包 FullKit 全副装备</p>
+<p>die-casting 美 [‘dai:k’ɑ:st] 压铸; 压模法，铸造法</p>
+<p>1毫米&#x3D;100丝&#x3D;100道&#x3D;1000微米 (南方称‘丝’，北方称‘道’，台湾称‘条’) 1毫米&#x3D;10</p>
+<p>丝米&#x3D;100忽米&#x3D;1000微米，习惯上用的丝和丝米不是一个概念</p>
+</blockquote>
+<h3 id="MkKink-用法示例"><a href="#MkKink-用法示例" class="headerlink" title="MkKink 用法示例"></a>MkKink 用法示例</h3><blockquote>
+<p>mklink &#x2F;j “C:\Users\Librarys” “D:\MzDevelop\Librarys”<br>第一个参数是目标，第二个参数是原始文件夹</p>
+</blockquote>
+<h3 id="开源加密计事本"><a href="#开源加密计事本" class="headerlink" title="开源加密计事本"></a>开源加密计事本</h3><blockquote>
+<p>Crypto Notepad </p>
+</blockquote>
+<h3 id="高通-禁用驱动签名"><a href="#高通-禁用驱动签名" class="headerlink" title="高通-禁用驱动签名"></a>高通-禁用驱动签名</h3><blockquote>
+<p>打开 Driver Signature Enforcement Overrider 应用程序。</p>
+</blockquote>
+<h3 id="治具探针安全距离"><a href="#治具探针安全距离" class="headerlink" title="治具探针安全距离"></a>治具探针安全距离</h3><blockquote>
+<p> 注: 1in&#x3D;1000mil-2.54cm-25.4mm  1mm-0.3937inch-39.37mil</p>
+<p>1，100mil和100mil之间的最小安全距离（要求： 2.1mm） 2.095mm &#x3D; 82.5mil</p>
+<p>2、75mil和75mil之间的最小安全距离（要求： 1.75mm） 1.74mm &#x3D; 68.5mil</p>
+<p>3、50mil和50mil之间的最小安全距离（要求： 1.21mm） 1.2065mm &#x3D; 47.5mil</p>
+<p>4、100mil和75mil之间的最小安全距离（要求： 1.92mm） 1.9177mm &#x3D; 75.5mil</p>
+<p>5、100mil和50mil之间的最小安全距离（要求： 1.72mm） 1.7145mm &#x3D; 67.5mil</p>
+<p>6、75mil和50mil之间的最小安全距离（要求： 1.55mm） 1.5367mm &#x3D; 60.5mil</p>
+</blockquote>
+<h3 id="批处理去文件夹的隐藏属性"><a href="#批处理去文件夹的隐藏属性" class="headerlink" title="批处理去文件夹的隐藏属性"></a>批处理去文件夹的隐藏属性</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">attrib c:\&quot;ABC&quot; -s -h</span><br></pre></td></tr></table></figure>
+
+<h3 id="打印机地址"><a href="#打印机地址" class="headerlink" title="打印机地址"></a>打印机地址</h3><blockquote>
+<p>工艺换打印机，看网络摘要<br>彩色打印机:172.16.148.220,HP Color LaserJet MFP M277dw</p>
+</blockquote>
+<h2 id="C-展开和折叠代码的快捷键"><a href="#C-展开和折叠代码的快捷键" class="headerlink" title="C# 展开和折叠代码的快捷键"></a>C# 展开和折叠代码的快捷键</h2><blockquote>
+<p>Ctrl + M + O: 折叠所有方法</p>
+<p>Ctrl + M + M: 折叠或者展开当前方法</p>
+<p>Ctrl + M + L:  展开所有方法</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>资料</category>
+      </categories>
+      <tags>
+        <tag>杂类</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>如何指定设备的COM口号</title>
+    <url>/2021/05/13/SpecifyComPort/</url>
+    <content><![CDATA[<p><img src="/2021/05/13/SpecifyComPort/01.png" alt="img1"></p>
+<p><img src="/2021/05/13/SpecifyComPort/02.png" alt="img2"></p>
+<p><img src="/2021/05/13/SpecifyComPort/03.png" alt="img3"></p>
+]]></content>
+      <categories>
+        <category>仪表</category>
+      </categories>
+      <tags>
+        <tag>COM</tag>
+        <tag>串口</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>SQLServer2008R2外网访问</title>
+    <url>/2021/10/13/SqlServer_ExtranetAccess/</url>
+    <content><![CDATA[<p>1.Sql Server 2008R2，确保可通过sa进行登录，先关掉防火墙，以免因为防火墙导致连接不上。</p>
+<p>2.配置管理器中需要打开TCP&#x2F;IP，路径为Sql Server Configuration Manager-SqlServer网络配置-SqlServer的协议，并双击确定端口是1433</p>
+<p><img src="/2021/10/13/SqlServer_ExtranetAccess/img1.png" alt="img"></p>
+<span id="more"></span>
+
+<p>3.SqlServer Management Studio配置，右键–方面–外围应用配置-RemoteDecEnable-True。</p>
+<p><img src="/2021/10/13/SqlServer_ExtranetAccess/img2.png" alt="img"></p>
+<p>4.配置连接</p>
+<p><img src="/2021/10/13/SqlServer_ExtranetAccess/img3.png" alt="img"></p>
+<p>配置一下安全性，允许连接，启用登录。</p>
+<p><img src="/2021/10/13/SqlServer_ExtranetAccess/img4.png" alt="img"></p>
+<p>5.重启服务，再次进入配置管理器，重启服务，因为没有重启这个，一直导致外网访问失败，故一定要注意此项。</p>
+<p><img src="/2021/10/13/SqlServer_ExtranetAccess/img5.png" alt="img"></p>
+<p>6.测试，使用外网电脑，通过程序或sql 数据库 连接进行测试。</p>
+<p>7.防火墙配置,这块做网站经常会用到，一般都比较熟练。这里我简单说一下，新建入站规则，打开1433端口。</p>
+<p>8.如果按照以上配置还有问题，请尝试进行更多配置</p>
+<blockquote>
+<p>1.程序例外</p>
+<p>Windows 防火墙中，选择”例外”选项卡，单击”添加程序”，在“添加程序”窗口中，单击“浏览”，选择 “C:\Program Files\Microsoft SQL Server\MSSQL10.MSSQLSERVER\MSSQL\Binn\sqlservr.exe” 可执行文件，然后单击“确定”按钮：</p>
+<p>2.服务确保开启</p>
+<p>配置管理器中，左侧的“SQL Server服务”，确保右侧的“SQL Server”以及“SQL Server Browser”正在运行。</p>
+</blockquote>
+<h3 id="SQLServer创建用户登录出现错误18456"><a href="#SQLServer创建用户登录出现错误18456" class="headerlink" title="SQLServer创建用户登录出现错误18456"></a>SQLServer创建用户登录出现错误18456</h3><p>使用SQLServer创建用户并登录的过程中总是出现问题，查找方法不易，于是就打算把解决方法写一下，方便后来的小伙伴查找<br>1、在本机数据库处右键，选择属性，点击打开。</p>
+<p><img src="/2021/10/13/SqlServer_ExtranetAccess/img6.png" alt="img"></p>
+<p>选择左侧的安全性，右侧服务器身份验证选择SQL Sever和Windos身份验证模式，点击确定。</p>
+<p><img src="/2021/10/13/SqlServer_ExtranetAccess/img7.png" alt="img"></p>
+<p>2、数据库–&gt;安全性–&gt;登录名，打开后下方选择你已经设置好的登录名，在登录名上右键，选择属性。</p>
+<p><img src="/2021/10/13/SqlServer_ExtranetAccess/img8.png" alt="img"></p>
+<p>将强制实施密码策略的选择取消，同时注意下方选择你想要登陆的数据库。</p>
+<p><img src="/2021/10/13/SqlServer_ExtranetAccess/img9.png" alt="img"></p>
+<p>左侧选择状态，注意将右侧的选项改成授予和启用，点击确定。</p>
+<p><img src="/2021/10/13/SqlServer_ExtranetAccess/img4.png" alt="img"></p>
+<p>此时断开重新使用创建的账号连接可能会出现18456错误。</p>
+<p>解决方法：<br>1、关闭SQLServer。</p>
+<p>2、打开菜单栏，找到SQL的配置管理器，打开。选择网络设置下的MSSQLSWEVER的协议，将右侧下面的两项启用。</p>
+<p><img src="/2021/10/13/SqlServer_ExtranetAccess/img1.png" alt="img"></p>
+<p>3、选择SQLSever服务，将第一项先停止再启动。关闭配置管理器，重新打开SQLSever 用创建的用户身份登录就可以了。</p>
+<p><img src="/2021/10/13/SqlServer_ExtranetAccess/img5.png" alt="img"></p>
+]]></content>
+      <categories>
+        <category>手册</category>
+      </categories>
+      <tags>
+        <tag>SQLServer</tag>
+        <tag>外网访问</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>什么是UWB技术</title>
+    <url>/2022/06/27/UWBTech/</url>
+    <content><![CDATA[<p>1.UWB（Ultra Wide Band）超宽带技术是一种使用1GHz以上频率带宽的无线载波通信技术，它不采用传统通信体制中的正弦载波，而是利用纳秒级的非正弦波窄脉冲传输数据，因此其所占的频谱范围很大，尽管使用无线通信，但其数据传输速率可以达到几百兆比特每秒以上。</p>
+<p><img src="/2022/06/27/UWBTech/01.png" alt="img1"></p>
+<p>2.UWB技术具有系统复杂度低，发射信号功率谱密度低，对信道衰落不敏感，截获能力低，定位精度高，穿透能力强等优点，尤其适用于室内等密集多径场所的高速无线接入。</p>
+<p><strong>3.UWB并非是一项新技术</strong>，它最早应用于军用雷达和通信应用中，名称为“脉冲无线电”，自2002年起，美国联邦通信委员会（FCC）授权其未经许可使用，为其划分了3.1~10.6GHz频段，占用500MHz以上的带宽。</p>
+<p><img src="/2022/06/27/UWBTech/02.png" alt="img2"></p>
+]]></content>
+      <categories>
+        <category>资料</category>
+      </categories>
+      <tags>
+        <tag>笔记</tag>
+        <tag>UWB</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Wifi历代记</title>
+    <url>/2021/10/13/Wifi_History/</url>
+    <content><![CDATA[<table>
+<thead>
+<tr>
+<th align="center">历代记</th>
+<th align="center">WiFi 1</th>
+<th align="center">WiFi 2</th>
+<th align="center">WiFi 3</th>
+<th align="center">WiFi 4</th>
+<th align="center">WiFi 5</th>
+<th align="center">WiFi 6</th>
+<th align="center">WiFi 7</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">协议</td>
+<td align="center">802.11b</td>
+<td align="center">802.11a</td>
+<td align="center">802.11g</td>
+<td align="center">802.11n</td>
+<td align="center">802.11ac</td>
+<td align="center">802.11ax</td>
+<td align="center">802.11be</td>
+</tr>
+<tr>
+<td align="center">年份</td>
+<td align="center">1999</td>
+<td align="center">1999</td>
+<td align="center">2003</td>
+<td align="center">2009</td>
+<td align="center">2013 wave1 &#x2F; 2016 wave2</td>
+<td align="center">2018+</td>
+<td align="center">2022</td>
+</tr>
+<tr>
+<td align="center">工作频段</td>
+<td align="center">2.4G</td>
+<td align="center">5G</td>
+<td align="center">2.4G</td>
+<td align="center">2.4G&#x2F;5G</td>
+<td align="center">5G</td>
+<td align="center">2.4G&#x2F;5G</td>
+<td align="center">2.4G&#x2F;5G&#x2F;6G</td>
+</tr>
+<tr>
+<td align="center">最大频宽</td>
+<td align="center">20MHz</td>
+<td align="center">20MHz</td>
+<td align="center">20MHz</td>
+<td align="center">40MHz</td>
+<td align="center">80MHz &#x2F; 160MHz</td>
+<td align="center">160MHz</td>
+<td align="center">320MHz</td>
+</tr>
+<tr>
+<td align="center">MCS范围</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">0~7</td>
+<td align="center">0~9</td>
+<td align="center">0~11</td>
+<td align="center">0~13</td>
+</tr>
+<tr>
+<td align="center">最高调制</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">64QAM</td>
+<td align="center">256QAM</td>
+<td align="center">1024QAM</td>
+<td align="center">4096QAM</td>
+</tr>
+<tr>
+<td align="center">单流带宽</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">150Mbps</td>
+<td align="center">433Mbps &#x2F; 867Mbps</td>
+<td align="center">1201Mbps</td>
+<td align="center">Up to 30G</td>
+</tr>
+<tr>
+<td align="center">最大空间</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center">4x4</td>
+<td align="center">8x8</td>
+<td align="center">8x8</td>
+<td align="center">16x16UL&#x2F;DL MU-MIMO</td>
+</tr>
+<tr>
+<td align="center">调试方式</td>
+<td align="center">CCK&#x2F;DSSS</td>
+<td align="center">OFDM</td>
+<td align="center">CCK&#x2F;OFDM&#x2F;PBCC</td>
+<td align="center">OFDM</td>
+<td align="center">OFMD下行</td>
+<td align="center">OFDMA</td>
+<td align="center">OFDMA</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>资料</category>
+      </categories>
+      <tags>
+        <tag>WIFI</tag>
       </tags>
   </entry>
 </search>
